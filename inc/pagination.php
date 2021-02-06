@@ -50,11 +50,11 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'nbe' ),
-				'next_text'          => __( '&raquo;', 'nbe' ),
+				'prev_text'          => __( '&laquo;', 'alcof' ),
+				'next_text'          => __( '&raquo;', 'alcof' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
-				'screen_reader_text' => __( 'Posts navigation', 'nbe' ),
+				'screen_reader_text' => __( 'Posts navigation', 'alcof' ),
 			)
 		);
 

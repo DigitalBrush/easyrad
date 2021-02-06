@@ -100,9 +100,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 	function understrap_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'nbe' ),
+				'name'          => __( 'Right Sidebar', 'alcof' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'nbe' ),
+				'description'   => __( 'Right sidebar widget area', 'alcof' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -112,9 +112,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'nbe' ),
+				'name'          => __( 'Left Sidebar', 'alcof' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'nbe' ),
+				'description'   => __( 'Left sidebar widget area', 'alcof' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -124,9 +124,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Slider', 'nbe' ),
+				'name'          => __( 'Hero Slider', 'alcof' ),
 				'id'            => 'hero',
-				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'nbe' ),
+				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'alcof' ),
 				'before_widget' => '<div class="carousel-item">',
 				'after_widget'  => '</div>',
 				'before_title'  => '',
@@ -136,9 +136,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Canvas', 'nbe' ),
+				'name'          => __( 'Hero Canvas', 'alcof' ),
 				'id'            => 'herocanvas',
-				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'nbe' ),
+				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'alcof' ),
 				'before_widget' => '',
 				'after_widget'  => '',
 				'before_title'  => '',
@@ -148,9 +148,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Top Full', 'nbe' ),
+				'name'          => __( 'Top Full', 'alcof' ),
 				'id'            => 'statichero',
-				'description'   => __( 'Full top widget with dynamic grid', 'nbe' ),
+				'description'   => __( 'Full top widget with dynamic grid', 'alcof' ),
 				'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .static-hero-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
@@ -160,9 +160,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Full', 'nbe' ),
+				'name'          => __( 'Footer Full', 'alcof' ),
 				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'nbe' ),
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'alcof' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
