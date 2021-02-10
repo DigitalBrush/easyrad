@@ -19,5 +19,11 @@ jQuery(function($){
             }
         }
     })
+
+    $('#main-menu .home-repair-cta').children('.nav-link').addClass('btn btn-primary');
+
+
 });
+
+
 

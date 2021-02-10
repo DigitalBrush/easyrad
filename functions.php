@@ -81,6 +81,26 @@ function related_products(){
 
 }
 
+add_shortcode( 'show-breadcrumb' , 'ss_show_breadcrumb');
+function ss_show_breadcrumb() {
+    if(function_exists('bcn_display'))
+    {
+        return bcn_display(true);
+    }
+}
+
+function wpdocs_enqueue_custom_admin_style($hook_suffix) {
+    // Check if it's the ?page=yourpagename. If not, just empty return before executing the folowing scripts. 
+    if($hook_suffix != 'alcof-options_page_setup_slider') {
+        return;
+    }
+
+    // Load your css.
+    wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.min.css', false, '1.0.0' );
+    wp_enqueue_style( 'custom_wp_admin_css' );
+}
+add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
+
 
 
   add_action( 'um_post_registration_approved_hook', 'remove_my_action', 9 );
@@ -113,7 +133,7 @@ function create_page($page_name,$content,$template){
 add_action('admin_menu', 'customize_homepage');
 
 function customize_homepage() { 
-    add_menu_page( '','Homepage', '','landing', '','dashicons-welcome-widgets-menus', 90);  
+    add_menu_page( '','Alcof Options', '','landing', '','dashicons-welcome-widgets-menus', 90);  
     add_submenu_page('landing','Slider', 'Slider','manage_options','setup_slider','setup_slider');
     add_submenu_page('landing','Services', 'Services','manage_options','services','services');
     add_submenu_page('landing','Brands', 'Brands','manage_options','brands','brands');
@@ -123,138 +143,131 @@ function customize_homepage() {
 function setup_slider(){
     ?>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-<style type="text/css">
-    fieldset {
-     
-      padding:10px !important;
-      border:1px solid #E8E7E6  !important;
-    }
-
-    legend { 
-     
-      font-size:16px !important;
-      text-transform:uppercase;
-      text-align: center;
-    }
-
-   .postbox{
-
-    margin:50px;
-    padding:50px;
-    padding-bottom:20px;
-
-   } 
-
-</style>
-
-
-            
-<div class="postbox">
-<div class="form-body row">
-
- <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post" enctype="multipart/form-data">
+    <div class="update-post">
+        <div class="form-body container-fluid">
+            <h2 class="update-heading"><span class="dashicons dashicons-admin-generic"></span>Hero Header</h2>
+            <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" enctype="multipart/form-data" method="post">
+                <div class="row section-edit">
+                    <div class="col-md-4">
+                        <div class="form-group form-md-line-input">
+                            <label class=" control-label">Intro Heading</label> 
+                            <textarea class="form-control" name="hero_intro_heading">
+                                <?php echo get_option('hero_intro_heading');?>
+                            </textarea>
+                            <div class="form-control-focus"></div>
+                        </div>
+                        <div class='heading-preview-wrapper'>
+                            <?php
+                                if(get_option('hero_intro_heading')!="")
+                                echo "<h1 class='big-heading'>". get_option('hero_intro_heading') ."</h1>";
+                            ?> 
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group form-md-line-input">
+                            <label class=" control-label">Intro Text</label> 
+                            <textarea class="form-control" name="hero_intro_text"><?php echo get_option('hero_intro_text');?></textarea>
+                            <div class="form-control-focus"></div>
+                        </div>
+                        <div class='text-preview-wrapper'>
+                            <?php
+                                if(get_option('hero_intro_text')!="")
+                                echo "<p>". get_option('hero_intro_text') ."</p>";
+                            ?> 
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group form-md-line-input">
+                            <label class=" control-label">Intro Subheading</label> 
+                            <textarea class="form-control" name="hero_intro_subheading"><?php echo get_option('hero_intro_subheading');?></textarea>
+                            <div class="form-control-focus"></div>
+                        </div>
+                        <div class='text-preview-wrapper'>
+                            <?php
+                                if(get_option('hero_intro_subheading')!="")
+                                echo "<p>". get_option('hero_intro_subheading') ."</p>";
+                            ?> 
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" name="slider_btn" value="Update Text" class="btn btn-primary">
+                    </div>
+                </div>
+            </form>
+            <div class="row section-edit">
+                <div class="col-md-6">
+                    <div class="form-group form-md-line-input">
+                        <label class="control-label">Header Image</label> 
+                    <?php
+                        if ( isset( $_POST['submit_image_selector'] ) && isset( $_POST['image_attachment_id'] ) ) :
+                                update_option( 'media_selector_attachment_id', absint( $_POST['image_attachment_id'] ) );
+                            endif;
+                            wp_enqueue_media();
+                            ?>
+                            <form method='post'>
+                                <input id="upload_image_button" type="button" class="button" value="<?php _e( 'Upload image' ); ?>" />
+                                <input type='hidden' name='image_attachment_id' id='image_attachment_id' value='<?php echo get_option( 'media_selector_attachment_id' ); ?>'>
+                                <input type="submit" name="submit_image_selector" value="Update Image" class="btn btn-primary">
+                                
+                            </form>
+                        <?php $my_saved_attachment_post_id = get_option( 'media_selector_attachment_id', 0 ); ?>
+                            <script type='text/javascript'>
+                                jQuery( document ).ready( function( $ ) {
+                                    // Uploading files
+                                    var file_frame;
+                                    var wp_media_post_id = wp.media.model.settings.post.id; // Store the old id
+                                    var set_to_post_id = <?php echo $my_saved_attachment_post_id; ?>; // Set this
+                                    jQuery('#upload_image_button').on('click', function( event ){
+                                        event.preventDefault();
+                                        // If the media frame already exists, reopen it.
+                                        if ( file_frame ) {
+                                            // Set the post ID to what we want
+                                            file_frame.uploader.uploader.param( 'post_id', set_to_post_id );
+                                            // Open frame
+                                            file_frame.open();
+                                            return;
+                                        } else {
+                                            // Set the wp.media post id so the uploader grabs the ID we want when initialised
+                                            wp.media.model.settings.post.id = set_to_post_id;
+                                        }
+                                        // Create the media frame.
+                                        file_frame = wp.media.frames.file_frame = wp.media({
+                                            title: 'Select a image to upload',
+                                            button: {
+                                                text: 'Use this image',
+                                            },
+                                            multiple: false // Set to true to allow multiple files to be selected
+                                        });
+                                        // When an image is selected, run a callback.
+                                        file_frame.on( 'select', function() {
+                                            // We set multiple to false so only get one image from the uploader
+                                            attachment = file_frame.state().get('selection').first().toJSON();
+                                            // Do something with attachment.id and/or attachment.url here
+                                            $( '#image-preview' ).attr( 'src', attachment.url ).css( 'width', 'auto' );
+                                            $( '#image_attachment_id' ).val( attachment.id );
+                                            // Restore the main post ID
+                                            wp.media.model.settings.post.id = wp_media_post_id;
+                                        });
+                                            // Finally, open the modal
+                                            file_frame.open();
+                                    });
+                                    // Restore the main ID when the add media button is pressed
+                                    jQuery( 'a.add_media' ).on( 'click', function() {
+                                        wp.media.model.settings.post.id = wp_media_post_id;
+                                    });
+                                });
+                            </script>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class='image-preview-wrapper'>
+                        <img id='image-preview' src='<?php echo wp_get_attachment_url( get_option( 'media_selector_attachment_id' ) ); ?>' width='300'>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-<div class="col-md-4 ">
-    <fieldset>
-        <legend>Slide 1</legend>
-        <div class="form-group form-md-line-input">
-            <label class="control-label">Image</label>
-        <?php
-        if(get_option('slide_img_1')!="")
-        echo "<img src='". get_option('slide_img_1')."' style='margin:auto; width:100%'/>";
-        ?>
-            
-        <input type="file" name="slide_img_1" value="" class="form-control" autocomplete="off">
-        <div class="form-control-focus"> </div>
-          
-        </div>      
-         <div class="form-group form-md-line-input">
-        <label class=" control-label">Intro Text</label>
-       
-        <textarea name="slide_intro_1" class="form-control" autocomplete="off">
-        <?php echo get_option('slide_intro_1');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-
- 
-
-</div>
-
-<div class="col-md-4 ">
-    <fieldset>
-        <legend>Slide 2</legend>
-        <div class="form-group form-md-line-input">
-            <label class="control-label">Image</label>
-        <?php
-        if(get_option('slide_img_2')!="")
-        echo "<img src='". get_option('slide_img_2')."' style='margin:auto; width:100%'/>";
-        ?>
-            
-        <input type="file" name="slide_img_2" value="" class="form-control" autocomplete="off">
-        <div class="form-control-focus"> </div>
-          
-        </div>      
-         <div class="form-group form-md-line-input">
-        <label class=" control-label">Intro Text</label>
-       
-        <textarea name="slide_intro_2" class="form-control" autocomplete="off">
-        <?php echo get_option('slide_intro_2');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-
-</div>
-
-
-
-<div class="col-md-4 ">
-    <fieldset>
-        <legend>Slide 3</legend>
-        <div class="form-group form-md-line-input">
-            <label class="control-label">Image</label>
-        <?php
-        if(get_option('slide_img_3')!="")
-        echo "<img src='". get_option('slide_img_3')."' style='margin:auto;width:100%'/>";
-        ?>
-            
-        <input type="file" name="slide_img_3" value="" class="form-control" autocomplete="off">
-        <div class="form-control-focus"> </div>
-          
-        </div>      
-         <div class="form-group form-md-line-input">
-        <label class=" control-label">Intro Text</label>
-       
-        <textarea name="slide_intro_3" class="form-control" autocomplete="off">
-        <?php echo get_option('slide_intro_3');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-</div>
-
-
-
-        </div>
-        <hr>
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary" name="slider_btn">Submit</button>
-        </div>
-
-</form>
-
-</div>
-
+    </div>
 
 <?php
 
@@ -262,43 +275,20 @@ function setup_slider(){
     if(isset($_REQUEST["slider_btn"]))
     {
     
-        $slide_intro_1 = $_REQUEST["slide_intro_1"];
-        $slide_intro_2 = $_REQUEST["slide_intro_2"];
-        $slide_intro_3 = $_REQUEST["slide_intro_3"];
+        $hero_intro_heading = $_REQUEST["hero_intro_heading"];
+        $hero_intro_subheading = $_REQUEST["hero_intro_subheading"];
+        $hero_intro_text = $_REQUEST["hero_intro_text"];
+
         
 
-        add_option('slide_intro_1',$slide_intro_1,'','yes');
-        update_option('slide_intro_1',$slide_intro_1);
+        add_option('hero_intro_heading',$hero_intro_heading,'','yes');
+        update_option('hero_intro_heading',$hero_intro_heading);
 
-        add_option('slide_intro_2',$slide_intro_2,'','yes');
-        update_option('slide_intro_2',$slide_intro_2);
+        add_option('hero_intro_text',$hero_intro_text,'','yes');
+        update_option('hero_intro_text',$hero_intro_text);
 
-        add_option('slide_intro_3',$slide_intro_3,'','yes');
-        update_option('slide_intro_3',$slide_intro_3);
-
-               
-        require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-        require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-        require_once(ABSPATH . "wp-admin" . '/includes/media.php'); 
-       
-           if ($_FILES) {
-
-               $i=1;
-              
-                foreach ($_FILES as $file => $array) {
-                    if ($_FILES[$file]['error']==0) {  
-                        $attach_id = media_handle_upload( $file, "" );
-                        $image_url_array=wp_get_attachment_image_src($attach_id,'full');
-                        $image_url = $image_url_array[0];
-                         
-                        add_option('slide_img_'.$i,$image_url,'','yes');
-                        update_option('slide_img_'.$i,$image_url);
-                    }
-                 
-                   $i++;
-                }            
-
-            }
+        add_option('hero_intro_subheading',$hero_intro_subheading,'','yes');
+        update_option('hero_intro_subheading',$hero_intro_subheading);
 
     }
 

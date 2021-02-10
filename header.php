@@ -37,36 +37,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'alcof' ); ?></a>
 
 		<div class="top-nav">
-			<div class="container">
-				<div class="row">
-					<div class="col-10">
-						<?php
-
-
-						wp_nav_menu(
-							array(
-								'theme_location'  => 'topmenu',
-								'menu_class'      => 'navbar-top',
-								'menu_id'         => 'top-menu',
-							)
-						);
-						?>
+			<div class="container-fluid">
+				<div class="row top-bar">
+					<div class="col-lg-8 col-md-6 d-flex align-items-center">
+						<div class="breadcrumbs-top">
+							<?php echo do_shortcode("[show-breadcrumb]"); ?>
+						</div>
 					</div>
-					<div class="col-2">
-					<!-- 	<div class="switch-lang">
-							<div class="current-lang"><img class="lang-flag" src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/128/Flag_of_United_Kingdom.png" />
-							</div>
-							<div class="lang-dropdown">
-								<div class="selecting-lang"><img class="lang-flag" src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/128/Flag_of_France.png" />
+					<div class="col-lg-2 col-md-3">
+						<form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
+							<div class="input-group search-inputs">
+								<input type="text" id="box" name="s" placeholder="Rechercher" class="search-box">
+								<div class="input-group-append">
+									<button type="submit" id="search-btn" class="btn search-icon"><span class="material-icons">search</span></button>
 								</div>
 							</div>
-						</div> -->
+						</form>
+					</div>
+					<div class="col-lg-2 col-md-3 contact-top">
+						<span class="material-icons">call</span>
+						01 45 05 15 12
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<nav id="main-nav" class="navbar navbar-expand-sm navbar-light" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-lg navbar-light" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'alcof' ); ?>
@@ -78,7 +74,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php endif; ?>
 				
 				<div class="row header-bar">
-					<div class="col-lg-2 col-md-3 logo-bar">
+					<div class="col-lg-2 logo-bar">
 
 							<!-- Your site title as branding in the menu -->
 							<?php if ( ! has_custom_logo() ) { ?>
@@ -94,7 +90,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 
 						
-					<div class="col-lg-5 col-md-9">
+					<div class="col-lg-10">
 						<!-- The WordPress Menu goes here -->
 						<?php
 						wp_nav_menu(
@@ -102,7 +98,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								'theme_location'  => 'primary',
 								'container_class' => 'collapse navbar-collapse',
 								'container_id'    => 'navbarNavDropdown',
-								'menu_class'      => 'navbar-nav mr-auto',
+								'menu_class'      => 'navbar-nav ml-auto',
 								'fallback_cb'     => '',
 								'menu_id'         => 'main-menu',
 								'depth'           => 2,
@@ -110,34 +106,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 							)
 						);
 						?>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<form  role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form form-inline my-2 my-lg-0">
-
-							<input type="text" id="box" name="s" placeholder="Rechercher un produit..." class="search-box">
-							<button type="submit" id="search-btn" class="btn search-icon"><span class="material-icons">search</span></button>
-						</form>
-
-					</div>
-					
-					<div class="col-lg-2 col-md-6">
-						<ul class="user-menu navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo esc_url(home_url('/my-account')); ?>">
-									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconUser.svg" />
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo esc_url(home_url('/shop')); ?>">
-									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconFavorites.svg" />
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo esc_url(home_url('/basket')); ?>">
-									<img class="shop-icon" src="<?php echo get_template_directory_uri(); ?>/img/iconCart.svg" />
-								</a>
-							</li>
-						</ul>
 					</div>
 				</div>
 			<?php if ( 'container' === $container ) : ?>

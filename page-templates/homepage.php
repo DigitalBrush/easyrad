@@ -27,6 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					if ( is_front_page() ) {
 						get_template_part( 'global-templates/hero-header' );
+						get_template_part( 'global-templates/featured' );
 						get_template_part( 'global-templates/brands' ); 
 						get_template_part( 'global-templates/bestsellers' );
 						get_template_part( 'global-templates/who' ); 

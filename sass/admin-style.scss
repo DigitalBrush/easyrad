@@ -1,0 +1,42 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "theme/theme_variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "assets/font-awesome"; 
+@import "understrap/understrap";
+@import "theme/theme";
+
+.update-post {
+    margin: $spacing-lg;
+    border: 3px solid $gray-300;
+    border-radius: $spacing-xs;
+    .update-heading {
+        padding: $spacing-lg 0;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 3px solid $gray-300;
+    }
+    .section-edit {
+        border-bottom: 3px solid $gray-300;
+        padding: $spacing-lg 0;
+        .heading-preview-wrapper {
+            padding: $spacing-lg 0;
+        }
+        .text-preview-wrapper {
+            padding: $spacing-lg 0;
+            p {
+                color: $alcof-gray;
+                font-size: 18px;
+            }
+        }
+        .image-preview-wrapper {
+            padding: $spacing-lg 0;
+        }
+        .control-label {
+            padding-bottom: $spacing-md;
+        }
+    }
+}

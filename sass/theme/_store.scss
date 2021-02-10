@@ -12,7 +12,7 @@
                     line-height: 120%;
                     border-radius: 0;
                     border: 0;
-                    background: $nbe-grey;
+                    background: $alcof-grey;
                     font-weight: 600;
                     margin: 10px 0;
                     text-transform: uppercase;
@@ -89,11 +89,11 @@
                 text-transform: capitalize;
             }
             p.price {
-                color: $nbe-dark;
+                color: $alcof-dark;
                 font-size: 1.25em;
             }
             span.price {
-                color: $nbe-dark;
+                color: $alcof-dark;
                 font-size: 1.25em;
             }
             .product_meta {
@@ -112,9 +112,9 @@
                         background: none;
                         position: relative;
                         &.active {
-                            border-bottom: 3px solid $nbe-dark;
+                            border-bottom: 3px solid $alcof-dark;
                             a {
-                                color: $nbe-dark;
+                                color: $alcof-dark;
                             }
                         }
                         &:before {
@@ -126,7 +126,7 @@
                         a {
                             font-weight: 400;
                             font-size: 18px;
-                            color: $nbe-gray;
+                            color: $alcof-gray;
                         }
                     }
                     &:before {
@@ -172,7 +172,7 @@
                                                     display: block;
                                                     font-size: 14px;
                                                     font-weight: 500;
-                                                    color: $nbe-dark;
+                                                    color: $alcof-dark;
                                                 }
                                                 .woocommerce-review__dash {
                                                     display: none;
@@ -222,14 +222,14 @@
                     // max-height: 127px!important;
                 }
                 .woocommerce-loop-product__title {
-                    color: $nbe-dark;
+                    color: $alcof-dark;
                     font-weight: 300;
                     text-transform: capitalize;
                     min-height: 60px;
                 }
             }
             .price {
-                color: $nbe-dark;
+                color: $alcof-dark;
                 font-size: 18px;
                 text-transform: capitalize;
             }

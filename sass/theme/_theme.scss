@@ -3,13 +3,13 @@ body {
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 700;
     @include media-breakpoint-down(md) {
-		font-size: 28px;
+		font-size: 32px;
     }
     @include media-breakpoint-down(sm) {
-		font-size: 28px;
+		font-size: 32px;
     }
     &.section-title {
         font-weight: 300;
@@ -17,6 +17,7 @@ h1 {
         text-transform: uppercase;
         padding: 0 0 $spacing-lg 0;
     }
+    
 }
 
 h2 {
@@ -34,17 +35,39 @@ h3 {
 .btn {
     border-radius: 0;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 120%;
+    font-size: 14px;
     text-transform: uppercase;
-    padding: 16px 20px;
+    padding: 1rem;
     margin: $spacing 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 3px;
+    &.btn-primary {
+        color: $white !important;
+    }
+    &.btn-secondary {
+        color: $white !important;
+        background-color: $alcof-dark;
+        border: 0;
+        position: relative;
+        padding-left: $spacing-max;
+        &:before {
+            position: absolute;
+            content:"";
+            width: 20px;
+            height: 2px;
+            left: $spacing-md;
+            background: $white;
+        }
+    }
 }
 
 #search-btn {
     border:none !important;
     background: none !important;
 }
+
 
 .section {
     padding: 100px 0;
@@ -56,7 +79,7 @@ h3 {
 .contact-cta {
     color: $white;
     padding: $spacing-xxl;
-    background: $nbe-gray;
+    background: $alcof-gray;
 }
 .section-who {
     display: flex;
@@ -121,13 +144,13 @@ h3 {
                     }
                 }
                 .entry-title {
-                    color: $nbe-dark;
+                    color: $alcof-dark;
                     font-weight: 300;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
                 .pi-price {
-                    color: $nbe-dark;
+                    color: $alcof-dark;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
@@ -146,6 +169,10 @@ h3 {
             padding: $spacing-sm;
         }
     }
+}
+
+.material-icons {
+    margin-right: $spacing;
 }
 
 .section-services {
@@ -190,7 +217,7 @@ h3 {
     display: flex;
     justify-content: center;
     .category {
-        background-color: $nbe-grey;
+        background-color: $alcof-grey;
         margin-bottom: $spacing-lg;
         .category-inner {
             padding: $spacing-lg;
