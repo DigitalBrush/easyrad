@@ -133,18 +133,258 @@ function create_page($page_name,$content,$template){
 add_action('admin_menu', 'customize_homepage');
 
 function customize_homepage() { 
-    add_menu_page( '','Alcof Options', '','landing', '','dashicons-welcome-widgets-menus', 90);  
-    add_submenu_page('landing','Slider', 'Slider','manage_options','setup_slider','setup_slider');
-    add_submenu_page('landing','Services', 'Services','manage_options','services','services');
-    add_submenu_page('landing','Brands', 'Brands','manage_options','brands','brands');
-    add_submenu_page('landing','Who we are', 'Who we are','manage_options','who_we_are','who_we_are');
+
+    add_submenu_page('themes.php','Alcof Options', 'Alcof Options','manage_options','alcof_options','alcof_options');
+   
+}
+
+function alcof_options(){
+    ?>
+
+    <link href="<?php echo get_template_directory_uri();?>/lumino/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri();?>/lumino/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri();?>/lumino/css/datepicker3.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri();?>/lumino/css/styles.css" rel="stylesheet">
+    
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+    <nav class="navbar navbar-custom" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="#"><span>Alcof</span>Options</a>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+
+                      <button class="btn btn-primary">Save All</button>
+                   
+                    </li>
+                   
+                </ul>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  border-right: none;
+  background-color: #f1f1f1;
+  min-height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 10px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #1883EC;
+  color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;  
+  border-left: none;
+  min-height: 300px;
+}
+</style>
+
+
+<div class="col-md-12">
+
+    <div class="tab col-md-2 nav nav-pills">
+      <button class="tablinks" onclick="openTab(event, 'slider')" id="defaultOpen">Slider</button>
+      <button class="tablinks" onclick="openTab(event, 'services')">Services</button>
+      <button class="tablinks" onclick="openTab(event, 'brands')">Brands</button>
+
+
+    </div>
+
+
+
+    <div id="slider" class="tabcontent col-md-10">
+          
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Sliders</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Slide1</div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Slide 2</div>
+                      <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Slide 3</div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->
+            
+    </div>
+
+
+
+    <div id="services" class="tabcontent col-md-10" >
+         <div class="row">
+              <div class="col-lg-12">
+                <h2>Services</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Info Panel
+                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Warning Panel
+                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Danger Panel
+                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+    </div>
+
+
+
+    <div id="brands" class="tabcontent col-md-10">
+        <div class="row">
+              <div class="col-lg-12">
+                <h2>Brands</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Info Panel
+                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Warning Panel
+                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Danger Panel
+                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->>
+    </div>
+</div>
+
+
+
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+
+    
+
+
+<?php
+
+
 }
 
 function setup_slider(){
     ?>
 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <div class="update-post">
         <div class="form-body container-fluid">
+
+
             <h2 class="update-heading"><span class="dashicons dashicons-admin-generic"></span>Hero Header</h2>
             <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" enctype="multipart/form-data" method="post">
                 <div class="row section-edit">
