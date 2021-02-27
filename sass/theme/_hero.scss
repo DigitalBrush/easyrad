@@ -1,6 +1,8 @@
 .hero-header {
     border-top: 1px solid $alcof-grey;
     border-bottom: 1px solid $alcof-grey;
+    display: flex;
+    align-items: stretch;
     .hero-text {
         display: flex;
         justify-content: center;
@@ -52,5 +54,12 @@
         padding: 0;
         position: relative;
         z-index: 1;
+        .slider-image {
+            height: 100%;
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
     }
 }

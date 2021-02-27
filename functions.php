@@ -90,7 +90,6 @@ function ss_show_breadcrumb() {
 }
 
 function wpdocs_enqueue_custom_admin_style($hook_suffix) {
-    // Check if it's the ?page=yourpagename. If not, just empty return before executing the folowing scripts. 
     if($hook_suffix != 'alcof-options_page_setup_slider') {
         return;
     }
@@ -300,120 +299,47 @@ function setup_slider(){
 function services(){
     ?>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-<style type="text/css">
-    fieldset {
-     
-      padding:10px !important;
-      border:1px solid #E8E7E6  !important;
-    }
-
-    legend { 
-     
-      font-size:16px !important;
-      text-transform:uppercase;
-      text-align: center;
-    }
-
-   .postbox{
-
-    margin:50px;
-    padding:50px;
-    padding-bottom:20px;
-
-   } 
-
-</style>
-
-
-<div class="postbox">
-<div class="form-body row">
-
- <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post" enctype="multipart/form-data">
-        
-<div class="col-md-3">
-    <fieldset>
-        <legend>Recherche de produi</legend>
-          
-         <div class="form-group form-md-line-input">    
-       
-        <textarea name="intro_1" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_1');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-
- 
-
-</div>
-
-<div class="col-md-3">
-    <fieldset>
-        <legend>Legistique</legend>
-          
-         <div class="form-group form-md-line-input">
-       
-        <textarea name="intro_2" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_2');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-
-</div>
-
-
-
-<div class="col-md-3">
-    <fieldset>
-        <legend>Distribution</legend>
-          
-         <div class="form-group form-md-line-input">
-       
-        <textarea name="intro_3" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_3');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-</div>
-
-<div class="col-md-3">
-    <fieldset>
-        <legend>Avantages</legend>
-          
-         <div class="form-group form-md-line-input">
-       
-        <textarea name="intro_4" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_4');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-</div>
-
-
-
-
+    <div class="update-post">
+        <div class="form-body container-fluid">
+            <h2 class="update-heading"><span class="dashicons dashicons-admin-generic"></span>Hero Header</h2>
+            <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" enctype="multipart/form-data" method="post">
+                <div class="row section-edit">
+                    <div class="col-md-4">
+                            <div class="form-group form-md-line-input">
+                                <label class=" control-label">Intro Heading</label>   
+                                    <textarea name="intro_1" class="form-control" rows="5" autocomplete="off">
+                                        <?php echo get_option('intro_1');?>
+                                    </textarea> 
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="form-group form-md-line-input">
+                                <label class=" control-label">Intro Heading</label>   
+                                    <textarea name="intro_1" class="form-control" rows="5" autocomplete="off">
+                                        <?php echo get_option('intro_2');?>
+                                    </textarea> 
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="form-group form-md-line-input">
+                                <label class=" control-label">Intro Heading</label>   
+                                    <textarea name="intro_1" class="form-control" rows="5" autocomplete="off">
+                                        <?php echo get_option('intro_3');?>
+                                    </textarea> 
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-md-12">
+                        <input type="submit" name="intro_btn" value="Update Text" class="btn btn-primary">
+                    </div>
+                </div>
+            </form>
         </div>
-        <hr>
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary" name="intro_btn">Submit</button>
-        </div>
-
-</form>
-
-</div>
+    </div>
 
 <?php
 
