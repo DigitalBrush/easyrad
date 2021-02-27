@@ -38,7 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="top-nav">
 			<div class="container-fluid">
-				<div class="row top-bar">
+				<div class="row top-bar d-md-flex d-none">
 					<div class="col-lg-8 col-md-6 d-flex align-items-center">
 						<div class="breadcrumbs-top">
 							<?php echo do_shortcode("[show-breadcrumb]"); ?>
@@ -62,30 +62,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 		</div>
 
-		<nav id="main-nav" class="navbar navbar-expand-lg navbar-light" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'alcof' ); ?>
 			</h2>
 			
-
-		<?php if ( 'container' === $container ) : ?>
-			<div class="container">
-		<?php endif; ?>
+			<div class="container-fluid h-100">
 				
-				<div class="row header-bar">
+				<div class="row header-bar h-100">
 					<div class="col-lg-2 logo-bar">
-
+						<div class="toggler-button d-lg-none d-flex">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'alcof' ); ?>">
+							<span class="material-icons">menu</span>
+							</button>	
+						</div>
+						<div class="brand">
 							<!-- Your site title as branding in the menu -->
 							<?php if ( ! has_custom_logo() ) { ?>
 
 							<?php } else {
 							the_custom_logo();
 							} ?><!-- end custom logo -->
+						</div>
+						<div class="contact-top d-md-none d-flex">
+							<span class="material-icons">call</span>
+						</div>
 						
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'alcof' ); ?>">
-							<span class="navbar-toggler-icon"></span>
-						</button>
 					</div>
 					
 

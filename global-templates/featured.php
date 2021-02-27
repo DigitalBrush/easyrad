@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
          
 			<div class="row section-services">
 
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/check-circle-solid.svg" />
@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/iconDeliveryTruck.svg" />
@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/iconDistribution.svg" />
@@ -49,18 +49,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="service-desc">
 							<h3 class="title">Distribution</h3>
 							<p class="description"><?php echo get_option('intro_3');?>.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-3">
-					<div class="single-service">
-						<div class="service-icon">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/iconAdvantages.svg" />
-						</div>
-						<div class="service-desc">
-							<h3 class="title">Avantages</h3>
-							<p class="description"><?php echo get_option('intro_4');?></p>
 						</div>
 					</div>
 				</div>

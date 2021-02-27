@@ -7,36 +7,70 @@
 @import "understrap/understrap";
 @import "theme/theme";
 
-.update-post {
-    margin: $spacing-lg;
-    border: 3px solid $gray-300;
-    border-radius: $spacing-xs;
-    .update-heading {
-        padding: $spacing-lg 0;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 18px;
-        font-weight: 500;
-        border-bottom: 3px solid $gray-300;
-    }
-    .section-edit {
-        border-bottom: 3px solid $gray-300;
-        padding: $spacing-lg 0;
-        .heading-preview-wrapper {
-            padding: $spacing-lg 0;
-        }
-        .text-preview-wrapper {
-            padding: $spacing-lg 0;
-            p {
-                color: $alcof-gray;
-                font-size: 18px;
+.update-section {
+    margin: $spacing-sm;
+    border: 1px solid $gray-300;
+    overflow: hidden;
+    .options-header {
+        background: $gray-300 /*url("../img/admin-vault-bg.jpg")*/;
+        padding: $spacing $spacing-lg;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .brand {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo {
+                width: 120px;
+                display: inline-block;
             }
         }
-        .image-preview-wrapper {
-            padding: $spacing-lg 0;
+    }
+    .options-body {
+        padding: $spacing-lg;
+        .nav {
+            .nav-pills {
+                .nav-link {
+                    border-radius: 0;
+                }
+            }
         }
-        .control-label {
-            padding-bottom: $spacing-md;
+        .update-post {
+            border-left: 1px solid $gray-300;
+            .update-heading {
+                padding-bottom: $spacing-lg;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 20px;
+                font-weight: 500;
+                border-bottom: 3px solid $gray-300;
+            }
+            .section-edit {
+                border-bottom: 3px solid $gray-300;
+                padding: $spacing-lg 0;
+                .heading-preview-wrapper {
+                    padding: $spacing-lg 0;
+                }
+                .text-preview-wrapper {
+                    padding: $spacing-lg 0;
+                    p {
+                        color: $alcof-gray;
+                        font-size: 18px;
+                    }
+                }
+                .image-preview-wrapper {
+                    padding: $spacing-lg 0;
+                }
+                .control-label {
+                    padding-bottom: $spacing-md;
+                }
+            }
         }
     }
+    
 }

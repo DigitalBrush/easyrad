@@ -90,13 +90,17 @@ function ss_show_breadcrumb() {
 }
 
 function wpdocs_enqueue_custom_admin_style($hook_suffix) {
-    if($hook_suffix != 'alcof-options_page_setup_slider') {
+    if($hook_suffix != 'appearance_page_alcof_options') {
         return;
     }
 
     // Load your css.
     wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.min.css', false, '1.0.0' );
     wp_enqueue_style( 'custom_wp_admin_css' );
+
+    // Load your js.
+    wp_register_script( 'custom_wp_admin_js', get_template_directory_uri() . '/js/theme.js', false, '1.0.0' );
+    wp_enqueue_script( 'custom_wp_admin_js' );
 }
 add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
 
@@ -140,230 +144,240 @@ function customize_homepage() {
 function alcof_options(){
     ?>
 
-    <link href="<?php echo get_template_directory_uri();?>/lumino/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri();?>/lumino/css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri();?>/lumino/css/datepicker3.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri();?>/lumino/css/styles.css" rel="stylesheet">
+
     
-    <!--Custom Font-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 
-    <nav class="navbar navbar-custom" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="#"><span>Alcof</span>Options</a>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown">
+    <div class="update-section">
+        <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" enctype="multipart/form-data" method="post">
+            <div class="options-header">
 
-                      <button class="btn btn-primary">Save All</button>
-                   
-                    </li>
-                   
-                </ul>
+                <div class="brand">
+                    
+                    <div class="logo">
+                        <?php the_custom_logo(); ?>
+                    </div>
+                    <div class="title">
+                        <span class="dashicons dashicons-admin-generic"></span>
+                        Theme Options
+                    </div>
+                </div>
+                <div class="actions">
+                    <input type="submit" name="save_options_btn" value="Save all" class="btn btn-primary">
+                </div>
             </div>
-        </div><!-- /.container-fluid -->
-    </nav>
+            <div class="container-fluid options-body">
+                <div class="row">
+                    <div aria-orientation="vertical" class="col-md-2 nav flex-column nav-pills" id="alcofTab" role="tablist">
+                        <a aria-controls="slider" aria-selected="true" class="nav-link active" data-toggle="tab" href="#slider" id="slider-tab" role="tab">Home Hero</a> 
+                        <a aria-controls="services" aria-selected="true" class="nav-link" data-toggle="tab" href="#services" id="services-tab" role="tab">Services</a> 
+                        <a aria-controls="services" aria-selected="true" class="nav-link" data-toggle="tab" href="#brands" id="brand-tab" role="tab">Brands</a>
+                    </div>
+                    <div class="col-md-10 tab-content" id="alcofTabOptions">
+                        <div aria-labelledby="slider-tab" class="tab-pane fade show active" id="slider" role="tabpanel">
+                            <div class="update-post">
+                                <div class="form-body container-fluid">
 
 
-<style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-
-/* Style the tab */
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  border-right: none;
-  background-color: #f1f1f1;
-  min-height: 300px;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 10px 10px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #1883EC;
-  color: #fff;
-}
-
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;  
-  border-left: none;
-  min-height: 300px;
-}
-</style>
-
-
-<div class="col-md-12">
-
-    <div class="tab col-md-2 nav nav-pills">
-      <button class="tablinks" onclick="openTab(event, 'slider')" id="defaultOpen">Slider</button>
-      <button class="tablinks" onclick="openTab(event, 'services')">Services</button>
-      <button class="tablinks" onclick="openTab(event, 'brands')">Brands</button>
-
-
+                                    <h2 class="update-heading">Hero Header</h2>
+                                        <div class="row section-edit">
+                                            <div class="col-md-12">
+                                                <div class="form-group form-md-line-input">
+                                                    <label class=" control-label">Intro Heading</label> 
+                                                    <textarea class="form-control" name="hero_intro_heading">
+                                                        <?php echo get_option('hero_intro_heading');?>
+                                                    </textarea>
+                                                    <div class="form-control-focus"></div>
+                                                </div>
+                                                <div class='heading-preview-wrapper'>
+                                                    <?php
+                                                        if(get_option('hero_intro_heading')!="")
+                                                        echo "<h1 class='big-heading'>". get_option('hero_intro_heading') ."</h1>";
+                                                    ?> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group form-md-line-input">
+                                                    <label class=" control-label">Intro Text</label> 
+                                                    <textarea class="form-control" name="hero_intro_text"><?php echo get_option('hero_intro_text');?></textarea>
+                                                    <div class="form-control-focus"></div>
+                                                </div>
+                                                <div class='text-preview-wrapper'>
+                                                    <?php
+                                                        if(get_option('hero_intro_text')!="")
+                                                        echo "<p>". get_option('hero_intro_text') ."</p>";
+                                                    ?> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group form-md-line-input">
+                                                    <label class=" control-label">Intro Subheading</label> 
+                                                    <textarea class="form-control" name="hero_intro_subheading"><?php echo get_option('hero_intro_subheading');?></textarea>
+                                                    <div class="form-control-focus"></div>
+                                                </div>
+                                                <div class='text-preview-wrapper'>
+                                                    <?php
+                                                        if(get_option('hero_intro_subheading')!="")
+                                                        echo "<p>". get_option('hero_intro_subheading') ."</p>";
+                                                    ?> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input type="submit" name="slider_btn" value="Update Text" class="btn btn-primary">
+                                            </div>
+                                        </div>
+                                    <div class="row section-edit">
+                                        <div class="col-md-6">
+                                            <div class="form-group form-md-line-input">
+                                                <label class="control-label">Header Image</label> 
+                                            <?php
+                                                if ( isset( $_POST['submit_image_selector'] ) && isset( $_POST['image_attachment_id'] ) ) :
+                                                        update_option( 'media_selector_attachment_id', absint( $_POST['image_attachment_id'] ) );
+                                                    endif;
+                                                    wp_enqueue_media();
+                                                    ?>
+                                                    <form method='post'>
+                                                        <input id="upload_image_button" type="button" class="button" value="<?php _e( 'Upload image' ); ?>" />
+                                                        <input type='hidden' name='image_attachment_id' id='image_attachment_id' value='<?php echo get_option( 'media_selector_attachment_id' ); ?>'>
+                                                        <input type="submit" name="submit_image_selector" value="Update Image" class="btn btn-primary">
+                                                        
+                                                    </form>
+                                                <?php $my_saved_attachment_post_id = get_option( 'media_selector_attachment_id', 0 ); ?>
+                                                    <script type='text/javascript'>
+                                                        jQuery( document ).ready( function( $ ) {
+                                                            // Uploading files
+                                                            var file_frame;
+                                                            var wp_media_post_id = wp.media.model.settings.post.id; // Store the old id
+                                                            var set_to_post_id = <?php echo $my_saved_attachment_post_id; ?>; // Set this
+                                                            jQuery('#upload_image_button').on('click', function( event ){
+                                                                event.preventDefault();
+                                                                // If the media frame already exists, reopen it.
+                                                                if ( file_frame ) {
+                                                                    // Set the post ID to what we want
+                                                                    file_frame.uploader.uploader.param( 'post_id', set_to_post_id );
+                                                                    // Open frame
+                                                                    file_frame.open();
+                                                                    return;
+                                                                } else {
+                                                                    // Set the wp.media post id so the uploader grabs the ID we want when initialised
+                                                                    wp.media.model.settings.post.id = set_to_post_id;
+                                                                }
+                                                                // Create the media frame.
+                                                                file_frame = wp.media.frames.file_frame = wp.media({
+                                                                    title: 'Select a image to upload',
+                                                                    button: {
+                                                                        text: 'Use this image',
+                                                                    },
+                                                                    multiple: false // Set to true to allow multiple files to be selected
+                                                                });
+                                                                // When an image is selected, run a callback.
+                                                                file_frame.on( 'select', function() {
+                                                                    // We set multiple to false so only get one image from the uploader
+                                                                    attachment = file_frame.state().get('selection').first().toJSON();
+                                                                    // Do something with attachment.id and/or attachment.url here
+                                                                    $( '#image-preview' ).attr( 'src', attachment.url ).css( 'width', 'auto' );
+                                                                    $( '#image_attachment_id' ).val( attachment.id );
+                                                                    // Restore the main post ID
+                                                                    wp.media.model.settings.post.id = wp_media_post_id;
+                                                                });
+                                                                    // Finally, open the modal
+                                                                    file_frame.open();
+                                                            });
+                                                            // Restore the main ID when the add media button is pressed
+                                                            jQuery( 'a.add_media' ).on( 'click', function() {
+                                                                wp.media.model.settings.post.id = wp_media_post_id;
+                                                            });
+                                                        });
+                                                    </script>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class='image-preview-wrapper'>
+                                                <img id='image-preview' src='<?php echo wp_get_attachment_url( get_option( 'media_selector_attachment_id' ) ); ?>' width='300'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="services-tab" class="tab-pane fade" id="services" role="tabpanel">
+                            <div class="update-post">
+                                <div class="form-body container-fluid">
+                                    <h2 class="update-heading">Services</h2>
+                                    <div class="row section-edit">
+                                        <div class="col-md-4">
+                                            <div class="form-group form-md-line-input">
+                                                <label class=" control-label">Intro Heading</label>   
+                                                    <textarea name="intro_1" class="form-control" rows="5" autocomplete="off">
+                                                        <?php echo get_option('intro_1');?>
+                                                    </textarea> 
+                                                <div class="form-control-focus"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group form-md-line-input">
+                                                    <label class=" control-label">Intro Heading</label>   
+                                                        <textarea name="intro_2" class="form-control" rows="5" autocomplete="off">
+                                                            <?php echo get_option('intro_2');?>
+                                                        </textarea> 
+                                                <div class="form-control-focus"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group form-md-line-input">
+                                                    <label class=" control-label">Intro Heading</label>   
+                                                        <textarea name="intro_3" class="form-control" rows="5" autocomplete="off">
+                                                            <?php echo get_option('intro_3');?>
+                                                        </textarea> 
+                                                <div class="form-control-focus"> </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="brands-tab" class="tab-pane fade" id="brands" role="tabpanel">
+                            <div class="update-post">
+                                <div class="form-body container-fluid">
+                                    <h2 class="update-heading">Brands</h2>
+                                    <div class="row section-edit">
+                                        <div class="col-md-4">
+                                            <div class="form-group form-md-line-input">
+                                                <label class=" control-label">Intro Heading</label>   
+                                                    <textarea name="homeintro_1" class="form-control" rows="5" autocomplete="off">
+                                                        <?php echo get_option('homeintro_1');?>
+                                                    </textarea> 
+                                                <div class="form-control-focus"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group form-md-line-input">
+                                                    <label class=" control-label">Intro Heading</label>   
+                                                        <textarea name="homeintro_1" class="form-control" rows="5" autocomplete="off">
+                                                            <?php echo get_option('homeintro_2');?>
+                                                        </textarea> 
+                                                <div class="form-control-focus"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="form-group form-md-line-input">
+                                                    <label class=" control-label">Intro Heading</label>   
+                                                        <textarea name="homeintro_1" class="form-control" rows="5" autocomplete="off">
+                                                            <?php echo get_option('homeintro_3');?>
+                                                        </textarea> 
+                                                <div class="form-control-focus"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-
-
-
-    <div id="slider" class="tabcontent col-md-10">
-          
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Sliders</h2>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Slide1</div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Slide 2</div>
-                      <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-success">
-                    <div class="panel-heading">Slide 3</div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.row -->
-            
-    </div>
-
-
-
-    <div id="services" class="tabcontent col-md-10" >
-         <div class="row">
-              <div class="col-lg-12">
-                <h2>Services</h2>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">Info Panel
-                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">Warning Panel
-                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">Danger Panel
-                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.row -->
-
-    </div>
-
-
-
-    <div id="brands" class="tabcontent col-md-10">
-        <div class="row">
-              <div class="col-lg-12">
-                <h2>Brands</h2>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">Info Panel
-                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">Warning Panel
-                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">Danger Panel
-                        <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui urna.</p>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.row -->>
-    </div>
-</div>
-
-
-
-
-<script>
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-
 
 
 
@@ -373,145 +387,7 @@ document.getElementById("defaultOpen").click();
 <?php
 
 
-}
-
-function setup_slider(){
-    ?>
-
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <div class="update-post">
-        <div class="form-body container-fluid">
-
-
-            <h2 class="update-heading"><span class="dashicons dashicons-admin-generic"></span>Hero Header</h2>
-            <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" enctype="multipart/form-data" method="post">
-                <div class="row section-edit">
-                    <div class="col-md-4">
-                        <div class="form-group form-md-line-input">
-                            <label class=" control-label">Intro Heading</label> 
-                            <textarea class="form-control" name="hero_intro_heading">
-                                <?php echo get_option('hero_intro_heading');?>
-                            </textarea>
-                            <div class="form-control-focus"></div>
-                        </div>
-                        <div class='heading-preview-wrapper'>
-                            <?php
-                                if(get_option('hero_intro_heading')!="")
-                                echo "<h1 class='big-heading'>". get_option('hero_intro_heading') ."</h1>";
-                            ?> 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group form-md-line-input">
-                            <label class=" control-label">Intro Text</label> 
-                            <textarea class="form-control" name="hero_intro_text"><?php echo get_option('hero_intro_text');?></textarea>
-                            <div class="form-control-focus"></div>
-                        </div>
-                        <div class='text-preview-wrapper'>
-                            <?php
-                                if(get_option('hero_intro_text')!="")
-                                echo "<p>". get_option('hero_intro_text') ."</p>";
-                            ?> 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group form-md-line-input">
-                            <label class=" control-label">Intro Subheading</label> 
-                            <textarea class="form-control" name="hero_intro_subheading"><?php echo get_option('hero_intro_subheading');?></textarea>
-                            <div class="form-control-focus"></div>
-                        </div>
-                        <div class='text-preview-wrapper'>
-                            <?php
-                                if(get_option('hero_intro_subheading')!="")
-                                echo "<p>". get_option('hero_intro_subheading') ."</p>";
-                            ?> 
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <input type="submit" name="slider_btn" value="Update Text" class="btn btn-primary">
-                    </div>
-                </div>
-            </form>
-            <div class="row section-edit">
-                <div class="col-md-6">
-                    <div class="form-group form-md-line-input">
-                        <label class="control-label">Header Image</label> 
-                    <?php
-                        if ( isset( $_POST['submit_image_selector'] ) && isset( $_POST['image_attachment_id'] ) ) :
-                                update_option( 'media_selector_attachment_id', absint( $_POST['image_attachment_id'] ) );
-                            endif;
-                            wp_enqueue_media();
-                            ?>
-                            <form method='post'>
-                                <input id="upload_image_button" type="button" class="button" value="<?php _e( 'Upload image' ); ?>" />
-                                <input type='hidden' name='image_attachment_id' id='image_attachment_id' value='<?php echo get_option( 'media_selector_attachment_id' ); ?>'>
-                                <input type="submit" name="submit_image_selector" value="Update Image" class="btn btn-primary">
-                                
-                            </form>
-                        <?php $my_saved_attachment_post_id = get_option( 'media_selector_attachment_id', 0 ); ?>
-                            <script type='text/javascript'>
-                                jQuery( document ).ready( function( $ ) {
-                                    // Uploading files
-                                    var file_frame;
-                                    var wp_media_post_id = wp.media.model.settings.post.id; // Store the old id
-                                    var set_to_post_id = <?php echo $my_saved_attachment_post_id; ?>; // Set this
-                                    jQuery('#upload_image_button').on('click', function( event ){
-                                        event.preventDefault();
-                                        // If the media frame already exists, reopen it.
-                                        if ( file_frame ) {
-                                            // Set the post ID to what we want
-                                            file_frame.uploader.uploader.param( 'post_id', set_to_post_id );
-                                            // Open frame
-                                            file_frame.open();
-                                            return;
-                                        } else {
-                                            // Set the wp.media post id so the uploader grabs the ID we want when initialised
-                                            wp.media.model.settings.post.id = set_to_post_id;
-                                        }
-                                        // Create the media frame.
-                                        file_frame = wp.media.frames.file_frame = wp.media({
-                                            title: 'Select a image to upload',
-                                            button: {
-                                                text: 'Use this image',
-                                            },
-                                            multiple: false // Set to true to allow multiple files to be selected
-                                        });
-                                        // When an image is selected, run a callback.
-                                        file_frame.on( 'select', function() {
-                                            // We set multiple to false so only get one image from the uploader
-                                            attachment = file_frame.state().get('selection').first().toJSON();
-                                            // Do something with attachment.id and/or attachment.url here
-                                            $( '#image-preview' ).attr( 'src', attachment.url ).css( 'width', 'auto' );
-                                            $( '#image_attachment_id' ).val( attachment.id );
-                                            // Restore the main post ID
-                                            wp.media.model.settings.post.id = wp_media_post_id;
-                                        });
-                                            // Finally, open the modal
-                                            file_frame.open();
-                                    });
-                                    // Restore the main ID when the add media button is pressed
-                                    jQuery( 'a.add_media' ).on( 'click', function() {
-                                        wp.media.model.settings.post.id = wp_media_post_id;
-                                    });
-                                });
-                            </script>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class='image-preview-wrapper'>
-                        <img id='image-preview' src='<?php echo wp_get_attachment_url( get_option( 'media_selector_attachment_id' ) ); ?>' width='300'>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
-<?php
-
-
-    if(isset($_REQUEST["slider_btn"]))
+    if(isset($_REQUEST["save_options_btn"]))
     {
     
         $hero_intro_heading = $_REQUEST["hero_intro_heading"];
@@ -528,6 +404,24 @@ function setup_slider(){
 
         add_option('hero_intro_subheading',$hero_intro_subheading,'','yes');
         update_option('hero_intro_subheading',$hero_intro_subheading);
+
+        $intro_1 = $_REQUEST["intro_1"];
+        $intro_2 = $_REQUEST["intro_2"];
+        $intro_3 = $_REQUEST["intro_3"];
+        $intro_4 = $_REQUEST["intro_4"];
+        
+
+        add_option('intro_1',$intro_1,'','yes');
+        update_option('intro_1',$intro_1);
+
+        add_option('intro_2',$intro_2,'','yes');
+        update_option('intro_2',$intro_2);
+
+        add_option('intro_3',$intro_3,'','yes');
+        update_option('intro_3',$intro_3);
+
+        add_option('intro_4',$intro_4,'','yes');
+        update_option('intro_4',$intro_4);
 
     }
 

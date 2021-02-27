@@ -171,9 +171,12 @@ h3 {
     }
 }
 
-.material-icons {
-    margin-right: $spacing;
-}
+// .material-icons {
+//     margin-right: $spacing;
+//     @include media-breakpoint-down(xs) {
+//         margin-right: 0 !important;
+//     }
+// }
 
 .section-services {
     padding: $spacing-xxl 0;

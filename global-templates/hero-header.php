@@ -33,6 +33,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						echo $img[0];
 						?>" style="width:100%"/>
 					</div>
+					<div class="slider-logo">
+						<img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-fichet.svg" height="50"/>
+					</div>
 				</div>
 			</div>
 

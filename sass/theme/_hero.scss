@@ -16,6 +16,10 @@
                 margin-right: -350px;
                 max-width: 700px;
             }
+            @include media-breakpoint-down(sm) {
+                margin-right: -150px;
+                max-width: 500px;
+            }
             .big-heading {
                 padding: 0 0 $spacing-lg 0;
                 position: relative;
@@ -60,6 +64,14 @@
                 object-fit: cover;
                 height: 100%;
             }
+        }
+        .slider-logo {
+            background: $white;
+            padding: $spacing $spacing-lg;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-height: 100px;
         }
     }
 }
