@@ -47,8 +47,8 @@
                 margin: 0 $spacing;
                 color: $alcof-dark;
                 text-transform: uppercase;
-                letter-spacing: 3px;
-                font-size: 14px;
+                letter-spacing: 2px;
+                font-size: 12px;
                 font-weight: 500;
                 a {
                     color: $alcof-dark !important;
@@ -169,9 +169,11 @@
             color: $alcof-dark;
             &:hover {
                 font-weight: 600;
+                color: $alcof-dark;
             }
             &:active {
-                font-weight: 600;
+                font-weight: 700;
+                color: $alcof-dark !important;
             }
         }
     }

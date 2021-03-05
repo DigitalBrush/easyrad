@@ -11,11 +11,11 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-	<div class="section">
+	<div class="page-section">
 
 <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
-<h1 class="section-title">Meilleures ventes</h1>
+<h2 class="section-title">Nos produits phares</h2>
 <div class="row product-section">         
 
  

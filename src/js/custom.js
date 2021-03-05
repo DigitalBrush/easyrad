@@ -1,4 +1,6 @@
 jQuery(function($){
+
+
     $('.logo-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -20,7 +22,33 @@ jQuery(function($){
         }
     })
 
-    $('#main-menu .home-repair-cta').children('.nav-link').addClass('btn btn-primary');
+    $('.category-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
+            }
+        }
+    })
+
+
+    if (window.matchMedia("(max-width: 767px)").matches)  
+    { 
+        $('.category-section').addClass('owl-carousel owl-theme category-carousel');
+    } else { 
+        
+    } 
 
 
 });

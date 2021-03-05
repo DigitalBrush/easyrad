@@ -13,7 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="section">
   <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
-    <h1 class="section-title">Nos Marques</h1>
+    <h1 class="section-title">Que voulez-vous protéger ?</h1>
 		<div class="row logo-section">
       <div class="owl-carousel owl-theme logo-carousel">
         <?php for( $i=1;$i<6;$i++):?>

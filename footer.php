@@ -13,6 +13,20 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+<div class="wrapper footer-cta" id="wrapper-footer">
+	<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-6">
+				<h2 class="section-title">Besoin d’un devis gratuit ?</h2>
+				<div class="text-body">
+					<p>La référence sécurité à Paris depuis 1985. Plus grand Point Fort Fichet d’Europe. 8 boutiques à Paris et en Ile-de-France.</p>
+					<a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">call</span>Contactez-nous</a>
+				</div>
+			</div><!--col end -->
+		</div><!-- row end -->
+	</div><!-- row end -->
+</div>
+
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper footer-bottom" id="wrapper-footer">
@@ -27,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						&copy; <?php echo date("Y"); ?> New Business Europ
+						&copy; <?php echo date("Y"); ?> Alcof sécurité
 
 					</div><!-- .site-info -->
 

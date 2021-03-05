@@ -11,102 +11,53 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-		<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+	<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+		<div class="page-section">
 
-         
+			<h2 class="section-title">Que voulez-vous protéger ?</h2>
 			<div class="row section-services">
 
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
-						<div class="service-icon">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/check-circle-solid.svg" />
+						<div class="service-image">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/gray-house.png" />
 
 						</div>
 						<div class="service-desc">
-							<h3 class="title">Recherche de produit</h3>
-							<p class="description"><?php echo get_option('intro_1');?></p>
+							<h4 class="title"><?php echo get_option('intro_1');?></h4>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
-						<div class="service-icon">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/iconDeliveryTruck.svg" />
+						<div class="service-image">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/sale-storefront.png" />
 						</div>
 						<div class="service-desc">
-							<h3 class="title">Logistique & expédition</h3>
-							<p class="description"><?php echo get_option('intro_2');?></p>
+							<h4 class="title"><?php echo get_option('intro_2');?></h4>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
-						<div class="service-icon">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/iconDistribution.svg" />
+						<div class="service-image">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/apartments-france.png" />
 						</div>
 						<div class="service-desc">
-							<h3 class="title">Distribution</h3>
-							<p class="description"><?php echo get_option('intro_3');?>.</p>
+							<h4 class="title"><?php echo get_option('intro_3');?></h4>
 						</div>
 					</div>
 				</div>
 
 			</div>
+		</div>
 
-			<div class="row category-section">
-
-				  <?php
-
-                    $taxonomy     = 'product_cat';
-                    $orderby      = 'name';  
-                    $show_count   = 0;      // 1 for yes, 0 for no
-                    $pad_counts   = 0;      // 1 for yes, 0 for no
-                    $hierarchical = 1;      // 1 for yes, 0 for no  
-                    $title        = '';  
-                    $empty        = 1;
-
-                    $args = array(
-                           'taxonomy'     => $taxonomy,
-                           'orderby'      => $orderby,
-                           'show_count'   => $show_count,
-                           'pad_counts'   => $pad_counts,
-                           'hierarchical' => $hierarchical,
-                           'title_li'     => $title,
-                           'hide_empty'   => $empty
-                    );
-                   $all_categories = get_categories( $args );
-               
-                   foreach ($all_categories as $cat) {
-                      if($cat->category_parent == 0) {
-                          $category_id = $cat->term_id; ?>  
-
-
-				<div class="col-sm-4">
-					<div class="category">
-						<div class="category-inner">
-						
-							<h2><?php echo $cat->name  ?></h2>
-							<p><?php echo $cat->description; ?></p>
-							<a href="<?php echo get_term_link($cat->slug, 'product_cat');?>" class="btn btn-lg btn-secondary">Voir les produits</a>
-						</div>
-						<div class="category-image">
-						<?php
-							$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );    
-							$image = wp_get_attachment_url( $thumbnail_id ); 
-						?>
-						<img src="<?php echo $image; ?>" style="width:100%; height:200px">
-					  </div>
-				  	</div>
-                </div>
-                  <?php
-
-                          
-                    }       
-                  }
-                  ?>
-
+		<div class="page-section media">
+			<div class="media-coverage">
+				<h5 class="section-title mute">Vu à la télé</h5>
+				<?php echo do_shortcode('[gslogo id=2]'); ?>
 			</div>
-
+		</div>
 	</div>

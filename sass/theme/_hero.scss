@@ -40,6 +40,9 @@
                 span {
                     color: $primary;
                 }
+                &:after {
+                    display: none;
+                }
             }
             .slider-body {
                 color: $alcof-gray;
