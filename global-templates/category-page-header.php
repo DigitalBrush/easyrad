@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="row">
 						<div class="col-sm-4">
 							<div class="header-text">
-								<h1 class="headline"><?php echo wp_title(''); ?></h1>
+								<h1 class="headline"><?php echo single_term_title(''); ?></h1>
 								<p class="header-intro">Porte blindée, alarme, vidéo surveillance, coffre-fort, grille de defense... Alcof protège ce que vous avez de plus cher.</p>
 							</div>
 						</div>

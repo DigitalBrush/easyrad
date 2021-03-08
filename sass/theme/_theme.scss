@@ -524,6 +524,11 @@ h4 {
             .category-inner {
                 padding: $spacing-lg 0;
                 word-wrap: break-word;
+                .category-title {
+                    a {
+                        color: $alcof-dark;
+                    }
+                }
                 .product-count {
                     text-transform: uppercase;
                     letter-spacing: 2px;

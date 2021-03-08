@@ -60,12 +60,13 @@ $container = get_theme_mod( 'understrap_container_type' );
               <?php
                 $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );    
                 $image = wp_get_attachment_url( $thumbnail_id ); 
+                $link = get_term_link( (int)$cat->term_id, 'product_cat' );
               ?>
               <img src="<?php echo $image; ?>">
 					  </div>
 
 						<div class="category-inner">
-							<h4><?php echo $cat->name; ?></h4>
+							<h4 class="category-title"><a href=<?php echo $link; ?>><?php echo $cat->name; ?></a></h4>
               <h6 class="product-count"><?php echo $cat->count; ?> Produits</h6>
 							<p><?php echo $cat->description; ?></p>
 						</div>

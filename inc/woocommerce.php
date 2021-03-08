@@ -39,6 +39,7 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 	 * Display the theme specific start of the page wrapper.
 	 */
 	function understrap_woocommerce_wrapper_start() {
+		get_template_part( 'global-templates/category-page-header' );
 		$container = get_theme_mod( 'understrap_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
@@ -58,6 +59,7 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 		echo '</div><!-- .row -->';
 		echo '</div><!-- Container end -->';
 		echo '</div><!-- Wrapper end -->';
+		
 	}
 }
 

@@ -1,4 +1,7 @@
 .woocommerce {
+    .woocommerce-breadcrumb {
+        display: none;
+    }
 	div.product {
 		margin-bottom: 0;
         position: relative;
@@ -238,9 +241,8 @@
     
     .products-area {
         padding: 0;
-        border-top: 1px solid $gray-300;
         @include media-breakpoint-up(md) {
-            border-left: 1px solid $gray-300;
+            padding-left: $spacing-md;
         }
         ul.products {
             border-top: 1px solid $gray-300;
@@ -255,16 +257,14 @@
         font-weight: 400;
     }
     .woocommerce-result-count {
-        float: right;
-        padding: $spacing-md 0;
-        min-height: 70px;
+        padding-bottom: $spacing-sm;
         margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
     }
     .woocommerce-ordering {
-        float: left;
-        padding: $spacing-sm 0;
-        min-height: 70px;
-        margin: 0 $spacing;
+        display: none;
     }
     .star-rating {
         span {

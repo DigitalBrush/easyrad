@@ -17,9 +17,13 @@ do_action( 'woocommerce_before_main_content' );
 
 <div class="wrapper" id="page-wrapper">
 
+
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
+
+			
+
 			<header class="woocommerce-products-header">
 						<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 							<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
@@ -107,5 +111,8 @@ do_action( 'woocommerce_before_main_content' );
 
 </div><!-- #page-wrapper -->
 
+
 <?php
+get_template_part( 'global-templates/contact' );
+get_template_part( 'global-templates/categories-other' );
 get_footer();

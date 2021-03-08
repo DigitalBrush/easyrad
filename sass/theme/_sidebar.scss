@@ -1,12 +1,57 @@
 #left-sidebar {
     &.widget-area {
         padding: 0;
-        .widget-title {
-            border-top: 1px solid $gray-300;
-            padding: $spacing-md 0;
-            height: 70px;
-            margin: 0;
+        .widget {
+            .widget-title {
+                padding: 0 0 $spacing 0;
+                margin-bottom: $spacing-md;
+            }
+            &.widget_layered_nav {
+                border-bottom: 1px solid $gray-300;
+                padding: $spacing-sm 0;
+                .widget-title {
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 14px;
+                    margin-bottom: $spacing;
+                    &:after {
+                        display: none;
+                    }
+                }
+                .woocommerce-widget-layered-nav-list {
+                    .woocommerce-widget-layered-nav-list__item {
+                        a {
+                            color: $alcof-dark;
+                            position: relative;
+                            padding-left: $spacing-lg;
+                            &:before {
+                                position: absolute;
+                                content:"";
+                                width: 14px;
+                                height: 14px;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                left: 8px;
+                                background: $gray-200;
+                                border: 1px solid $gray-400;
+                            }
+                        }
+                        &--chosen {
+                            a {
+                                &:before {
+                                    background: $primary;
+                                    border: 1px solid $primary;
+                                }
+                            }
+                        }
+                        .count {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
+        
         ul.product-categories {
             padding: $spacing-lg $spacing-lg 0 0;
             list-style: none;
