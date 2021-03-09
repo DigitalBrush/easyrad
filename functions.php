@@ -89,6 +89,9 @@ function ss_show_breadcrumb() {
     }
 }
 
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 8 );
+
 function wpdocs_enqueue_custom_admin_style($hook_suffix) {
     if($hook_suffix != 'appearance_page_alcof_options') {
         return;

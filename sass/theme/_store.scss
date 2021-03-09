@@ -87,9 +87,24 @@
         }
         div.summary {
             .product_title {
-                font-size: 26px;
-                font-weight: 600;
                 text-transform: capitalize;
+                padding-bottom: $spacing-md;
+                margin-bottom: $spacing-lg;
+            }
+            .product-part {
+                border-bottom: 1px solid $gray-400;
+                padding: $spacing-lg 0 $spacing;
+                h2 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    margin-bottom: 0;
+                    padding: 0 0 $spacing-sm 0;
+                    &:after {
+                        display: none;
+                    }
+                }
             }
             p.price {
                 color: $alcof-dark;
@@ -103,7 +118,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: $spacing-lg 0;
+                padding: $spacing 0;
             }
             .woocommerce-tabs {
                 ul.tabs {

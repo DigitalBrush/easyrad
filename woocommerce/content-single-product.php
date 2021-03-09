@@ -49,36 +49,27 @@ if ( post_password_required() ) {
 		 * Hook: woocommerce_single_product_summary.
 		 *
 		 * @hooked woocommerce_template_single_title - 5
+		 * @hooked woocommerce_template_single_meta - 8
 		 * @hooked woocommerce_template_single_rating - 10
 		 * @hooked woocommerce_template_single_price - 10
 		 * @hooked woocommerce_template_single_excerpt - 20
 		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
 		 * @hooked woocommerce_template_single_sharing - 50
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
+		
 		do_action( 'woocommerce_single_product_summary' );
-		//get_template_part( 'woocommerce/single-product-reviews' );
-		do_action( 'woocommerce_after_single_product_summary' );
 		?>
+		<div class="product-part">
+			<?php get_template_part( 'woocommerce/single-product/description' );?>
+		</div>
+		<div class="product-part">
+			<?php get_template_part( 'woocommerce/single-product/additional-information' );?>
+		</div>
 	</div>
 
 </div></div>
 
-	<div class="col-md-12">
-	<?php
-
-	woocommerce_output_related_products();
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-
-	?>
-    </div>
 
 <?php 
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Hero setup
+ * Categories Page Top
  *
  * @package UnderStrap
  */
