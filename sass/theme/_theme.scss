@@ -153,7 +153,7 @@ h4 {
         background: $alcof-dark;
         color: $white;
         &.negative-margin {
-            margin-top: -300px;
+            margin-top: -200px;
         }
     }
 }
@@ -570,6 +570,105 @@ h4 {
     }
 }
 
+.about-page {
+    .page-header {
+        .header-row {
+            position: relative;
+            .header-text {
+                .headline {
+                    font-size: 200px;
+                    font-weight: 900;
+                    margin: 0;
+                    padding: 0;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            .about-text {
+                position: absolute;
+                right: 0;
+                bottom: -250px;
+                background: $alcof-dark;
+                padding: $spacing-xl;
+                color: $white;
+                max-width: 400px;
+                p {
+                    position: relative;
+                    padding-top: $spacing-lg;
+                    &:before {
+                        position: absolute;
+                        content:"";
+                        width: 40px;
+                        height: 5px;
+                        top: 0;
+                        left: 0;
+                        background: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .content-area {
+        padding: 100px 0;
+    }
+    .about-contact-block {
+        .about-contact {
+            .block-left {
+                position: relative;
+                background-image: url(../img/section-besoin-d-aide-web-reverse.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                padding-top: 50px;
+                min-height: 500px;
+                margin-left: -100px;
+                .block-left-content {
+                    padding-left: 250px;
+                    .heavy-weight {
+                        font-size: 200px;
+                        font-weight: 900;
+                        margin: 0;
+                        padding: 0;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+                .block-left-cta {
+                    position: absolute;
+                    bottom: -40px;
+                    left: 100px;
+                }
+            }
+            .block-right {
+                padding-top: 100px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .about-innovation {
+        padding: 400px 0 100px;
+        background: url(../img/vault-dark-bg-web.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        .innovation-content {
+            display: flex;
+            justify-content: center;
+            h2 {
+                padding: 0;
+                &:after {
+                    display: none;
+                }
+            }
+            .pretitle {
+                padding: $spacing-lg 0;
+            }
+        }
+    }
+}
+
 .services-page {
     .services-slider {
         @include media-breakpoint-up(lg) {
@@ -671,15 +770,32 @@ h4 {
     }
     .services-investment {
         padding: 400px 0 100px;
-        background: radial-gradient(transparent, $alcof-dark), url(../img/vault-dark-bg-web.jpg);
-        background-size: cover;
+        background: url(../img/vault-dark-bg-web.jpg);
+        background-size: contain;
         background-repeat: no-repeat;
+        background-position: bottom;
         backdrop-filter: grayscale(1);
         .investment-content {
             display: flex;
             justify-content: center;
+            h2 {
+                padding: 0;
+                &:after {
+                    display: none;
+                }
+            }
+            .pretitle {
+                padding: $spacing-lg 0;
+            }
         }
     }
+}
+
+.pretitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: $spacing-xs 0;
 }
 
 .contact-block {

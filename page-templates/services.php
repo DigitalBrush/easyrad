@@ -28,7 +28,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 						get_template_part( 'global-templates/services-slider' );
 						get_template_part( 'global-templates/services-contact' );
 						get_template_part( 'global-templates/services-investment' );
-						get_template_part( 'global-templates/categories-other' );
 					?>
 
 				</main><!-- #main -->
