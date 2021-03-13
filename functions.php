@@ -89,6 +89,10 @@ function ss_show_breadcrumb() {
     }
 }
 
+add_post_type_support( 'page', 'excerpt' );
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+
+
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 8 );
 
