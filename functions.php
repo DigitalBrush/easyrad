@@ -150,6 +150,15 @@ function customize_homepage() {
 
 require_once "alcof-options/alcof_options.php";
 
+function alcof_include_script() {
+    if ( ! did_action( 'wp_enqueue_media' ) ) {
+        wp_enqueue_media();
+    }
+}
+
+add_action( 'admin_enqueue_scripts', 'alcof_include_script' );
+
+
 add_filter('get_comment_author', 'my_comment_author', 10, 1);
 function my_comment_author( $author = '' ) {
 // Get the comment ID from WP_Query

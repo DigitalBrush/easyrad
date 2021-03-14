@@ -41,13 +41,17 @@
         if(get_option('hero_header_img')!="")
         echo "<img src='". get_option('hero_header_img')."' style='margin:auto;width:100%'/>";
         ?>
-            
-        <input type="file" name="hero_header_img" value="" class="form-control" autocomplete="off">
-        <div class="form-control-focus"> </div>
+    
+    <input type="text" class="process_custom_images" id="process_custom_images" name="hero_header_img" value="" placeholder="http://">
+    <button class="set_custom_images button" style="vertical-align: middle;">Select Image</button>
           
         </div> 
          
-             
+  
+
+</form>
+
+   
      
          
     </div>
@@ -71,7 +75,7 @@ if(isset($_REQUEST["save_options_btn"]))
     $hero_intro_heading = $_REQUEST["hero_intro_heading"];
     $hero_intro_subheading = $_REQUEST["hero_intro_subheading"];
     $hero_intro_text = $_REQUEST["hero_intro_text"];
-
+    $image_url = $_REQUEST["hero_header_img"];
     
 
     add_option('hero_intro_heading',$hero_intro_heading,'','yes');
@@ -83,29 +87,10 @@ if(isset($_REQUEST["save_options_btn"]))
     add_option('hero_intro_subheading',$hero_intro_subheading,'','yes');
     update_option('hero_intro_subheading',$hero_intro_subheading);
 
-               
-        require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-        require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-        require_once(ABSPATH . "wp-admin" . '/includes/media.php'); 
-       
-           if ($_FILES) {
+    add_option('hero_header_img',$image_url,'','yes');
+    update_option('hero_header_img',$image_url);
 
-               $i=1;
-              
-                foreach ($_FILES as $file => $array) {
-                    if ($_FILES[$file]['error']==0) {  
-                        $attach_id = media_handle_upload( $file, "" );
-                        $image_url_array=wp_get_attachment_image_src($attach_id,'full');
-                        $image_url = $image_url_array[0];
-                         
-                        add_option('hero_header_img',$image_url,'','yes');
-                        update_option('hero_header_img',$image_url);
-                    }
-                 
-                   $i++;
-                }            
-
-            }
+     
 
 }
 
