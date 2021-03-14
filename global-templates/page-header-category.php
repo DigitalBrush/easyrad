@@ -21,7 +21,7 @@ $image = wp_get_attachment_url( $thumbnail_id );
 
 		<div class="page-header" style="background: url('<?php echo $image; ?>'); background-size: cover; background-repeat: no-repeat;  background-position-y: center;">
 			<div class="container">
-				<div class="row">
+				<div class="row header-row">
 					<div class="col-sm-4">
 						<div class="header-text">
 							<h1 class="headline"><?php echo single_term_title(''); ?></h1>

@@ -1,0 +1,39 @@
+.accordions {
+    margin: 50px 0;
+	.accordions-head {
+        background: $gray-200 !important;
+        border-radius: 0 !important;
+        padding: $spacing-sm !important;
+        margin: $spacing-sm 0 0 !important;
+		.ui-accordion-header-icon {
+			display: none;
+		}
+		.accordion-minus {
+			display: none;
+		}
+	}
+	.accordions-head-title {
+		font-size: 14px;
+	}
+	.accordions-head.ui-state-active {
+		.accordion-plus {
+			display: none;
+		}
+		.accordion-minus {
+			display: inline-block;
+            color: $primary;
+		}
+	}
+	.accordion-content {
+		background: $gray-100 !important;
+		padding: $spacing-lg !important;
+        font-family: $body-font;
+        border-radius: 0 !important;
+	}
+	.accordion-icons.left {
+		float: left;
+	}
+	.accordion-icons.right {
+		float: right;
+	}
+}

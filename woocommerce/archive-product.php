@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-get_template_part( 'global-templates/category-page-header' );
+get_template_part( 'global-templates/page-header-category' );
 $container = get_theme_mod( 'understrap_container_type' );
 do_action( 'woocommerce_before_main_content' );
 ?>

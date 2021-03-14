@@ -1,5 +1,6 @@
 body {
     font-family: $body-font;
+    line-height: 1.8;
 }
 
 h1 {
@@ -570,16 +571,35 @@ h4 {
     }
 }
 
+.page-header {
+    .header-row {
+        .header-text {
+            color: $white;
+            .headline {
+                color: $white;
+            }
+        }
+    }
+}
+
 .about-page {
     .page-header {
         .header-row {
             position: relative;
             .header-text {
                 .headline {
+                    color: $alcof-dark;
                     font-size: 200px;
                     font-weight: 900;
                     margin: 0;
                     padding: 0;
+                    &:after {
+                        display: none;
+                    }
+                }
+                .pretitle {
+                    color: $alcof-dark;
+                    font-weight: 600;
                     &:after {
                         display: none;
                     }
@@ -670,6 +690,17 @@ h4 {
 }
 
 .services-page {
+    .page-header {
+        .header-row {
+            position: relative;
+            .header-text {
+                color: $alcof-dark;
+                .headline {
+                    color: $alcof-dark;
+                }
+            }
+        }
+    }
     .services-slider {
         @include media-breakpoint-up(lg) {
             margin-top: -200px;
@@ -812,6 +843,13 @@ h4 {
                 color: $alcof-dark;
             }
         }
+    }
+}
+
+.service-page {
+    .content-area {
+        margin-top: -40px;
+        padding-bottom: 100px;
     }
 }
 
