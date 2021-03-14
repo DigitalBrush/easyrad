@@ -20,11 +20,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/gray-house.png" />
+							<img class="img-fluid" src="<?php echo get_option('protect_img1'); ?>" />
 
 						</div>
 						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('intro_1');?></h4>
+							<h4 class="title"><?php echo get_option('protect_item1');?></h4>
 						</div>
 					</div>
 				</div>
@@ -32,10 +32,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/sale-storefront.png" />
+							<img class="img-fluid" src="<?php echo get_option('protect_img2'); ?>" />
 						</div>
 						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('intro_2');?></h4>
+							<h4 class="title"><?php echo get_option('protect_item2');?></h4>
 						</div>
 					</div>
 				</div>
@@ -43,10 +43,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/apartments-france.png" />
+							<img class="img-fluid" src="<?php echo get_option('protect_img3'); ?>" />
 						</div>
 						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('intro_3');?></h4>
+							<h4 class="title"><?php echo get_option('protect_item3');?></h4>
 						</div>
 					</div>
 				</div>
