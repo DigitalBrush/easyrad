@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="col-md-6">
         <div class="about-img">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/feature-Un-travail-sur-mesure.png" class="img-fluid">
+          <img src="<?php echo get_option('who_img');?>" class="img-fluid">
         </div>
       </div>
 		</div>
