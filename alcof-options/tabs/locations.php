@@ -1,8 +1,8 @@
       
-<div aria-labelledby="about-tab" class="tab-pane fade" id="about" role="tabpanel">
+<div aria-labelledby="location-tab" class="tab-pane fade" id="location" role="tabpanel">
 <div class="update-post">
 <div class="form-body container-fluid">
-<h2 class="update-heading">About us</h2>
+<h2 class="update-heading">Locations</h2>
 <div class="row section-edit">
 
 
