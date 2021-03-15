@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-<div class="section" style="background: url('<?php echo get_template_directory_uri(); ?>/img/section-besoin-d-aide-web-reverse.jpg')">
+<div class="section" style="background: url('<?php echo get_template_directory_uri(); ?>/img/section-besoin-d-aide-web-reverse.jpg') center center;">
 	<div class="container-fluid contact-block" id="wrapper-static-content" tabindex="-1"  >
 		<div class="container">
 			<div class="row contact-content">
