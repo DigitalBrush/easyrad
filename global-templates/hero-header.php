@@ -26,9 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div class="col-sm-6 hero-image">
 					<div class="slider-image">
-						<img src="<?php
-						echo  get_option('hero_header_img');
-						?>" style="width:100%"/>
+						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/beautiful-lady-drinking-tea.jpg" />
 					</div>
 					<div class="slider-logo">
 						<img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-fichet.svg" height="50"/>

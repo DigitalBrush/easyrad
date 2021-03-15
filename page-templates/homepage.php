@@ -31,6 +31,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						get_template_part( 'global-templates/locations-map' ); 
 						get_template_part( 'global-templates/categories-home' );
 						get_template_part( 'global-templates/who' ); 
+						get_template_part( 'global-templates/home-modal' ); 
+						get_template_part( 'global-templates/home-bottom-slider' ); 
 					}else{
 
 

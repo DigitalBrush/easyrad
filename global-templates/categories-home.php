@@ -73,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div>
       <div class="text-center">
-        <a class="btn btn-lg btn-secondary" href="/produits" target="_blank">Voir tous nos produits</a>
+        <a class="btn btn-lg btn-secondary" href="produits">Voir tous nos produits</a>
       </div>
 		</div>
 	</div>

@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<p>Phasellus venenatis nisl tellus, sit amet scelerisque est venenatis nec. Integer non orci cursus, efficitur risus sed, rutrum orci. Sed pellentesque dignissim dui nec iaculis. Fusce libero nibh, suscipit posuere tincidunt dapibus.</p>
 						</div>
 						<div class="col-md-12 mb-5">
-							<a class="btn btn-lg btn-primary" href="" target="_blank"><span class="material-icons">mail</span>Obtenir un devis</a>
+							<a class="btn btn-lg btn-primary" href=""><span class="material-icons">mail</span>Obtenir un devis</a>
 						</div>
 					</div>
 				</div>

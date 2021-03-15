@@ -93,7 +93,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 
 						
-					<div class="col-lg-10">
+					<div class="col-lg-10 nav-block">
 						<!-- The WordPress Menu goes here -->
 						<?php
 						wp_nav_menu(

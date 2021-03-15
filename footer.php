@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<h2 class="section-title">Besoin d’un devis gratuit ?</h2>
 				<div class="text-body">
 					<p>La référence sécurité à Paris depuis 1985. Plus grand Point Fort Fichet d’Europe. 8 boutiques à Paris et en Ile-de-France.</p>
-					<a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">call</span>Contactez-nous</a>
+					<a href="<?php echo esc_url(home_url('contact')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">call</span>Contactez-nous</a>
 				</div>
 			</div><!--col end -->
 		</div><!-- row end -->

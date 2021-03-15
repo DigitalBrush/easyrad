@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-	<div class="container-fluid" id="wrapper-static-content" tabindex="-1" >
+	<div id="wrapper-static-content" tabindex="-1" >
 
 		<div class="page-header" style="background: url('<?php  
 				echo get_the_post_thumbnail_url();

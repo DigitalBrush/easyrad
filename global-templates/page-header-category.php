@@ -17,7 +17,7 @@ $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
 $image = wp_get_attachment_url( $thumbnail_id ); 
 ?>
 
-	<div class="container-fluid" id="wrapper-static-content" tabindex="-1">
+	<div id="wrapper-static-content" tabindex="-1">
 
 		<div class="page-header" style="background: url('<?php echo $image; ?>'); background-size: cover; background-repeat: no-repeat;  background-position-y: center;">
 			<div class="container">

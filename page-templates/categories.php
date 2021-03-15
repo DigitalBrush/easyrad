@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div id="full-width-page-wrapper">
 
-	<div id="content">
+	<div class="categories-page header-light" id="content">
 
 			<div class="content-area" id="primary">
 

@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_option('protect_img1'); ?>" />
+						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-maison.jpg" />
 
 						</div>
 						<div class="service-desc">
@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_option('protect_img2'); ?>" />
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-boutique.jpg" />
 						</div>
 						<div class="service-desc">
 							<h4 class="title"><?php echo get_option('protect_item2');?></h4>
@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-6 col-lg-4">
 					<div class="single-service">
 						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_option('protect_img3'); ?>" />
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-syndics.jpg" />
 						</div>
 						<div class="service-desc">
 							<h4 class="title"><?php echo get_option('protect_item3');?></h4>

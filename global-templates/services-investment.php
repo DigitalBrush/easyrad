@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<p>Le livret de garantie FICHET est l'assurance de bénéficier pendant 1 an d'une assistance permanente : participation au remplacement de votre cylindre en cas de perte ou de vol de vos clés, organisation de l'hébergement, du rapatriement, du gardiennage de votre domicile, FICHET service est là. </p>
 						</div>
 						<div class="col-md-12 mb-5">
-							<a class="btn btn-lg btn-primary" href="" target="_blank"><span class="material-icons">mail</span>Obtenir un devis</a>
+							<a class="btn btn-lg btn-primary" href=""><span class="material-icons">mail</span>Obtenir un devis</a>
 						</div>
 					</div>
 				</div>

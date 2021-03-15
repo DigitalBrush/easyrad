@@ -93,6 +93,12 @@
             }
         }      
     }
+    .navbar-collapse {
+        &.show {
+            background: $white;
+            padding: $spacing-lg 0;
+        }
+    }
     .header-bar {
         width: 100%;
         display: flex;
@@ -151,6 +157,13 @@
                 }
             }
         }
+        .nav-block {
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+                z-index: 10;
+                background: $white;
+            }
+        }
     }
     .navbar-nav {
         align-items: center;
@@ -174,6 +187,26 @@
             &:active {
                 font-weight: 700;
                 color: $alcof-dark !important;
+            }
+        }
+        .nav-cta {
+            padding-left: $spacing-lg;
+            background-color: $primary;
+            position: relative;
+            &:before {
+                position: absolute;
+                font-family: 'Material Icons';
+                content: '\e869';
+                -webkit-font-feature-settings: 'liga';
+                font-size: 16px;
+                color: $white;
+                left: 20px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .nav-link {
+                color: $white !important;
+                
             }
         }
     }

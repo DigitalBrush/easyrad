@@ -28,8 +28,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<main class="site-main" id="main" role="main">
 					<div class="container">
-						<div class="row d-flex justify-content-start">
-							<div class="col-sm-5">
+						<div class="row d-flex justify-content-center">
+							<div class="col-sm-8">
 								<?php
 									while ( have_posts() ) {
 										the_post();

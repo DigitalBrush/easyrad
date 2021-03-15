@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<h1 class="heavy-weight">100,000</h1>
 					</div>
 					<div class="block-left-cta">
-						<a class="btn btn-lg btn-primary" href="" target="_blank"><span class="material-icons">call</span>Contactez-nous</a>
+						<a class="btn btn-lg btn-primary" href=""><span class="material-icons">call</span>Contactez-nous</a>
 					</div>
 				</div>
 				<div class="col-md-3 block-right">
