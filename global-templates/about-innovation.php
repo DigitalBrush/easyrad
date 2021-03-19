@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="row"> 
 						<div class="col-md-12 mb-5">
 							<h1 class="light-weight">L’innovation au service de ma sécurité</h1>
-							<p class="pretitle">Des valeurs bien ancrées dans l’ADN d’aLCOF Sécurité</p>
+							<p class="pretitle">Des valeurs bien ancrées dans l’ADN d’easyrad Sécurité</p>
 						</div>
 						<div class="col-md-7 mt-5 mb-5">
 							<h2>Pionnier</h2>

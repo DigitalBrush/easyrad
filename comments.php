@@ -34,7 +34,7 @@ if ( post_password_required() ) {
 			if ( 1 === (int) $comments_number ) {
 				printf(
 					/* translators: %s: post title */
-					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'alcof' ),
+					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'easyrad' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
@@ -61,17 +61,17 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-above">
 
-				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'alcof' ); ?></h1>
+				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'easyrad' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
-						<?php previous_comments_link( __( '&larr; Older Comments', 'alcof' ) ); ?>
+						<?php previous_comments_link( __( '&larr; Older Comments', 'easyrad' ) ); ?>
 					</div>
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
 					<div class="nav-next">
-						<?php next_comments_link( __( 'Newer Comments &rarr;', 'alcof' ) ); ?>
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'easyrad' ) ); ?>
 					</div>
 				<?php } ?>
 
@@ -96,17 +96,17 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-below">
 
-				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'alcof' ); ?></h1>
+				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'easyrad' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
-						<?php previous_comments_link( __( '&larr; Older Comments', 'alcof' ) ); ?>
+						<?php previous_comments_link( __( '&larr; Older Comments', 'easyrad' ) ); ?>
 					</div>
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
 					<div class="nav-next">
-						<?php next_comments_link( __( 'Newer Comments &rarr;', 'alcof' ) ); ?>
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'easyrad' ) ); ?>
 					</div>
 				<?php } ?>
 

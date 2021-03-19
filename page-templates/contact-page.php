@@ -40,7 +40,7 @@ get_template_part( 'global-templates/locations-map-full' );
 									</div>
 									<div class="d-block ml-5">
 										<h4 class="pretitle"><span class="material-icons">mail</span>Email</h4>
-										<a href="mailto:contact@alcof-securite.fr" target="_blank" rel="noopener">contact@alcof-securite.fr</a>
+										<a href="mailto:contact@easyrad-securite.fr" target="_blank" rel="noopener">contact@easyrad-securite.fr</a>
 									</div>
 								</div>
 							</div>

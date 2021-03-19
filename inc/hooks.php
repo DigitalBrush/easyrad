@@ -27,21 +27,21 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 
 		$site_info = sprintf(
 			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s(%4$s)',
-			esc_url( __( 'http://wordpress.org/', 'alcof' ) ),
+			esc_url( __( 'http://wordpress.org/', 'easyrad' ) ),
 			sprintf(
 				/* translators: WordPress */
-				esc_html__( 'Proudly powered by %s', 'alcof' ),
+				esc_html__( 'Proudly powered by %s', 'easyrad' ),
 				'WordPress'
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators: 1: Theme name, 2: Theme author */
-				esc_html__( 'Theme: %1$s by %2$s.', 'alcof' ),
+				esc_html__( 'Theme: %1$s by %2$s.', 'easyrad' ),
 				$the_theme->get( 'Name' ),
-				'<a href="' . esc_url( __( 'http://doctaroo.fr', 'alcof' ) ) . '">doctaroo.fr</a>'
+				'<a href="' . esc_url( __( 'http://doctaroo.fr', 'easyrad' ) ) . '">doctaroo.fr</a>'
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators: Theme version */
-				esc_html__( 'Version: %1$s', 'alcof' ),
+				esc_html__( 'Version: %1$s', 'easyrad' ),
 				$the_theme->get( 'Version' )
 			)
 		);

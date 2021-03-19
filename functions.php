@@ -97,7 +97,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 8 );
 
 function wpdocs_enqueue_custom_admin_style($hook_suffix) {
-    if($hook_suffix != 'appearance_page_alcof_options') {
+    if($hook_suffix != 'appearance_page_easyrad_options') {
         return;
     }
 
@@ -144,19 +144,19 @@ add_action('admin_menu', 'customize_homepage');
 
 function customize_homepage() { 
 
-    add_submenu_page('themes.php','Alcof Options', 'Alcof Options','manage_options','alcof_options','alcof_options');
+    add_submenu_page('themes.php','easyrad Options', 'easyrad Options','manage_options','easyrad_options','easyrad_options');
    
 }
 
-require_once "alcof-options/alcof_options.php";
+require_once "easyrad-options/easyrad_options.php";
 
-function alcof_include_script() {
+function easyrad_include_script() {
     if ( ! did_action( 'wp_enqueue_media' ) ) {
         wp_enqueue_media();
     }
 }
 
-add_action( 'admin_enqueue_scripts', 'alcof_include_script' );
+add_action( 'admin_enqueue_scripts', 'easyrad_include_script' );
 
 
 add_filter('get_comment_author', 'my_comment_author', 10, 1);

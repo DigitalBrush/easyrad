@@ -1,6 +1,6 @@
 .hero-header {
-    border-top: 1px solid $alcof-grey;
-    border-bottom: 1px solid $alcof-grey;
+    border-top: 1px solid $easyrad-grey;
+    border-bottom: 1px solid $easyrad-grey;
     display: flex;
     align-items: stretch;
     .hero-text {
@@ -45,7 +45,7 @@
                 }
             }
             .slider-body {
-                color: $alcof-gray;
+                color: $easyrad-gray;
                 max-width: 400px;
             }
             @include media-breakpoint-down(xs) {
@@ -81,8 +81,8 @@
 }
 
 .hero-footer {
-    border-top: 1px solid $alcof-grey;
-    border-bottom: 1px solid $alcof-grey;
+    border-top: 1px solid $easyrad-grey;
+    border-bottom: 1px solid $easyrad-grey;
     display: flex;
     align-items: stretch;
     .hero-text {

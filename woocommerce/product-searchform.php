@@ -22,11 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="input-group">
-		<input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field form-control" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'alcof' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />	
-		<label class="sr-only" for="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>"><?php esc_html_e( 'Search for:', 'alcof' ); ?></label>
+		<input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field form-control" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'easyrad' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />	
+		<label class="sr-only" for="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>"><?php esc_html_e( 'Search for:', 'easyrad' ); ?></label>
 		<input type="hidden" name="post_type" value="product" />
 		<div class="input-group-append">
-			<button class="btn btn-primary" type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'alcof' ); ?>"><?php echo esc_html_x( 'Search', 'submit button', 'alcof' ); ?></button>
+			<button class="btn btn-primary" type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'easyrad' ); ?>"><?php echo esc_html_x( 'Search', 'submit button', 'easyrad' ); ?></button>
 	</div>
 	</div>
 </form>

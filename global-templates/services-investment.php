@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 						<div class="col-md-7 mt-5 mb-5">
 							<h2>Taux compétitif</h2>
-							<p>Alcof vous propose un plan de financement personnalisé sur l'ensemble de sa gamme, à un taux très compétitif. Payez jusqu'à 4X, 6X ou 10X... sans frais. Contactez-nous, nous élaborerons avec vous, en toute confidentialité, une solution adaptée à vos besoins. </p>
+							<p>easyrad vous propose un plan de financement personnalisé sur l'ensemble de sa gamme, à un taux très compétitif. Payez jusqu'à 4X, 6X ou 10X... sans frais. Contactez-nous, nous élaborerons avec vous, en toute confidentialité, une solution adaptée à vos besoins. </p>
 						</div>
 						<div class="col-md-7 mt-5 mb-5">
 							<h2>Garantie</h2>

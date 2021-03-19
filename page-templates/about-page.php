@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Alcof Landing Page
+ * Template Name: About easyrad Landing Page
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *

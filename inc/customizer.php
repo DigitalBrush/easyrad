@@ -39,9 +39,9 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_section(
 			'understrap_theme_layout_options',
 			array(
-				'title'       => __( 'Theme Layout Settings', 'alcof' ),
+				'title'       => __( 'Theme Layout Settings', 'easyrad' ),
 				'capability'  => 'edit_theme_options',
-				'description' => __( 'Container width and sidebar defaults', 'alcof' ),
+				'description' => __( 'Container width and sidebar defaults', 'easyrad' ),
 				'priority'    => apply_filters( 'understrap_theme_layout_options_priority', 160 ),
 			)
 		);
@@ -81,14 +81,14 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_container_type',
 				array(
-					'label'       => __( 'Container Width', 'alcof' ),
-					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'alcof' ),
+					'label'       => __( 'Container Width', 'easyrad' ),
+					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'easyrad' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_container_type',
 					'type'        => 'select',
 					'choices'     => array(
-						'container'       => __( 'Fixed width container', 'alcof' ),
-						'container-fluid' => __( 'Full width container', 'alcof' ),
+						'container'       => __( 'Fixed width container', 'easyrad' ),
+						'container-fluid' => __( 'Full width container', 'easyrad' ),
 					),
 					'priority'    => apply_filters( 'understrap_container_type_priority', 10 ),
 				)
@@ -110,7 +110,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_sidebar_position',
 				array(
-					'label'             => __( 'Sidebar Positioning', 'alcof' ),
+					'label'             => __( 'Sidebar Positioning', 'easyrad' ),
 					'description'       => __(
 						'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
 						'understrap'
@@ -120,10 +120,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
 					'choices'           => array(
-						'right' => __( 'Right sidebar', 'alcof' ),
-						'left'  => __( 'Left sidebar', 'alcof' ),
-						'both'  => __( 'Left & Right sidebars', 'alcof' ),
-						'none'  => __( 'No sidebar', 'alcof' ),
+						'right' => __( 'Right sidebar', 'easyrad' ),
+						'left'  => __( 'Left sidebar', 'easyrad' ),
+						'both'  => __( 'Left & Right sidebars', 'easyrad' ),
+						'none'  => __( 'No sidebar', 'easyrad' ),
 					),
 					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 20 ),
 				)

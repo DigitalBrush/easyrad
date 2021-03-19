@@ -114,7 +114,7 @@ h4 {
     }
     &.btn-secondary {
         color: $white !important;
-        background-color: $alcof-dark;
+        background-color: $easyrad-dark;
         border: 0;
         position: relative;
         padding-left: $spacing-max;
@@ -154,7 +154,7 @@ h4 {
         padding: 60px 0;
     }
     &.dark {
-        background: $alcof-dark;
+        background: $easyrad-dark;
         color: $white;
         &.negative-margin {
             @include media-breakpoint-up(md) {
@@ -167,7 +167,7 @@ h4 {
 .contact-cta {
     color: $white;
     padding: $spacing-xxl;
-    background: $alcof-gray;
+    background: $easyrad-gray;
 }
 .section-who {
     padding: 0;
@@ -179,7 +179,7 @@ h4 {
             display: block;
         }
         .about-text {
-            background: $alcof-grey;
+            background: $easyrad-grey;
             position: relative;
             z-index: 2;
             padding: $spacing-xl;
@@ -213,7 +213,7 @@ h4 {
         .reputation-tabs {
             position: relative;
             .nav-link {
-                color: $alcof-dark;
+                color: $easyrad-dark;
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 font-size: 14px;
@@ -276,13 +276,13 @@ h4 {
                     }
                 }
                 .entry-title {
-                    color: $alcof-dark;
+                    color: $easyrad-dark;
                     font-weight: 300;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
                 .pi-price {
-                    color: $alcof-dark;
+                    color: $easyrad-dark;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
@@ -436,7 +436,7 @@ h4 {
 }
 
 .section-location {
-    background: $alcof-dark;
+    background: $easyrad-dark;
     color: $white;
     .location-content {
         display: flex;
@@ -605,7 +605,7 @@ h4 {
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 font-size: 14px;
-                color: $alcof-dark;
+                color: $easyrad-dark;
                 margin: $spacing 0;
             }
         }
@@ -616,7 +616,7 @@ h4 {
                 word-wrap: break-word;
                 .category-title {
                     a {
-                        color: $alcof-dark;
+                        color: $easyrad-dark;
                     }
                 }
                 .product-count {
@@ -658,9 +658,9 @@ h4 {
     .page-header {
         .header-row {
             .header-text {
-                color: $alcof-dark;
+                color: $easyrad-dark;
                 .headline {
-                    color: $alcof-dark;
+                    color: $easyrad-dark;
                 }
             }
         }
@@ -673,7 +673,7 @@ h4 {
             position: relative;
             .header-text {
                 .headline {
-                    color: $alcof-dark;
+                    color: $easyrad-dark;
                     font-size: 200px;
                     font-weight: 900;
                     margin: 0;
@@ -686,7 +686,7 @@ h4 {
                     }
                 }
                 .pretitle {
-                    color: $alcof-dark;
+                    color: $easyrad-dark;
                     font-weight: 600;
                     display: flex;
                     align-items: center;
@@ -699,7 +699,7 @@ h4 {
                 position: absolute;
                 right: 0;
                 bottom: -250px;
-                background: $alcof-dark;
+                background: $easyrad-dark;
                 padding: $spacing-xl;
                 color: $white;
                 max-width: 400px;
@@ -801,9 +801,9 @@ h4 {
         .header-row {
             position: relative;
             .header-text {
-                color: $alcof-dark;
+                color: $easyrad-dark;
                 .headline {
-                    color: $alcof-dark;
+                    color: $easyrad-dark;
                 }
             }
         }
@@ -824,7 +824,7 @@ h4 {
                     right: 0;
                     margin: 0;
                     [class*='owl-'] {
-                        background: $alcof-dark;
+                        background: $easyrad-dark;
                         color: $white;
                         padding: $spacing; 
                         font-size: 36px;
@@ -841,7 +841,7 @@ h4 {
                     word-wrap: break-word;
                     .service-title {
                         a {
-                            color: $alcof-dark;
+                            color: $easyrad-dark;
                         }
                     }
                     .service-subtitle {
@@ -898,7 +898,7 @@ h4 {
                 }
                 .light-weight {
                     color: transparent;
-                    background: linear-gradient(to right, $alcof-dark 0%,$alcof-dark 25%,$white 25.01%,$white 100%);
+                    background: linear-gradient(to right, $easyrad-dark 0%,$easyrad-dark 25%,$white 25.01%,$white 100%);
                     -webkit-background-clip: text;
                     &:after {
                         display: none;
@@ -956,7 +956,7 @@ h4 {
             &:after {
                 right: 0;
                 left: initial;
-                color: $alcof-dark;
+                color: $easyrad-dark;
             }
         }
     }
@@ -982,7 +982,7 @@ h4 {
             margin-bottom: $spacing-lg;
             .close {
                 background: $white;
-                color: $alcof-dark;
+                color: $easyrad-dark;
                 border-radius: 50%;
                 line-height: .7;
                 padding: 0.8rem;

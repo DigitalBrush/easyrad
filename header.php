@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar">
 
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'alcof' ); ?></a>
+		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'easyrad' ); ?></a>
 
 		<div class="top-nav">
 			<div class="container-fluid">
@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
-				<?php esc_html_e( 'Main Navigation', 'alcof' ); ?>
+				<?php esc_html_e( 'Main Navigation', 'easyrad' ); ?>
 			</h2>
 			
 			<div class="container-fluid h-100">
@@ -73,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row header-bar h-100">
 					<div class="col-lg-2 logo-bar">
 						<div class="toggler-button d-lg-none d-flex">
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'alcof' ); ?>">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'easyrad' ); ?>">
 							<span class="material-icons">menu</span>
 							</button>	
 						</div>

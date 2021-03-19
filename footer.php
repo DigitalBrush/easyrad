@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						&copy; <?php echo date("Y"); ?> Alcof sécurité
+						&copy; <?php echo date("Y"); ?> easyrad sécurité
 
 					</div><!-- .site-info -->
 

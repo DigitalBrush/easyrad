@@ -27,10 +27,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
 				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php esc_html_e( 'Product', 'alcof' ); ?></th>
-				<th class="product-price"><?php esc_html_e( 'Price', 'alcof' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'alcof' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'alcof' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'Product', 'easyrad' ); ?></th>
+				<th class="product-price"><?php esc_html_e( 'Price', 'easyrad' ); ?></th>
+				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'easyrad' ); ?></th>
+				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'easyrad' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -53,7 +53,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									sprintf(
 										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
 										esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-										esc_html__( 'Remove this item', 'alcof' ),
+										esc_html__( 'Remove this item', 'easyrad' ),
 										esc_attr( $product_id ),
 										esc_attr( $_product->get_sku() )
 									),
@@ -74,7 +74,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
-						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'alcof' ); ?>">
+						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'easyrad' ); ?>">
 						<?php
 						if ( ! $product_permalink ) {
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
@@ -89,18 +89,18 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						// Backorder notification.
 						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'alcof' ) . '</p>', $product_id ) );
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'easyrad' ) . '</p>', $product_id ) );
 						}
 						?>
 						</td>
 
-						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'alcof' ); ?>">
+						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'easyrad' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							?>
 						</td>
 
-						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'alcof' ); ?>">
+						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'easyrad' ); ?>">
 						<?php
 						if ( $_product->is_sold_individually() ) {
 							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -122,7 +122,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
-						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'alcof' ); ?>">
+						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'easyrad' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							?>
@@ -140,12 +140,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'alcof' ); ?></label> <input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'alcof' ); ?>" /> <button type="submit" class="btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'alcof' ); ?>"><?php esc_attr_e( 'Apply coupon', 'alcof' ); ?></button>
+							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'easyrad' ); ?></label> <input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'easyrad' ); ?>" /> <button type="submit" class="btn btn-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'easyrad' ); ?>"><?php esc_attr_e( 'Apply coupon', 'easyrad' ); ?></button>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>
 
-					<button type="submit" class="btn btn-primary" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'alcof' ); ?>"><?php esc_html_e( 'Update cart', 'alcof' ); ?></button>
+					<button type="submit" class="btn btn-primary" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'easyrad' ); ?>"><?php esc_html_e( 'Update cart', 'easyrad' ); ?></button>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
