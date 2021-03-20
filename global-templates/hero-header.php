@@ -11,27 +11,15 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-		<div class="container-fluid" id="wrapper-static-content" tabindex="-1">
-
-			<div class="row hero-header">
-				<div class="col-sm-6 hero-text">
-					<div class="slider-text">
-						<h1 class="big-heading"><?php echo get_option('hero_intro_heading');?></h1>
-						<div class="slider-body">
-							<p class=""><?php echo get_option('hero_intro_text');?></p>
-							<a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-lg btn-secondary">Acheter maintenant</a>
-						</div>
-						<h4 class="small-heading"><?php echo get_option('hero_intro_subheading');?></h4>
-					</div>
-				</div>
-				<div class="col-sm-6 hero-image">
-					<div class="slider-image">
-						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/beautiful-lady-drinking-tea.jpg" />
-					</div>
-					<div class="slider-logo">
-						<img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-fichet.svg" height="50"/>
-					</div>
-				</div>
-			</div>
-
+  <div class="container-fluid" id="wrapper-static-content" tabindex="-1">
+    <div class="row hero-header">
+      <div class="col-sm-5">
+        <div class="hero-text">
+          <?php the_custom_logo(); ?>
+          <h1>N°1 de la <span>contestation radar en ligne </span>depuis 17 ans</h1>
+          <p class="sm-text">Protégez votre permis de conduire et sauvez vos points !</p>
+          <button class="btn btn-primary"><p class="button-text">Je conteste en ligne</p></button>
+        </div>
+      </div>
+    </div>
 	</div>

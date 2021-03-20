@@ -1,13 +1,22 @@
 .hero-header {
-    border-top: 1px solid $easyrad-grey;
-    border-bottom: 1px solid $easyrad-grey;
     display: flex;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     .hero-text {
+        padding: $spacing-lg;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: $spacing-lg;
+        flex-direction: column;
+        text-align: center;
+        .navbar-brand {
+            background-color: $white;
+            padding: $spacing-xxl $spacing;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        } 
         .slider-text {
             position: relative;
             z-index: 2;
@@ -80,52 +89,3 @@
     }
 }
 
-.hero-footer {
-    border-top: 1px solid $easyrad-grey;
-    border-bottom: 1px solid $easyrad-grey;
-    display: flex;
-    align-items: stretch;
-    .hero-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: $spacing-lg;
-        .owl-theme {
-            .owl-nav {
-                display: none;
-            }
-            .owl-dots {
-                text-align: left;
-            }
-        }
-        .content-block {
-            @include media-breakpoint-up(md) {
-                padding: $spacing-xxl;
-            }
-        }
-        @include media-breakpoint-up(md) {
-            padding: $spacing-xxl;
-        }
-    }
-    .hero-image {
-        padding: 0;
-        position: relative;
-        z-index: 1;
-        .slider-image {
-            height: 100%;
-            img {
-                object-fit: cover;
-                height: 100%;
-                width: 100%;
-            }
-        }
-        .slider-logo {
-            background: $white;
-            padding: $spacing $spacing-lg;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            max-height: 100px;
-        }
-    }
-}

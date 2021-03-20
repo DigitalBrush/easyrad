@@ -144,7 +144,7 @@ add_action('admin_menu', 'customize_homepage');
 
 function customize_homepage() { 
 
-    add_submenu_page('themes.php','easyrad Options', 'easyrad Options','manage_options','easyrad_options','easyrad_options');
+    add_submenu_page('themes.php','EasyRad Options', 'EasyRad Options','manage_options','easyrad_options','easyrad_options');
    
 }
 
