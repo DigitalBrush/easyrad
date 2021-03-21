@@ -1,4 +1,4 @@
-![AgroHub Expo](wp-content/themes/easyrad/img/easyrad-logo.svg)
+![EasyRad](img/easyrad-logo.svg)
 
 ## About
 
