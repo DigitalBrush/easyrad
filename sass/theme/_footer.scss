@@ -1,23 +1,11 @@
 .footer-cta {
-    text-align: center;
-    background: $easyrad-dark;
-    color: $white;
-    padding: 100px 0;
+    color: $easyrad-dark;
+    display: flex;
+    align-items: center;
     .section-title {
         font-weight: 700;
         position: relative;
-        padding-bottom: $spacing-lg;
         margin-bottom: $spacing-lg;
-        &:after {
-            position: absolute;
-            content:"";
-            width: 80px;
-            height: 5px;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background: $white;
-        }
     }
     .text-body {
         margin: 0 auto;
@@ -28,8 +16,8 @@
     
 }
 .footer-top {
-    background: $easyrad-dark !important;
-    color: $white;
+    background: $white !important;
+    color: $easyrad-dark;
     .footer-widget {
         margin-bottom: $spacing-lg;
         .widget-title {
@@ -39,16 +27,7 @@
             display: inline-block;
             position: relative;
             margin-bottom: 0;
-            &:after {
-                position: absolute;
-                content:"";
-                width: $spacing-md;
-                height: 3px;
-                top: $spacing;
-                right: 0;
-                left: initial;
-                background: $primary;
-            }
+            font-family: $body-font;
         }
     }
     .menu {
@@ -59,9 +38,7 @@
             justify-content: flex-start;
             .nav-link {
                 padding: $spacing-xs 0;
-                color: $white;
-                text-transform: uppercase;
-                letter-spacing: 2px;
+                color: $easyrad-dark;
                 font-size: 14px;
                 &:hover {
                     color: $primary;
@@ -69,10 +46,21 @@
             }
         }
     }
+    .payment-logos {
+        background: $white;
+        padding: $spacing-lg;
+        border-radius: $spacing-xs;
+        margin-top: -70px;
+        box-shadow: $shadow;
+        .widget-title {
+            color: $easyrad-blue-gray;
+            margin-bottom: $spacing-lg;
+        }
+    }
 }
 
 .footer-bottom {
-    background: $easyrad-dark !important;
+    background: $easyrad-blue-gray !important;
     color: $white;
     text-transform: uppercase;
     letter-spacing: 2px;

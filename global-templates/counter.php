@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<span data-view="flip"></span>
 						</div>
 					</div>
-					<h2 class="text-heading">POINTS CONTESTES AU19/01/2021</h2>
+					<h2 class="text-heading">POINTS CONTESTES AU <?php echo date("d/m/Y"); ?></h2>
 				</div>
 			</div>
 	</div>

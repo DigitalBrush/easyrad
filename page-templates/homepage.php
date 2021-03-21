@@ -30,7 +30,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						get_template_part( 'global-templates/featured' );
 						get_template_part( 'global-templates/brief' ); 
 						get_template_part( 'global-templates/press' );
-						get_template_part( 'global-templates/counter' ); 
+						get_template_part( 'global-templates/counter' );
+						get_template_part( 'global-templates/call-to-action' );  
 						get_template_part( 'global-templates/home-modal' ); 
 					}else{
 

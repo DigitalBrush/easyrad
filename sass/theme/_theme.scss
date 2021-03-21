@@ -517,9 +517,28 @@ blockquote {
             .tick-credits {
                 display: none !important;
             }
+            .tick-flip {
+                .tick-flip-card {
+                    .tick-flip-panel {
+                        background-color: $white;
+                        color: $easyrad-dark;
+                    }
+                }
+            }
+        }
+        .text-heading {
+            color: $primary;
         }
 
     }
+}
+
+.section-cta {
+    padding: $spacing-xxl 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .category-section {
