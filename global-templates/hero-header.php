@@ -13,7 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
   <div class="container-fluid" id="wrapper-static-content" tabindex="-1">
     <div class="row hero-header" style="background-image: url(<?php echo get_option('hero_header_img');?>); background-size: cover; background-repeat: no-repeat;">
-      <div class="col-sm-7">
+      <div class="col-lg-7">
         <div class="hero-text">
           <?php the_custom_logo(); ?>
           <h1 class="big-heading">N°1 de la <span>contestation radar en ligne </span>depuis 17 ans</h1>

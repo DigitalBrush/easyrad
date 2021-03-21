@@ -17,17 +17,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div id="full-width-page-wrapper">
 
-	<div id="content">
 
-			<div class="content-area" id="primary">
+	<div id="content">
+	<?php get_template_part( 'global-templates/page-header' ); ?>
+
+			<div class="container content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 					<?php
 
-						get_template_part( 'global-templates/page-header' );
-						get_template_part( 'global-templates/categories-page' );
-						get_template_part( 'global-templates/contact' );
-						get_template_part( 'global-templates/categories-other' );
+						
+						while ( have_posts() ) {
+							the_post();
+							get_template_part( 'loop-templates/content', 'page' );
+						}
 					?>
 
 				</main><!-- #main -->

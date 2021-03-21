@@ -5,9 +5,10 @@ body {
 }
 
 h1 {
-    font-size: 64px;
-    font-weight: 700;
+    font-size: 60px;
+    font-weight: 800;
     font-family: $heading-font;
+    text-transform: uppercase;
     position: relative;
     @include media-breakpoint-down(md) {
 		font-size: 32px;
@@ -27,7 +28,6 @@ h1 {
         @include media-breakpoint-down(sm) {
             font-size: 56px;
         }
-        
     }
 }
 
@@ -296,6 +296,22 @@ h4 {
             }
         }
     }
+    .breadcrumbs-top {
+        padding-bottom: $spacing-lg;
+        color: $primary;
+        span {
+            margin: 0 $spacing-sm;
+            &:first-of-type {
+                margin-left: 0;
+            }
+            a {
+                color: $easyrad-blue-gray;
+            }
+            .current-item {
+                color: $gray-100;
+            }
+        }
+    }
 }
 
 .page-section {
@@ -453,34 +469,99 @@ blockquote {
 .section-press {
     padding: $spacing-xxl 0;
     .section-title {
-        color: $gray-700;
+        color: $easyrad-blue-gray;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .press-carousel {
+        position: relative;
+        .owl-stage-outer {
+            margin-bottom: $spacing-lg;
+        }
+        .owl-nav {
+            position: absolute;
+            top: 40%;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .owl-prev {
+                margin-left: -70px;
+                background: $primary;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                font-size: 36px;
+                line-height: 0.5em;
+                color: $white;
+                text-decoration: none;
+            }
+            .owl-next {
+                margin-right: -70px;
+                background: $primary;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                font-size: 36px;
+                line-height: 0.5em;
+                color: $white;
+                text-decoration: none;
+            }
+        }
     }
     .press-row {
         padding-top: $spacing-xxl;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
         .press-content {
-            border-radius: $spacing-xs;
-	        background-color: $gray-100;
-            box-shadow: $shadow;
+            
             position: relative;
             .channel-block {
-                img {
-                    margin-top: -60px;
-                }
+                border-radius: $spacing-xs;
+                overflow: hidden;
             }
             .press-text {
-                max-width: 500px;
+                border-radius: $spacing-xs;
+                background-color: $gray-100;
+                position: relative;
                 .text-body {
                     padding: $spacing-lg;
                     margin-bottom: $spacing-lg;
+                    position: relative;
+                    .quote {
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-family: $heading-font;
+                        padding-left: $spacing-sm;
+                        &:before{
+                            content: "\201C";
+                            font-family: Arial;
+                            color: $easyrad-blue-gray;
+                            font-size: 8em;
+                            position: absolute;
+                            left: -5px;
+                            top: -55px;
+                            opacity: 0.3;
+                          }
+                    }
+                }
+                &:after {
+                    content: ' ';
+                    height: 0;
+                    position: absolute;
+                    width: 0;
+                    border: 24px solid transparent; 
+                    border-top-color: $gray-100; 
+                    bottom: -36px;
+                    left: 10%;
+                    z-index: 2;
                 }
             }
         }
         .video-block {
-            height: 200px;
             border-radius: $spacing-xs;
             overflow: hidden;
             background: $black;
-            margin-bottom: $spacing-lg;
             img {
                 object-fit: cover;
                 height: 100%;
@@ -490,7 +571,7 @@ blockquote {
 }
 
 .section-points {
-    padding: $spacing-xxl 0;
+    padding: $spacing-max 0;
     background-image: url(../img/wave.svg);
     background-size: cover;
     background-repeat: no-repeat;

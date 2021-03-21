@@ -7114,7 +7114,7 @@ jQuery(function ($) {
       }
     }
   });
-  $('.home-bottom-carousel').owlCarousel({
+  $('.press-carousel').owlCarousel({
     loop: true,
     margin: 10,
     responsiveClass: true,
