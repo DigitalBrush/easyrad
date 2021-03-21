@@ -13,48 +13,70 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper footer-cta" id="wrapper-footer">
-	<div class="<?php echo esc_attr( $container ); ?>">
-		<div class="row d-flex justify-content-center">
-			<div class="col-md-6">
-				<h2 class="section-title">Besoin d’un devis gratuit ?</h2>
-				<div class="text-body">
-					<p>La référence sécurité à Paris depuis 1985. Plus grand Point Fort Fichet d’Europe. 8 boutiques à Paris et en Ile-de-France.</p>
-					<a href="<?php echo esc_url(home_url('contact')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">call</span>Contactez-nous</a>
-				</div>
-			</div><!--col end -->
-		</div><!-- row end -->
-	</div><!-- row end -->
-</div>
-
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
-
-<div class="wrapper footer-bottom" id="wrapper-footer">
-
-	<div class="<?php echo esc_attr( $container ); ?>">
-
-		<div class="row">
-
-			<div class="col-md-12">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-						&copy; <?php echo date("Y"); ?> easyrad sécurité
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
-
+<div class="footer">
+              <div class="footer-cta">
+                <p><button type="button" class="btn btn-md-primary"><p class="sm-button-text">Un souci, une question ?</p></button>
+                <i class="fa fa-facebook-square fa-1x"></i>
+                <i class="fa fa-twitter-square fa-1x"></i></p>
+                <p class="some-text">&#169; Copyright 2021 EasyRad
+                  conditions générales de service mentions légales</p>
+              </div>
+              <div class="lg-footer">
+                <div class="row lg-footer-wrapper">
+                  <div class="col-md-3 col-12">
+                    <p class="h1">Contestation</p>
+                    <a class="some-text" href="#">Radars automatiques</a>
+                    <a class="some-text" href="#">Vidéo verbalisations</a>
+                    <a class="some-text" href="#">Votre procédure</a>
+                    <a class="some-text" href="#">
+                      Avocat permis de conduire</a>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <p class="h1">Vos Droits</p>
+                    <a class="some-text" href="#">Conducteur non identifié</a>
+                    <a class="some-text" href="#">
+                      La consignation obligatoire</a>
+                    <a class="some-text" href="#">Salariés désignés</a>
+                    <a class="some-text" href="#">Obligations des employeurs</a>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <p class="h1">INFOS LÉGALES</p>
+                    <a class="some-text" href="#">Conditions générales de service</a>
+                    <a class="some-text" href="#">
+                      Paiement</a>
+                    <a class="some-text" href="#">Charte de confidentialité et cookies</a>
+                    <a class="some-text" href="#">Mentions légales</a>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <p class="some-text"><i class="fa fa-credit-card"></i><br>
+                          PAIEMENT 100% SÉCURISÉ PAR HIPAY
+                        </p>
+                      </div>
+                      <div class="card-body">
+                        <form>
+                          <input type="radio" id="visa" name="PaymentMethod" value="visa"/>
+                          <label for="visa"><i class="fa fa-cc-visa"></i></label><br>
+                          <input type="radio" id="masterCard" name="PaymentMethod" value="masterCard"/>
+                          <label for="masterCard"><i class="fa fa-cc-mastercard"></i></label><br>
+                          <input type="radio" id="payPal" name="PaymentMethod" value="payPal"/>
+                          <label for="payPal"><i class="fa fa-paypal"></i></label><br>
+                          <input type="radio" id="google" name="PaymentMethod" value="google"/>
+                          <label for="google"><i class="fa fa-google"></i></label><br>
+                        </form>
+                      </div>
+                      <div class="card-footer">
+                        <button type="button"class="btn btn-md-primary">
+                          <p class="sm-button-text">Continuez</p></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>

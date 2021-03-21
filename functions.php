@@ -102,11 +102,11 @@ function wpdocs_enqueue_custom_admin_style($hook_suffix) {
     }
 
     // Load your css.
-    wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.min.css', false, '1.0.0' );
+    wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.min.css', '1.0.0' );
     wp_enqueue_style( 'custom_wp_admin_css' );
 
     // Load your js.
-    wp_register_script( 'custom_wp_admin_js', get_template_directory_uri() . '/js/theme.js', false, '1.0.0' );
+    wp_register_script( 'custom_wp_admin_js', get_template_directory_uri() . '/js/theme.js', '1.0.0' );
     wp_enqueue_script( 'custom_wp_admin_js' );
 }
 add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );

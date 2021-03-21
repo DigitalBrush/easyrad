@@ -1,85 +1,171 @@
-.footer-cta {
-    text-align: center;
-    background: $easyrad-dark;
-    color: $white;
-    padding: 100px 0;
-    .section-title {
-        font-weight: 700;
-        position: relative;
-        padding-bottom: $spacing-lg;
-        margin-bottom: $spacing-lg;
-        &:after {
-            position: absolute;
-            content:"";
-            width: 80px;
-            height: 5px;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background: $white;
-        }
-    }
-    .text-body {
-        margin: 0 auto;
-        p {
-            color: $white;
-        }
-    }
-    
+$primaryBlack:#272323;
+$primaryRed:#E31D3B;
+$root-font-family:Roboto;
+$root-font-style:normal;
+$root-font-size:16px;
+$font-bebas:'Bebas Neue Pro',Helvetica; 
+$shadow:0px 38px 55px rgba(63, 63, 63, 0.11);
+html,body{
+    overflow-x: hidden;
 }
-.footer-top {
-    background: $easyrad-dark !important;
-    color: $white;
-    .footer-widget {
-        margin-bottom: $spacing-lg;
-        .widget-title {
-            font-size: 18px;
-            font-weight: 700;
-            padding-right: $spacing-lg;
-            display: inline-block;
-            position: relative;
-            margin-bottom: 0;
-            &:after {
-                position: absolute;
-                content:"";
-                width: $spacing-md;
-                height: 3px;
-                top: $spacing;
-                right: 0;
-                left: initial;
-                background: $primary;
+.root{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+}
+.hr{
+    width: 50%;
+    height:3px;
+    background-image:linear-gradient(to right,red,rgba(255, 0, 0, 0));
+    margin: 10px 0px;
+    display: block;
+}
+h1{
+    font-family:$font-bebas;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 3.5em;
+    color: $primaryBlack;
+    text-align: center;
+    text-transform: uppercase;
+    @media(max-width:768px){
+        font-size: 2.5em;
+    }
+
+}
+h2{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: $primaryBlack;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 20px 0px;
+
+}
+.sm-text{
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1em;
+    text-align: center;
+    letter-spacing: 0.01em;
+    margin: auto 1em;
+    padding: 5px 0px;
+    color:$primaryBlack;
+}
+.red{
+    color: $primaryRed;
+}
+.footer{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    .footer-cta{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        background-color: $primaryBlack;
+        padding: 50px 340px;
+        width: 100%;
+        height: 150px;
+        @media(max-width:1600px){
+            height: fit-content;
+            text-align: center;
+            p{
+                margin: 0px auto!important;
+            }
+        }
+
+        @media(max-width:768px){
+            padding: 20px 40px;
+            flex-flow: column;
+            text-align: center;
+            order: 10;
+        }
+        .fa{
+            color: white;
+            font-size: 1.5em;
+            margin: 10px;
+        }
+        
+        .some-text{
+            width: 20%;
+            text-align: center;
+            color: white;
+            display: inline;
+            margin: 10px 250px 0px;
+            @media(max-width:1600px){
+                margin: 10px 20px;
+                width: 50%;
+            }
+            @media(max-width:768px){
+                width: 70%;
+                margin: 20px auto!important;
             }
         }
     }
-    .menu {
-        padding: 0;
-        margin: 0;
-        .menu-item {
-            list-style: none;
-            justify-content: flex-start;
-            .nav-link {
-                padding: $spacing-xs 0;
-                color: $white;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                font-size: 14px;
-                &:hover {
-                    color: $primary;
+    .close-lg-footer{
+        display: none;
+    }
+    .lg-footer{
+        width:100%;
+        margin: 0px 0px 100px 0px;
+        .lg-footer-wrapper{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 70%;
+            margin: 0px auto;
+            padding: 50px 0px;
+            @media(max-width:768px){
+                width: 100%;
+                flex-flow: column;
+                justify-content: space-between;
+            }
+            .h1{
+                font-size: 1em;
+                text-transform: capitalize;
+                @media(max-width:768px){
+                    margin-top: 20px;
                 }
+
+            }
+
+            .card{
+                background-color: white;
+                border: none;
+                border-radius: 5px;
+                box-shadow: $shadow;
+                width: 250px;
+                padding: 20px;
+                margin: -100px auto;
+                @media(max-width:768px){
+                
+                    margin: 20px auto;
+                }
+                .fa{
+                    color: $primaryRed;
+                }
+                .card-header,.card-footer{
+                    border: none;
+                    background-color: white;
+                    text-align: center;
+                    .fa{
+                        color: $primaryRed;
+                    }
+                    .h1{
+                        font-size: 0.8em;
+                    }
+                }
+                
             }
         }
     }
 }
 
-.footer-bottom {
-    background: $easyrad-dark !important;
-    color: $white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    .site-footer {
-        .site-info {
-            text-align: right;
-        }
-    }
-}
