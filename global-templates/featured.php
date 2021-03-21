@@ -13,49 +13,68 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 		<div class="page-section">
-			<div class="row section-services">
+			<div class="row section-benefits">
 
-				<div class="col-md-6 col-lg-4">
-					<div class="single-service">
-						<div class="service-image">
-						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-maison.jpg" />
-
+				<div class="col-md p-0">
+					<div class="single-benefit">
+						<div class="benefit-icon">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-price.svg" />
 						</div>
-						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('protect_item1');?></h4>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4">
-					<div class="single-service">
-						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-boutique.jpg" />
-						</div>
-						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('protect_item2');?></h4>
+						<div class="benefit-desc">
+							<h4 class="title">54€ seulement</h4>
+							<p class="description">de forfait honoraire</p>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-md-6 col-lg-4">
-					<div class="single-service">
-						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-syndics.jpg" />
+				<div class="col-md p-0 bg-pink">
+					<div class="single-benefit">
+						<div class="benefit-icon">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-secure.svg" />
 						</div>
-						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('protect_item3');?></h4>
+						<div class="benefit-desc">
+							<h4 class="title">100% sécurisé</h4>
+							<p class="description">par HIPAY</p>
 						</div>
 					</div>
 				</div>
 
-			</div>
-		</div>
+				<div class="col-md p-0 bg-red">
+					<div class="single-benefit">
+						<div class="benefit-icon">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-rating.svg" />
+						</div>
+						<div class="benefit-desc">
+							<h4 class="title">4.7/5</h4>
+							<p class="description">avis de nos clients</p>
+						</div>
+					</div>
+				</div>
 
-		<div class="page-section media">
-			<div class="media-coverage">
-				<h5 class="section-title mute">Vu à la télé</h5>
-				<?php echo do_shortcode('[gslogo id=2]'); ?>
+				<div class="col-md p-0 bg-pink">
+					<div class="single-benefit">
+						<div class="benefit-icon">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-justice.svg" />
+						</div>
+						<div class="benefit-desc">
+							<h4 class="title">Un cabinet d’avocat</h4>
+							<p class="description">réputé à votre service</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md p-0">
+					<div class="single-benefit">
+						<div class="benefit-icon">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-simple.svg" />
+						</div>
+						<div class="benefit-desc">
+							<h4 class="title">Pas d’engagement</h4>
+							<p class="description">de votre part</p>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>

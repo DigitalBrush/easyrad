@@ -23,6 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/flip.min.css">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" />
@@ -88,7 +89,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 					<div class="col-md-2 contact-top">
 						<span class="material-icons">call</span>
-						01 45 05 15 12
+						<div class="number">
+							<p class="header-contact">0 890 10 20 30</p>
+							<p class=fine-print>Service 0,80 €/min + prix appel</p>
+						</div>
 					</div>
 					<div class="col-md-2 cta-top">
 						Je conteste en ligne

@@ -7138,6 +7138,13 @@ jQuery(function ($) {
     $('.category-section').addClass('owl-carousel owl-theme category-carousel');
   } else {}
 
+  function setupFlip(tick) {
+    Tick.helper.interval(function () {
+      tick.value;
+    }, 1000);
+  }
+});
+jQuery(document).ready(function () {
   var $ = jQuery;
 
   if ($('.set_custom_images').length > 0) {

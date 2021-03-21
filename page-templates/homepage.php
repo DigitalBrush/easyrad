@@ -28,11 +28,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					if ( is_front_page() ) {
 						get_template_part( 'global-templates/hero-header' );
 						get_template_part( 'global-templates/featured' );
-						get_template_part( 'global-templates/locations-map' ); 
-						get_template_part( 'global-templates/categories-home' );
-						get_template_part( 'global-templates/who' ); 
+						get_template_part( 'global-templates/brief' ); 
+						get_template_part( 'global-templates/press' );
+						get_template_part( 'global-templates/counter' ); 
 						get_template_part( 'global-templates/home-modal' ); 
-						get_template_part( 'global-templates/home-bottom-slider' ); 
 					}else{
 
 

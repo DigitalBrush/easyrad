@@ -1,5 +1,5 @@
 .navbar {
-    min-height: 80px;
+    min-height: 72px;
     width: 100%;
     padding: 0;
     @include media-breakpoint-down(md) {
@@ -19,9 +19,9 @@
             padding: $spacing;
             border-radius: 0 0 $spacing-xs $spacing-xs;
             img {
-                width: 180px;
+                width: 160px;
                 @include media-breakpoint-down(md) {
-                    width: 150px;
+                    width: 130px;
                 }
                 @include media-breakpoint-down(sm) {
                     width: 100px;
@@ -95,11 +95,27 @@
             }
         }
         .contact-top {
-            background: $gray-300;
+            background: $gray-200;
             color: $easyrad-dark;
             display: flex;
             align-items: center;
             justify-content: center;
+            .number {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                .header-contact {
+                    margin: 0;
+                    font-size: 22px;
+                    font-weight: 800;
+                    line-height: 1em;
+                }
+                p {
+                    margin: 0;
+                    line-height: 1em;
+                }
+            }
         }
         .cta-top {
             background: $primary;

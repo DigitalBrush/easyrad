@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 200px;
     .hero-text {
         padding: $spacing-lg;
         display: flex;
@@ -10,60 +11,31 @@
         flex-direction: column;
         text-align: center;
         .navbar-brand {
-            background-color: $white;
+            background-color: transparent;
             padding: $spacing-xxl $spacing;
             width: 100%;
+            max-width: 500px;
             img {
                 width: 100%;
             }
         } 
-        .slider-text {
-            position: relative;
-            z-index: 2;
-            float: right;
-            @include media-breakpoint-up(md) {
-                margin-right: -350px;
-                max-width: 700px;
-            }
-            @include media-breakpoint-down(sm) {
-                margin-right: -150px;
-                max-width: 500px;
-            }
-            .big-heading {
-                padding: 0 0 $spacing-lg 0;
-                position: relative;
-                margin-bottom: $spacing-lg;
-                &:after {
-                    position: absolute;
-                    content:"";
-                    width: 80px;
-                    height: 5px;
-                    bottom: 0;
-                    left: 0;
-                    background: $primary;
-                }
-            }
-            .small-heading {
-                padding: $spacing-lg 0;
-                font-weight: 600;
-                span {
-                    color: $primary;
-                }
-                &:after {
-                    display: none;
-                }
-            }
-            .slider-body {
-                color: $easyrad-gray;
-                max-width: 400px;
-            }
-            @include media-breakpoint-down(xs) {
-                padding: $spacing-lg;
-                margin: 0 auto;
+        .big-heading {
+            padding: 0;
+            margin: 0;
+            span {
+                color: $primary;
             }
         }
-        @include media-breakpoint-up(md) {
-            padding: $spacing-xxl;
+        .small-heading {
+            padding: $spacing 0;
+            font-weight: 400;
+            font-size: 28px;
+            span {
+                color: $primary;
+            }
+            &:after {
+                display: none;
+            }
         }
     }
     .hero-image {
