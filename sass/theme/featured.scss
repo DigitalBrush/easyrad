@@ -1,0 +1,99 @@
+.cards{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0px!important;
+    width: 100%;
+    margin: 0px auto 30px auto;
+    
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: 0px;
+        margin: 10px auto;
+        width: 100%;
+        box-shadow: none;
+        
+    }
+    .card{
+        flex-grow: 1;
+        padding:3em 2em;
+        margin: 0;
+        display:flex;
+        flex-flow:  column nowrap;
+        justify-content: space-between;
+        text-align: center!important;
+        width:250px;
+        min-width:250px;
+        height:250px;
+        min-height:250px ;
+        border: none!important;
+        border-radius:0px!important;
+        box-shadow: $shadow;
+        .benefit-icon {
+            margin-bottom: $spacing;
+            padding: $spacing $spacing-xl;
+            text-align: center;
+            @media (max-width: 768px) {
+                padding: 0px;
+                margin: 0px;
+                height: fit-content;
+                text-align: left;
+            }
+            img {
+                max-width: 100px;
+                @media (max-width: 768px) {
+                    width: 100px;
+                }
+            }
+        }
+        .sm-text{
+            font-size: 0.6em;
+        }
+        
+        .col-8{
+            width: 100%!important;
+            height: fit-content;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+            flex-flow: row nowrap;
+            justify-content: left;
+            text-align: left;
+            font-size: 2.0em;
+            
+            .sm-text{
+                text-align: left;
+                font-size: 0.5em;
+            }
+            .col-8{
+                margin-left: 10px;
+                .card-title{
+                    font-size: 0.8em;
+                    width: 80%;
+                }
+
+            }
+        }
+
+        .card-title{
+            font-family: inherit;
+            font-style: inherit;
+            font-weight: 900;
+            font-size: 1em;
+            color: $primaryBlack;
+            margin-bottom:0px;
+            width: 100%;
+        }
+        .sm-text{
+            margin: 0em;
+        }
+        
+        
+    }
+    .one,.five{background-color: $easyradwhite}
+    .two,.four{background-color: #FFD5D5;}
+    .three{background-color:$primaryRed ;}
+}

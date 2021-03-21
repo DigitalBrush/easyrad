@@ -14,25 +14,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <?php 
 get_header();
+//get_template_part('global-templates/home-modal'); //pending styling setup
 ?>
-<?php get_template_part( 'global-templates/hero' ); ?>
-<div class="row easy-rad-brief">
-              <div class="col-md-6 col-12 brief">
-                <h1 class="h1">Easy Rad en bref</h1>
-                <div class="hr"></div>
-                <p class="some-text">
-                  EasyRad est le premier site internet à proposer la contestation en ligne des infractions relevées par radars automatiques et vidéo-verbalisation !<br>
+          <?php 
+              get_template_part( 'global-templates/hero' );
+              get_template_part( 'page-templates/brief' );
 
-                  Vous ne savez pas comment protéger votre permis de conduire et ne pas perdre vos points ? EasyRad le fait pour vous !<br>
+          ?>
 
-                  Découvrez notre service en vidéo.
-                </p>
-                <button class="btn btn-primary"><p class="button-text">En Savoir plus</p></button>
-              </div>
-              <div class="col-md-6 col-12 asset">
-                <iframe width="720px"height="405px" src="https://www.youtube.com/embed/2uhoFemQhdA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-              </div>
-            </div>
             <header>
                 <h1 class="h1 center">La presse en parle</h1>
                 <?php 

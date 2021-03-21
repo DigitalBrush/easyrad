@@ -46,7 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Contestation</a>
+                <a class="nav-link active" aria-current="page" href="formulaire">Contestation</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#rights">Vos Droits</a>
@@ -55,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <a class="nav-link" href="#mission">Notre mission</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Actualités.html">Actualites</a>
+                <a class="nav-link" href="Actualités">Actualités</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Espace client</a>
@@ -63,7 +63,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               
             </ul>
             <button onclick="location.href='tel:0890102030'" class="btn btn-phone"><i style="display: inline-block;" class="fa fa-phone-square fa-2x"></i><span class="button-sub-text"><strong class="phone-no">0 890 10 20 30</strong><br/>Service 0,80 €/min + prix appel</span></button>
-            <button onclick="location.href='Formulaire.html'" class="btn btn-secondary "><p class="button-text">Je conteste en ligne</p></button>
+            <button onclick="location.href='formulaire'" class="btn btn-secondary "><p class="button-text">Je conteste en ligne</p></button>
           </div>
         </div>
       </nav>

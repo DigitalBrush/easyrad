@@ -258,144 +258,7 @@ body{
                 
             }
         }
-        .consignation-hero{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.384),rgba(0, 0, 0, 0.26)),url(../assets/consignation-hero.jpg)!important;
-            background-position: center;
-            height: 40em;
-            color: white;
-            @media (max-width:768px){
-                height: 38em;
-            }
-            .hero-nav{
-                color: white!important;
-            }
-            h1{
-                color: white!important;
-                margin-top: 100px;
-                text-shadow: none!important;
-            }
-            .sm-text,.some-text{
-                color: white;
-            }
-            a:hover{
-                color: $primaryRed;
-            }
-        }
-        .actualites-hero{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.384),rgba(0, 0, 0, 0.26)),url(../assets/actualités-hero.png)!important;
-            background-position: center;
-            height: 40em;
-            color: white;
-            @media (max-width:768px){
-                height: 30em;
-            }
-            .hero-nav{
-                color: white!important;
-            }
-            h1{
-                color: white!important;
-                margin-top: 100px;
-                text-shadow: none!important;
-            }
-            .sm-text,.some-text{
-                color: white;
-            }
-            a:hover{
-                color: $primaryRed;
-            }
-        }
-        .quote{
-            width: 80%;
-            margin: 20px auto;
-            .h1{
-                font-size: 1.5em;
-                text-align: center;
-                width: 80%;
-                margin: 0px auto;
-            }
-        }
         
-        
-        .btn-phone{
-            height: 72px;
-            width: 15em;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            background-color:#DADADA ;
-            border-radius: 0!important;
-            margin: 0;
-            .fa-phone-square{
-                color:#000;
-                margin: auto 2px;
-
-            }
-            .button-sub-text{
-                font-family: inherit;
-                font-style: inherit;
-                font-weight: 500;
-                font-size: 0.6em;
-                line-height: 1em;
-                text-align: left;
-                letter-spacing: 0.01em;
-                margin: auto 1em;
-                padding: 5px 0px;
-
-                .phone-no{
-                    font-family: $root-font-family;
-                    font-style: $root-font-style;
-                    font-weight: 900;
-                    font-size: 2.0em;
-                    letter-spacing: 0.01em;
-                }
-            }
-        }
-        .btn-secondary{
-            height: 72px;
-            width: 15em;
-            text-align: center;
-            background-color:$primaryRed;
-            padding: auto!important;
-            border: none!important;
-            border-radius: 0!important;
-            color: $white;
-            font-family: $root-font-family;
-            font-style: bold;
-            .button-text{
-                font-family: $root-font-family;
-                font-weight: 700;
-                font-size: 1.2 em;
-                margin: 0;
-                color: $white;
-
-
-            }
-        }
-        .btn-primary{
-            height: 50px;
-            width: 15em;
-            text-align: center;
-            background-color:$primaryRed;
-            padding: 10px!important;
-            border: none!important;
-            border-radius: 5px!important;
-            margin: 5em;
-            color: $white;
-            font-family: $root-font-family;
-            font-style: bold;
-            .button-text{
-                font-family: $root-font-family;
-                font-weight: 700;
-                color: $white;
-                font-size: 1em;
-                margin: 0;
-
-
-            }
-        }
-        .btn-primary:hover,.btn-secondary:hover{
-            transform:scale(1.1);
-        }
         
         .main-content{
             width: 100%;
@@ -1255,7 +1118,7 @@ a:hover{
 .swap-first{
     order:1;
     width: 48%;
-    margin-right: 20px;
+    margin-right: 0px;
     @media(max-width:768px){
         width: 100%;
     }
@@ -1269,4 +1132,48 @@ a:hover{
 }
 .btn-group{
     margin: 0px auto!important;
+}
+.section-benefits {
+    margin-top: -200px;
+    background: $white;
+    border-radius: $spacing-xs;
+    box-shadow: $shadow;
+    .single-benefit {
+        padding: $spacing-lg $spacing-md;
+        @include media-breakpoint-down(xs) {
+            padding-bottom: $spacing-xl;
+        }
+        .benefit-icon {
+            margin-bottom: $spacing;
+            padding: $spacing $spacing-xl;
+            text-align: center;
+            img {
+                max-width: 100px;
+            }
+        }
+        .benefit-desc {
+            .title {
+                font-size: 22px;
+                font-weight: 700;
+                font-family: $body-font;
+                line-height: 1em;
+                text-align: center;
+            }
+            .description {
+                margin-bottom: 22px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 1em;
+            }
+            a {
+                color: #fff;
+                font-size: 14px;
+                text-decoration: none;
+                i {
+                    margin-right: 10px;
+                    color: #f70037;
+                }
+            }
+        }
+    }
 }

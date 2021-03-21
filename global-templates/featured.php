@@ -11,53 +11,47 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
-		<div class="page-section">
-
-			<h2 class="section-title">Que voulez-vous protéger ?</h2>
-			<div class="row section-services">
-
-				<div class="col-md-6 col-lg-4">
-					<div class="single-service">
-						<div class="service-image">
-						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-maison.jpg" />
-
-						</div>
-						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('protect_item1');?></h4>
-						</div>
+<div class="row cards">
+                <div class="card one col-md-2 col-12">
+				  	<div class="benefit-icon">
+					  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-price.svg" />
 					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4">
-					<div class="single-service">
-						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-boutique.jpg" />
+                <div class="col-md-12 col-8">
+                    <p class="card-title">54€ seulement</p>
+                    <p class="sm-text">de forfait honoraire</p>
+                </div>
+                  </div>
+                  <div class="card two col-md-2 col-12">
+				  <div class="benefit-icon">
+				  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-secure.svg" /></div>
+                    <div class="col-md-12 col-8">
+                      <p class="card-title">100% sécurisé</p>
+                      <p class="sm-text">par HIPAY</p>
+                    </div>
+                  </div>
+                  <div class="card three col-md-2 col-12">
+				  <div class="benefit-icon">
+				  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-rating.svg" /></div>
+                    <div class="col-md-12 col-8">
+                      <p class="card-title">4.7/5</p>
+                      <p class="sm-text">avis de nos clients</p>
+                    </div>
+                  </div>
+                  <div class="card four col-md-2 col-12">
+				  <div class="benefit-icon">
+				  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-justice.svg" /></div>
+                    <div class="col-md-12 col-8">
+                      <p class="card-title">Un cabinet d’avocat</p>
+                      <p class="sm-text">réputé à votre service</p>
+                    </div>
+                  </div>
+                  <div class="card five col-md-2 col-12">
+				  <div class="benefit-icon">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-simple.svg" />
 						</div>
-						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('protect_item2');?></h4>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4">
-					<div class="single-service">
-						<div class="service-image">
-							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-protect-syndics.jpg" />
-						</div>
-						<div class="service-desc">
-							<h4 class="title"><?php echo get_option('protect_item3');?></h4>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<div class="page-section media">
-			<div class="media-coverage">
-				<h5 class="section-title mute">Vu à la télé</h5>
-				<?php echo do_shortcode('[gslogo id=2]'); ?>
-			</div>
-		</div>
-	</div>
+                    <div class="col-md-12 col-8">
+                      <p class="card-title">Pas d’engagement</p>
+                      <p class="sm-text">de votre part</p>
+                    </div>
+                  </div>
+                </div>
