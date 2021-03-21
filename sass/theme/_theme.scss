@@ -67,7 +67,7 @@ h4 {
     border-radius: $spacing-xs;
     font-weight: 600;
     font-size: 16px;
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.2rem;
     margin: $spacing 0;
     display: inline-flex;
     align-items: center;
@@ -301,7 +301,7 @@ h4 {
 .page-section {
     padding: $spacing-xxl 0;
     &.media {
-        padding: $spacing-sm 0 $spacing-xxl;
+        padding: $spacing-xxl 0;
         overflow: hidden;
     }
     .section-title {
@@ -480,6 +480,7 @@ blockquote {
             border-radius: $spacing-xs;
             overflow: hidden;
             background: $black;
+            margin-bottom: $spacing-lg;
             img {
                 object-fit: cover;
                 height: 100%;
@@ -490,46 +491,74 @@ blockquote {
 
 .section-points {
     padding: $spacing-xxl 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .points-counter {
-        padding-top: $spacing-xxl;
-        text-align: center;
-        .tick {
-            font-size: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: $spacing-lg 0;
-            .channel-block {
-                img {
-                    margin-top: -60px;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .points-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .points-counter {
+            padding-top: $spacing-xxl;
+            text-align: center;
+            .tick {
+                font-size: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: $spacing-lg 0;
+                @include media-breakpoint-down(sm) {
+                    font-size: 60px;
                 }
-            }
-            .press-text {
-                max-width: 500px;
-                .text-body {
-                    padding: $spacing-lg;
-                    margin-bottom: $spacing-lg;
+                .channel-block {
+                    img {
+                        margin-top: -60px;
+                    }
                 }
-            }
-            .tick-credits {
-                display: none !important;
-            }
-            .tick-flip {
-                .tick-flip-card {
-                    .tick-flip-panel {
-                        background-color: $white;
-                        color: $easyrad-dark;
+                .press-text {
+                    max-width: 500px;
+                    .text-body {
+                        padding: $spacing-lg;
+                        margin-bottom: $spacing-lg;
+                    }
+                }
+                .tick-credits {
+                    display: none !important;
+                }
+                .tick-flip {
+                    .tick-flip-card {
+                        .tick-flip-panel {
+                            background-color: $white;
+                            color: $easyrad-dark;
+                        }
                     }
                 }
             }
+            .text-heading {
+                color: $primary;
+            }
+    
         }
-        .text-heading {
-            color: $primary;
-        }
+    }
+}
 
+.section-founder {
+    padding: $spacing-xxl 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .founder-image {
+        .image-block {
+            margin-bottom: -75px;
+            @include media-breakpoint-down(xs) {
+                margin-bottom: -55px;
+            }
+        }
+    }
+    .founder-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

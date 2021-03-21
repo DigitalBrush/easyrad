@@ -62,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_custom_logo();
 							} ?><!-- end custom logo -->
 						</div>
-						<div class="contact-top d-md-none d-flex">
+						<div class="contact-top-m d-md-none d-flex">
 							<span class="material-icons">call</span>
 						</div>
 						
@@ -87,14 +87,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div class="col-md-2 contact-top">
+					<div class="col-md-2 contact-top d-md-flex d-none">
 						<span class="material-icons">call</span>
 						<div class="number">
 							<p class="header-contact">0 890 10 20 30</p>
 							<p class=fine-print>Service 0,80 €/min + prix appel</p>
 						</div>
 					</div>
-					<div class="col-md-2 cta-top">
+					<div class="col-md-2 cta-top d-md-flex d-none">
 						Je conteste en ligne
 					</div>
 				</div>

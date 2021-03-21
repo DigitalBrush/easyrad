@@ -94,6 +94,14 @@
                 background: $white;
             }
         }
+        .contact-top-m {
+            background: $primary;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+        }
         .contact-top {
             background: $gray-200;
             color: $easyrad-dark;

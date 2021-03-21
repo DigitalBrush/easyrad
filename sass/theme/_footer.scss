@@ -17,17 +17,15 @@
 }
 .footer-top {
     background: $white !important;
-    color: $easyrad-dark;
+    color: $easyrad-blue-gray;
     .footer-widget {
         margin-bottom: $spacing-lg;
         .widget-title {
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 600;
             padding-right: $spacing-lg;
             display: inline-block;
             position: relative;
-            margin-bottom: 0;
-            font-family: $body-font;
         }
     }
     .menu {
@@ -38,7 +36,7 @@
             justify-content: flex-start;
             .nav-link {
                 padding: $spacing-xs 0;
-                color: $easyrad-dark;
+                color: $easyrad-blue-gray;
                 font-size: 14px;
                 &:hover {
                     color: $primary;
@@ -52,9 +50,13 @@
         border-radius: $spacing-xs;
         margin-top: -70px;
         box-shadow: $shadow;
+        @include media-breakpoint-down(xs) {
+            margin-top: initial;
+        }
         .widget-title {
             color: $easyrad-blue-gray;
             margin-bottom: $spacing-lg;
+            font-family: $body-font;
         }
     }
 }

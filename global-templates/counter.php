@@ -11,10 +11,10 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-		<div class="container" id="wrapper-static-content" tabindex="-1">
-
-			<div class="row section-points">
-				<div class="col-sm-6 points-counter">
+	<div class="container-fluid section-points" tabindex="-1">
+		<div class="container">
+			<div class="row points-row">
+				<div class="col-sm-12 points-counter">
 					<div class="tick" data-value="85422" data-did-init="setupFlip">
 						<div data-repeat="true">
 							<span data-view="flip"></span>
@@ -23,4 +23,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<h2 class="text-heading">POINTS CONTESTES AU <?php echo date("d/m/Y"); ?></h2>
 				</div>
 			</div>
+		</div>
 	</div>
