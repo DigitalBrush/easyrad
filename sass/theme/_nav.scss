@@ -159,6 +159,12 @@
                 color: $easyrad-dark !important;
             }
         }
+        .dropdown-menu {
+            border-radius: 0;
+            border: 0;
+            border-top: 5px solid $primary;
+            margin-top: $spacing;
+        }
         .nav-cta {
             padding-left: $spacing-lg;
             background-color: $primary;
