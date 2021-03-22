@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-	<div class="container-fluid bg-gray section-press" tabindex="-1">
+	<div class="container-fluid section-press" tabindex="-1">
 		<div class="container">
 			<h2 class="section-title">La presse en parle</h2>
 			<div class="row owl-carousel owl-theme press-carousel">

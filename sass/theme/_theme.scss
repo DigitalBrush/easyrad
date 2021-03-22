@@ -67,7 +67,7 @@ h4 {
     border-radius: $spacing-xs;
     font-weight: 600;
     font-size: 16px;
-    padding: 0.8rem 1.2rem;
+    padding: 0.6rem 1.2rem;
     margin: $spacing 0;
     display: inline-flex;
     align-items: center;
@@ -404,6 +404,48 @@ h4 {
     color: $primary !important;
 }
 
+.section-why {
+    .single-why {
+        background: $white;
+        border-radius: $spacing-sm;
+        box-shadow: $shadow;
+        @include media-breakpoint-down(xs) {
+            padding-bottom: $spacing-xl;
+        }
+        .why-image {
+            margin-bottom: $spacing;
+            text-align: center;
+            border-radius: $spacing-sm $spacing-sm 0 0;
+            overflow: hidden;
+        }
+        .why-desc {
+            text-align: center;
+            margin-top: $spacing-lg;
+            padding: $spacing-md;
+            .title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1em;
+                text-align: center;
+                margin-bottom: $spacing;
+                text-transform: uppercase;
+            }
+            .description {
+                text-align: center;
+            }
+            a {
+                color: #fff;
+                font-size: 14px;
+                text-decoration: none;
+                i {
+                    margin-right: 10px;
+                    color: #f70037;
+                }
+            }
+        }
+    }
+}
+
 .section-brief {
     padding: $spacing-xxl 0;
     .brief-content {
@@ -468,6 +510,9 @@ blockquote {
 
 .section-press {
     padding: $spacing-xxl 0;
+    background-image: url(../img/wave-press.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     .section-title {
         color: $easyrad-blue-gray;
         text-align: center;
@@ -572,9 +617,6 @@ blockquote {
 
 .section-points {
     padding: $spacing-max 0;
-    background-image: url(../img/wave.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
     .points-row {
         display: flex;
         align-items: center;
