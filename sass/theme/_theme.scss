@@ -507,6 +507,15 @@ h4 {
     }
 }
 
+.section-ratings {
+    padding: 0;
+    .ratings-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .section-brief {
     padding: $spacing-xxl 0;
     .brief-content {
