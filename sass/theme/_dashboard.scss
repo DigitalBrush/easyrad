@@ -1,0 +1,39 @@
+#dash-navbar {
+    border-bottom: 1px solid $gray-300;
+    .header-bar {
+        justify-content: space-between;
+    }
+}
+.dash-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    align-items: stretch;
+    .side-bar {
+        width: 360px;
+        padding: $spacing-lg;
+        border-right: 1px solid $gray-300;
+    }
+    .dash-body {
+        background: $gray-100;
+        padding: $spacing-lg;
+        .card {
+            margin-bottom: $spacing-sm;
+            .card-header {
+                color: $easyrad-blue-gray;
+                .card-title {
+                    margin: 0;
+                }
+            }
+            .card-body {
+                .card-text {
+                    margin: 0;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
