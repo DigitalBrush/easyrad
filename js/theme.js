@@ -7095,7 +7095,7 @@ jQuery(function ($) {
       }
     }
   });
-  $('#main-menu .dropdown a').first().addClass('dropdown-toggle');
+  $('#main-menu .dropdown a').children('.nav-link').addClass('dropdown-toggle');
 
   if (window.matchMedia("(max-width: 767px)").matches) {
     $('.category-section').addClass('owl-carousel owl-theme category-carousel');

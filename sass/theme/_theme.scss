@@ -67,7 +67,6 @@ h4 {
     border-radius: $spacing-xs;
     font-weight: 600;
     font-size: 16px;
-    padding: 0.6rem 1.2rem;
     margin: $spacing 0;
     display: inline-flex;
     align-items: center;
@@ -300,7 +299,7 @@ h4 {
         padding-bottom: $spacing-lg;
         color: $primary;
         span {
-            margin: 0 $spacing-sm;
+            margin: 0 $spacing;
             &:first-of-type {
                 margin-left: 0;
             }
@@ -315,10 +314,18 @@ h4 {
 }
 
 .page-section {
-    padding: $spacing-xxl 0;
+    padding-top: $spacing-xxl;
+    padding-bottom: $spacing-xxl;
     &.media {
         padding: $spacing-xxl 0;
         overflow: hidden;
+        .media-coverage {
+            .gs-logo-area {
+                .gs-logo-single {
+                    max-width: 200px;
+                }
+            }
+        }
     }
     .section-title {
         text-align: center;
@@ -409,6 +416,7 @@ h4 {
         background: $white;
         border-radius: $spacing-sm;
         box-shadow: $shadow;
+        margin-bottom: $spacing-xl;
         @include media-breakpoint-down(xs) {
             padding-bottom: $spacing-xl;
         }
@@ -422,6 +430,59 @@ h4 {
             text-align: center;
             margin-top: $spacing-lg;
             padding: $spacing-md;
+            .title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1em;
+                text-align: center;
+                margin-bottom: $spacing;
+                text-transform: uppercase;
+            }
+            .description {
+                text-align: center;
+            }
+            a {
+                color: #fff;
+                font-size: 14px;
+                text-decoration: none;
+                i {
+                    margin-right: 10px;
+                    color: #f70037;
+                }
+            }
+        }
+    }
+}
+
+.section-rights {
+    background-image: url(../img/wave-red.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: $spacing-max 0;
+    @include media-breakpoint-down(xs) {
+        background-position: 20% center;
+    }
+    .section-title {
+        color: $white;
+    }
+    .single-rights {
+        background: $white;
+        border-radius: $spacing-sm;
+        box-shadow: $shadow;
+        margin-bottom: $spacing-xl;
+        padding: $spacing;
+        @include media-breakpoint-down(xs) {
+            padding-bottom: $spacing-xl;
+        }
+        .rights-image {
+            margin-bottom: $spacing;
+            text-align: center;
+            border-radius: $spacing;
+            overflow: hidden;
+        }
+        .rights-desc {
+            text-align: center;
+            margin-top: $spacing-lg;
             .title {
                 font-size: 24px;
                 font-weight: 700;
@@ -728,9 +789,6 @@ blockquote {
 
 .contact-page {
     .content-area {
-        @include media-breakpoint-up(lg) {
-            margin-top: -80px;
-        }
         .contact-info {
             background: $primary;
             display: flex;

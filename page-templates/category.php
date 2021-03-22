@@ -38,7 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!-- #primary -->
 
 
-
+	<?php get_template_part( 'global-templates/call-to-action' ); ?>
 	</div><!-- #content -->
 
 </div><!-- #full-width-page-wrapper -->

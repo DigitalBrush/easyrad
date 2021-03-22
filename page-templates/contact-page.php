@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		
 	<?php
 
-get_template_part( 'global-templates/locations-map-full' );
+get_template_part( 'global-templates/page-header' );
 
 
 ?>
@@ -32,18 +32,6 @@ get_template_part( 'global-templates/locations-map-full' );
 				
 					<div class="container">
 						<div class="row d-flex justify-content-start mt-5 mb-5">
-							<div class="col-sm-5">
-								<div class="contact-info">
-									<div class="d-block">
-										<h4 class="pretitle"><span class="material-icons">phone</span>Telephone</h4>
-										<a href="tel:01 45 05 15 12" target="_blank" rel="noopener">01 45 05 15 12</a>
-									</div>
-									<div class="d-block ml-5">
-										<h4 class="pretitle"><span class="material-icons">mail</span>Email</h4>
-										<a href="mailto:contact@easyrad-securite.fr" target="_blank" rel="noopener">contact@easyrad-securite.fr</a>
-									</div>
-								</div>
-							</div>
 							
 							<div class="col-sm-12">
 								
