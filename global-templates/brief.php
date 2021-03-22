@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<p>EasyRad est le premier site internet à proposer la contestation en ligne des infractions relevées par radars automatiques et vidéo-verbalisation !</p>
 							<p>Vous ne savez pas comment protéger votre permis de conduire et ne pas perdre vos points ? EasyRad le fait pour vous !</p>
 							<p>Découvrez notre service en vidéo.</p>
-							<a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-primary">En savoir plus</a>
+							<a href="#" class="btn btn-primary">En savoir plus</a>
 						</div>
 					</div>
 				</div>
