@@ -48,8 +48,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/press/press-ee-m6.jpg" />
 								</div>
 							</div>
-							<div class="col-sm-7 video-block">
-								<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://easyrad-85d9.kxcdn.com/wp-content/themes/easy-rad/video/enquete-exclusive-sequence-easyrad.mp4"></iframe>
+							<div class="col-sm-7">
+								<div class="video-block">
+									<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://easyrad-85d9.kxcdn.com/wp-content/themes/easy-rad/video/enquete-exclusive-sequence-easyrad.mp4"></iframe>
+								</div>
 							</div>
 						</div>
 					</div>
