@@ -96,8 +96,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<p class=fine-print>Service 0,80 €/min + prix appel</p>
 						</div>
 					</div>
-					<div class="col-lg-2 col-md-6 cta-top d-md-flex d-none">
-						Je conteste en ligne
+					<div class="col-lg-2 col-md-6 d-md-flex d-none p-0">
+						<a class="cta-top" href="<?php echo esc_url(home_url('produits/contestation/contestation-en-ligne/')); ?>">Je conteste en ligne</a>
 					</div>
 				</div>
 			<?php if ( 'container' === $container ) : ?>

@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<h2 class="section-title">Protégez votre permis de conduire et sauvez vos points</h2>
 				<div class="text-body">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna.</p>
-					<a href="<?php echo esc_url(home_url('contact')); ?>" class="btn btn-lg btn-primary">Je conteste en ligne</a>
+					<a href="<?php echo esc_url(home_url('produits/contestation/contestation-en-ligne/')); ?>" class="btn btn-lg btn-primary">Je conteste en ligne</a>
 				</div>
 			</div><!--col end -->
 		</div><!-- row end -->
