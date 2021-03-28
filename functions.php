@@ -81,6 +81,11 @@ function related_products(){
 
 }
 
+// Remove image from product pages
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+
+
+
 add_shortcode( 'show-breadcrumb' , 'ss_show_breadcrumb');
 function ss_show_breadcrumb() {
     if(function_exists('bcn_display'))
@@ -95,6 +100,16 @@ remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 8 );
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 30);
+
+// To change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+    return __( 'Payer en ligne', 'woocommerce' ); 
+}
+
 
 function wpdocs_enqueue_custom_admin_style($hook_suffix) {
     if($hook_suffix != 'appearance_page_easyrad_options') {
@@ -113,7 +128,7 @@ add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
 
 
 
-  add_action( 'um_post_registration_approved_hook', 'remove_my_action', 9 );
+add_action( 'um_post_registration_approved_hook', 'remove_my_action', 9 );
 function remove_my_action(){
     remove_action('um_post_registration_approved_hook', 'um_post_registration_approved_hook', 10, 2);
     add_action('um_post_registration_approved_hook', 'um_post_registration_approved_hook_new', 10, 2);

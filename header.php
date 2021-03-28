@@ -89,7 +89,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div class="col-lg-2 col-md-6 contact-top d-lg-flex d-none">
+					<div class="col-lg-2 col-md-6 contact-top d-md-flex d-none">
 						<span class="material-icons">call</span>
 						<div class="number">
 							<p class="header-contact">0 890 10 20 30</p>

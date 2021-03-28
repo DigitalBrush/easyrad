@@ -44,8 +44,7 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
-		get_template_part( 'global-templates/left-sidebar-check' );
-		echo '<main class="site-main" id="main">';
+		echo '<div class="col-sm-12">';
 	}
 }
 
@@ -54,10 +53,10 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 	 * Display the theme specific end of the page wrapper.
 	 */
 	function understrap_woocommerce_wrapper_end() {
-		echo '</main><!-- #main -->';
-		get_template_part( 'global-templates/right-sidebar-check' );
+		echo '</div><!-- .col -->';
 		echo '</div><!-- .row -->';
 		echo '</div><!-- Container end -->';
+		get_template_part( 'global-templates/call-to-action' );
 		echo '</div><!-- Wrapper end -->';
 		
 	}

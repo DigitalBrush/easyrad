@@ -1,0 +1,61 @@
+.contestation {
+    width: 100%;
+    .wsf-group-tabs {
+        justify-content: space-between;
+        border: 0 !important;
+        background: $gray-100;
+        border-radius: $spacing;
+        margin: $spacing-md 0 !important;
+        .wsf-group-tab {
+            a {
+                font-size: 20px;
+            }
+            &.wsf-tab-active {
+                a {
+                    font-weight: bold;
+                    color: $white;
+                    background: $primary;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .contest-tab {
+        .contest-section {
+            padding: $spacing-xl 0;
+            max-width: 720px !important;
+            margin: 0 auto;
+            .contest-field-group {
+                .wsf-label {
+                    font-size: 18px;
+                    margin-bottom: $spacing;
+                    color: $easyrad-blue-gray;
+                    font-weight: bold;
+                }
+                p {
+                    font-weight: 300;
+                    font-size: 20px;
+                }
+                .contest-field {
+                    .wsf-label {
+                        font-size: 16px;
+                    }
+                }
+                &.button-radio {
+                    .contest-field {
+                        display: flex;
+                        align-items: center;
+                        div {
+                            margin-right: $spacing-md;
+                            padding: $spacing-sm $spacing-md;
+                            border: 1px solid $gray-400;
+                            .wsf-label {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
