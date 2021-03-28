@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="footer-cta">
 
-						<a href="<?php echo esc_url(home_url('contact')); ?>" class="btn btn-primary"><span class="material-icons">help_outline</span>Un souci, une question ?</a>
+						<a href="<?php echo esc_url(home_url('faqs')); ?>" class="btn btn-primary"><span class="material-icons">help_outline</span>Un souci, une question ?</a>
 
 					</div><!-- .site-info -->
 
