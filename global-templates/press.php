@@ -35,20 +35,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 
 				<div class="col-sm-12">
-					<div class="row press-row">
-						<div class="col-sm-5 press-content">
-							<div class="press-text">
-								<div class="text-body">
-									<p class="quote">Depuis 2003, cet avocat mène une véritable croisade anti-radar et il prend un malin plaisir à faire annuler les pertes de points de ses clients.</p>
-									<h4>19/11/17</h4>
+					<div class="row">
+						<div class="press-row">
+							<div class="col-sm-5 press-content">
+								<div class="press-text">
+									<div class="text-body">
+										<p class="quote">Depuis 2003, cet avocat mène une véritable croisade anti-radar et il prend un malin plaisir à faire annuler les pertes de points de ses clients.</p>
+										<h4>19/11/17</h4>
+									</div>
+								</div>
+								<div class="channel-block">
+									<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/press/press-ee-m6.jpg" />
 								</div>
 							</div>
-							<div class="channel-block">
-								<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/press/press-ee-m6.jpg" />
+							<div class="col-sm-7 video-block">
+								<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://easyrad-85d9.kxcdn.com/wp-content/themes/easy-rad/video/enquete-exclusive-sequence-easyrad.mp4"></iframe>
 							</div>
-						</div>
-						<div class="col-sm-7 video-block">
-							<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://easyrad-85d9.kxcdn.com/wp-content/themes/easy-rad/video/enquete-exclusive-sequence-easyrad.mp4"></iframe>
 						</div>
 					</div>
 				</div>

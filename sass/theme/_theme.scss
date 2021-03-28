@@ -657,6 +657,9 @@ blockquote {
         display: flex;
         justify-content: center;
         align-items: stretch;
+        @include media-breakpoint-down(xs) {
+            max-width: 320px;
+        }
         .press-content {
             
             position: relative;
