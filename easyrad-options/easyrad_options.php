@@ -1,4 +1,3 @@
-
 <?php
 function easyrad_options(){
 ?> 
