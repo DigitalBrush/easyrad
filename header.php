@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container-fluid h-100 p-0">
 				
 				<div class="row header-bar h-100">
-					<div class="col-lg-2 logo-bar">
+					<div class="col-lg-1 logo-bar">
 						<div class="toggler-button d-lg-none d-flex">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'easyrad' ); ?>">
 							<span class="material-icons">menu</span>
@@ -72,7 +72,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 
 						
-					<div class="col-lg-6 nav-block">
+					<div class="col-lg-7 nav-block">
 						<!-- The WordPress Menu goes here -->
 						<?php
 						wp_nav_menu(
@@ -89,14 +89,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div class="col-md-2 contact-top d-md-flex d-none">
+					<div class="col-lg-2 col-md-6 contact-top d-lg-flex d-none">
 						<span class="material-icons">call</span>
 						<div class="number">
 							<p class="header-contact">0 890 10 20 30</p>
 							<p class=fine-print>Service 0,80 €/min + prix appel</p>
 						</div>
 					</div>
-					<div class="col-md-2 cta-top d-md-flex d-none">
+					<div class="col-lg-2 col-md-6 cta-top d-md-flex d-none">
 						Je conteste en ligne
 					</div>
 				</div>
