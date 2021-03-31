@@ -24,8 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<h2 class="text-heading">Le mot du fondateur</h2>
 						<div class="text-body">
 							<p>Easyrad est pour moi l’accomplissement de 14 années de combat judiciaire contre ces radars : permettre enfin à tous les automobilistes de pouvoir se défendre contre ce racket automatisé !</p>
-							<a href="https://maitredufour.com/cabinet-maitre-dufour-avocat-permis-de-conduire/" target="_blank" class="btn btn-primary">En savoir plus</a>
-							<p>maitredufour.com</p>
+							<a href="https://maitredufour.com/cabinet-maitre-dufour-avocat-permis-de-conduire/" target="_blank" class="text-link">En savoir plus maitredufour.com</a>
 						</div>
 					</div>
 				</div>

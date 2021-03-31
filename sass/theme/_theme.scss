@@ -455,15 +455,13 @@ h4 {
 }
 
 .section-rights {
-    background-image: url(../img/wave-red.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: $gray-200;
     padding: $spacing-max 0;
     @include media-breakpoint-down(xs) {
         background-position: 20% center;
     }
     .section-title {
-        color: $white;
+        color: $easyrad-blue-gray;
     }
     .single-rights {
         background: $white;
@@ -502,6 +500,52 @@ h4 {
                     margin-right: 10px;
                     color: #f70037;
                 }
+            }
+        }
+    }
+}
+
+.section-blogs {
+    padding: $spacing-max 0;
+    @include media-breakpoint-down(xs) {
+        background-position: 20% center;
+    }
+    .section-title {
+        color: $easyrad-blue-gray;
+    }
+    .single-blog {
+        background: $white;
+        border-radius: $spacing;
+        border: 1px solid $gray-300;
+        margin-bottom: $spacing-xl;
+        overflow: hidden;
+        @include media-breakpoint-down(xs) {
+            padding-bottom: $spacing-xl;
+        }
+        .blog-image {
+            margin-bottom: $spacing;
+            text-align: center;
+            overflow: hidden;
+        }
+        .blog-desc {
+            margin-top: $spacing-lg;
+            padding: $spacing-sm;
+            .blog-category {
+                .post-categories {
+                    list-style-type: none !important;
+                    margin: $spacing-xs 0;
+                    padding: 0;
+                }
+            }
+            .title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1em;
+                margin: 0;
+                text-transform: uppercase;
+            }
+            .description {
+                padding: $spacing 0;
             }
         }
     }
@@ -687,6 +731,9 @@ blockquote {
 
 .section-points {
     padding: $spacing-max 0;
+    .section-title {
+        text-align: center;
+    }
     .points-row {
         display: flex;
         align-items: center;

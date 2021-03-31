@@ -13,6 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="container-fluid section-points" tabindex="-1">
 		<div class="container">
+		<h2 class="section-title">Easyrad en chiffres</h2>
 			<div class="row points-row">
 				<div class="col-sm-12 points-counter">
 					<div class="tick" data-value="85422" data-did-init="setupFlip">

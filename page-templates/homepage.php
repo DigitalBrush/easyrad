@@ -35,6 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						get_template_part( 'global-templates/counter' );
 						get_template_part( 'global-templates/rights' );
 						get_template_part( 'global-templates/founder' );
+						get_template_part( 'global-templates/latest-news' );
 						get_template_part( 'global-templates/call-to-action' );  
 						get_template_part( 'global-templates/home-modal' ); 
 					}else{
