@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="why-desc">
 							<h3 class="title">Quelle Est Notre Mission ?</h3>
 							<p class="description">Notre Cabinet d’Avocats gère pour vous l’intégralité des formalités juridiques et vous représente en justice.</p>
-							<a href="#" target="_blank" class="btn btn-primary">Lire la suite</a>
+							<a href="http://doctaroo.fr/sites/easyrad/notre-mission/" target="_blank" class="btn btn-primary">Lire la suite</a>
 						</div>
 					</div>
 				</div>
@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="why-desc">
 							<h3 class="title">Quels sont les risques encourus ?</h3>
 							<p class="description">Entamer une procédure judicaire n’est pas anodin. Il peut exister des désagréments qu’il faut connaître.</p>
-							<a href="#" target="_blank" class="btn btn-primary">Lire la suite</a>
+							<a href="http://doctaroo.fr/sites/easyrad/faqs/" target="_blank" class="btn btn-primary">Lire la suite</a>
 						</div>
 					</div>
 				</div>
@@ -49,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="why-desc">
 							<h3 class="title">Quand faut-il utiliser EasyRad ?</h3>
 							<p class="description">Vous hésitez à contester votre contravention ? Voici nos conseils pour protéger efficacement votre permis !</p>
-							<a href="#" target="_blank" class="btn btn-primary">Lire la suite</a>
+							<a href="http://doctaroo.fr/sites/easyrad/faqs/" target="_blank" class="btn btn-primary">Lire la suite</a>
 						</div>
 					</div>
 				</div>

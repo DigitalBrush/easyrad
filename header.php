@@ -89,7 +89,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div class="col-md-2 contact-top d-md-flex d-none">
+					<div onclick="location.href='tel:0890102030'"class="col-md-2 contact-top d-md-flex d-none">
 						<span class="material-icons">call</span>
 						<div class="number">
 							<p class="header-contact">0 890 10 20 30</p>
