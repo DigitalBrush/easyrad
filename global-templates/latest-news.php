@@ -13,6 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="container-fluid section-blogs">
 		<div class="container">
+		<h2 class="section-title">Actualités</h2>
 			<div class="row">
 			<?php 
 				// the query

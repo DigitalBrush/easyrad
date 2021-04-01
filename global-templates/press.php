@@ -74,4 +74,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div>
 		</div>
+		<?php get_template_part( 'global-templates/logo-slider' ); ?>
 	</div>
+	

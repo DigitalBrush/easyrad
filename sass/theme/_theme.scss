@@ -316,17 +316,6 @@ h4 {
 .page-section {
     padding-top: $spacing-xxl;
     padding-bottom: $spacing-xxl;
-    &.media {
-        padding: $spacing-xxl 0;
-        overflow: hidden;
-        .media-coverage {
-            .gs-logo-area {
-                .gs-logo-single {
-                    max-width: 200px;
-                }
-            }
-        }
-    }
     .section-title {
         text-align: center;
         font-weight: 700;
@@ -411,6 +400,25 @@ h4 {
     color: $primary !important;
 }
 
+.section-logos {
+    padding: $spacing-max 0;
+    .section-title {
+        text-align: center;
+        margin: 0;
+    }
+    .media {
+        padding: $spacing-xxl 0;
+        overflow: hidden;
+        .media-coverage {
+            .gs-logo-area {
+                .gs-logo-single {
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
+
 .section-why {
     .single-why {
         background: $white;
@@ -461,7 +469,7 @@ h4 {
         background-position: 20% center;
     }
     .section-title {
-        color: $easyrad-blue-gray;
+        color: $easyrad-dark;
     }
     .single-rights {
         background: $white;
@@ -487,7 +495,6 @@ h4 {
                 line-height: 1em;
                 text-align: center;
                 margin-bottom: $spacing;
-                text-transform: uppercase;
             }
             .description {
                 text-align: center;
@@ -506,17 +513,16 @@ h4 {
 }
 
 .section-blogs {
-    padding: $spacing-max 0;
+    padding: 100px 0;
     @include media-breakpoint-down(xs) {
         background-position: 20% center;
     }
     .section-title {
-        color: $easyrad-blue-gray;
+        color: $easyrad-dark;
     }
     .single-blog {
         background: $white;
-        border-radius: $spacing;
-        border: 1px solid $gray-300;
+        border-left: 3px solid $gray-300;
         margin-bottom: $spacing-xl;
         overflow: hidden;
         @include media-breakpoint-down(xs) {
@@ -528,13 +534,20 @@ h4 {
             overflow: hidden;
         }
         .blog-desc {
-            margin-top: $spacing-lg;
-            padding: $spacing-sm;
+            margin-top: $spacing;
+            padding: $spacing-md;
             .blog-category {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 14px;
+                font-weight: 700;
                 .post-categories {
                     list-style-type: none !important;
-                    margin: $spacing-xs 0;
+                    margin: $spacing-xs 0 $spacing-sm;
                     padding: 0;
+                    a {
+                        color: $gray-500;
+                    }
                 }
             }
             .title {
@@ -542,7 +555,6 @@ h4 {
                 font-weight: 700;
                 line-height: 1em;
                 margin: 0;
-                text-transform: uppercase;
             }
             .description {
                 padding: $spacing 0;
@@ -628,9 +640,8 @@ blockquote {
     background-size: cover;
     background-repeat: no-repeat;
     .section-title {
-        color: $easyrad-blue-gray;
+        color: $easyrad-dark;
         text-align: center;
-        text-transform: uppercase;
     }
     .press-carousel {
         position: relative;
@@ -681,7 +692,7 @@ blockquote {
             }
             .press-text {
                 border-radius: $spacing-xs;
-                background-color: $gray-100;
+                background-color: $white;
                 position: relative;
                 .text-body {
                     padding: $spacing-lg;
