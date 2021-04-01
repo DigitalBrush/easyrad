@@ -10,14 +10,11 @@
         align-items: center;
         flex-direction: column;
         text-align: center;
-        .navbar-brand {
+        img{
             background-color: transparent;
             padding: $spacing-xxl $spacing;
             width: 100%;
             max-width: 500px;
-            img {
-                width: 100%;
-            }
         } 
         .big-heading {
             padding: 0;
