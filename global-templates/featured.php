@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				
 
-				<div class="col-md px-0 py-4">
+				<div class="col-md px-0 py-md-4">
 					<div class="single-benefit">
 						<div class="benefit-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-secure.svg" />
@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 
-				<div class="col-md px-0 py-4">
+				<div class="col-md px-0 py-md-4">
 					<div class="single-benefit">
 						<div class="benefit-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-rating.svg" />
@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 
-				<div class="col-md featured">
+				<div class="col-md px-0 featured">
 					<div class="single-benefit">
 						<div class="benefit-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-price.svg" />
@@ -53,7 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 
-				<div class="col-md px-0 py-4 before-last">
+				<div class="col-md px-0 py-md-4 before-last">
 					<div class="single-benefit">
 						<div class="benefit-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-justice.svg" />
@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 
-				<div class="col-md px-0 py-4">
+				<div class="col-md px-0 py-md-4">
 					<div class="single-benefit">
 						<div class="benefit-icon">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-icons/home-icon-simple.svg" />
