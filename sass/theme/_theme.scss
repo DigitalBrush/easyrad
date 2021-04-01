@@ -686,6 +686,9 @@ blockquote {
     }
     .press-carousel {
         position: relative;
+        @include media-breakpoint-down(xs) {
+            margin: 0;
+        }
         .owl-stage-outer {
             margin-bottom: $spacing-lg;
         }
@@ -705,6 +708,9 @@ blockquote {
                 line-height: 0.5em;
                 color: $white;
                 text-decoration: none;
+                @include media-breakpoint-down(xs) {
+                    margin-left: -10px;
+                }
             }
             .owl-next {
                 margin-right: -70px;
@@ -716,6 +722,9 @@ blockquote {
                 line-height: 0.5em;
                 color: $white;
                 text-decoration: none;
+                @include media-breakpoint-down(xs) {
+                    margin-right: -10px;
+                }
             }
         }
     }
@@ -724,16 +733,23 @@ blockquote {
         display: flex;
         justify-content: center;
         align-items: stretch;
+        @include media-breakpoint-down(xs) {
+            max-width: 320px;
+            display: block;
+        }
         .press-content {
             
             position: relative;
             .channel-block {
                 border-radius: $spacing-xs;
                 overflow: hidden;
+                @include media-breakpoint-down(xs) {
+                    border-radius: $spacing-xs $spacing-xs 0 0;
+                }
             }
             .press-text {
                 border-radius: $spacing-xs;
-                background-color: $white;
+                background-color: $gray-100;
                 position: relative;
                 .text-body {
                     padding: $spacing-lg;
@@ -776,6 +792,9 @@ blockquote {
             img {
                 object-fit: cover;
                 height: 100%;
+            }
+            @include media-breakpoint-down(xs) {
+                border-radius: 0 0 $spacing-xs $spacing-xs;
             }
         }
     }
