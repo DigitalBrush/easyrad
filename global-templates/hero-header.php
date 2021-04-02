@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/easyrad-logo-plain.svg" />
           <h1 class="big-heading">N°1 de la <span>contestation radar en ligne </span>depuis 17 ans</h1>
           <p class="small-heading">Protégez votre permis de conduire et sauvez vos points !</p>
-          <a class="btn btn-lg btn-primary" href="<?php echo esc_url( home_url( '/contestation' ) ); ?>">Je conteste en ligne</a>
+          <a class="btn btn-lg btn-primary" href="<?php echo esc_url(home_url('/produits/contestation/contestation-en-ligne/')); ?>">Je conteste en ligne</a>
         </div>
       </div>
     </div>

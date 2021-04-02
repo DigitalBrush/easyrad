@@ -56,7 +56,7 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 		echo '</div><!-- .col -->';
 		echo '</div><!-- .row -->';
 		echo '</div><!-- Container end -->';
-		get_template_part( 'global-templates/call-to-action' );
+		get_template_part( 'global-templates/tutorial' );
 		echo '</div><!-- Wrapper end -->';
 		
 	}
