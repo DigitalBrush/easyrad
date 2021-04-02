@@ -107,7 +107,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<a href="<?php echo esc_url( home_url( '/contestation' ) ); ?>">Je conteste en ligne</a>
 					</div>
 					<div class="col-md-1 client-area d-md-flex d-none">
-						<a href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span> Espace Client</a>
+						<a href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
 					</div>
 				</div>
 			<?php if ( 'container' === $container ) : ?>
