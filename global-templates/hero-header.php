@@ -20,7 +20,8 @@ $container = get_theme_mod( 'understrap_container_type' );
           <p class="small-heading">Protégez votre permis de conduire et sauvez vos points !</p>
           <a class="btn btn-lg btn-primary">Je conteste en ligne</a>
         </div>
-        <?php get_template_part( 'global-templates/ratings' ); ?>
       </div>
     </div>
 	</div>
+
+

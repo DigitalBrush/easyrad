@@ -355,36 +355,72 @@ h4 {
     }
     .section-benefits {
         margin-top: -200px;
-        background: $white;
-        border-radius: $spacing-xs;
-        box-shadow: $shadow;
+        
         @include media-breakpoint-down(xs) {
             border-radius: 0;
         }
+        .featured {
+            z-index: 200;
+            @include media-breakpoint-down(sm) {
+                .benefit-icon {
+                    order: -1;
+                }
+            }
+        }
+        .before-last {
+            z-index: 150;
+        }
         .single-benefit {
             padding: $spacing-lg $spacing-md;
+            background: $white;
+            border-radius: $spacing-xs;
+            box-shadow: $shadow;
+            height: 100%;
             @include media-breakpoint-down(sm) {
                 padding: $spacing;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 border-bottom: 1px solid $gray-300;
+                box-shadow: none;
+                border-radius: 0;
+                height: 130px;
             }
             .benefit-icon {
                 margin-bottom: $spacing;
-                padding: $spacing $spacing-xl;
+                padding: $spacing;
                 text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                max-height: 120px;
                 img {
-                    width: 100px;
+                    max-height: 100%;
                 }
                 @include media-breakpoint-down(sm) {
                     font-size: 22px;
                     img {
-                        width: 80px;
+                        max-width: 100px;
                     }
+                    width: 150px;
                 }
                 @include media-breakpoint-down(md) {
                     padding: $spacing-sm;
+                }
+                .avis-verifies-testimonials {
+                    width: 100%;
+                    text-align: center;
+                    .review-stars {
+                        padding: $spacing;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $rating-orange;
+                        .material-icons {
+                            font-size: 18px;
+                        }
+                    }
                 }
             }
             .benefit-desc {
@@ -400,12 +436,20 @@ h4 {
                     font-family: $body-font;
                     line-height: 1em;
                     text-align: center;
+                    &.price {
+                        font-size: 72px;
+                        color: $primary;
+                        @include media-breakpoint-down(xs) {
+                            font-size: 60px;
+                        }
+                    }
                 }
                 .description {
                     margin-bottom: 22px;
                     text-align: center;
                     font-size: 14px;
                     line-height: 1em;
+                    color: $gray-700;
                     @include media-breakpoint-down(xs) {
                         text-align: left;
                         margin: 0;
