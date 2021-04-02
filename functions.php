@@ -92,6 +92,33 @@ function ss_show_breadcrumb() {
 add_post_type_support( 'page', 'excerpt' );
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 
+function wpb_login_logo() { ?>
+    <style type="text/css">
+    .login {
+        background: #fff;
+    }
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_template_directory_uri(); ?>/img/easyrad-logo.svg);
+            height:100px;
+            width:300px;
+            background-size: 300px 100px;
+            background-repeat: no-repeat;
+            padding-bottom: 10px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'wpb_login_logo' );
+
+function wpb_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'wpb_login_logo_url' );
+ 
+function wpb_login_logo_url_title() {
+    return 'EasyRad';
+}
+add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
+
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 8 );
