@@ -108,8 +108,31 @@
                 width: 64px;
             }
         }
+        .client-area {
+            color: $primary !important;
+            padding-left: $spacing-lg;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            a {
+                text-transform: uppercase;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+        }
+        .why-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .material-icons {
+                font-size: 48px;
+            }
+        }
         .contact-top {
-            background: $gray-200;
             color: $easyrad-dark;
             display: flex;
             align-items: center;
@@ -211,24 +234,7 @@
                 
             }
         }
-        .client-area {
-            .nav-link {
-                color: $primary !important;
-                padding-left: $spacing-lg;
-                position: relative;
-                &:before {
-                    position: absolute;
-                    font-family: 'Material Icons';
-                    content: '\e7fd';
-                    -webkit-font-feature-settings: 'liga';
-                    font-size: 16px;
-                    color: $primary;
-                    left: 20px;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
+        
         
     }
     &.sticky {
