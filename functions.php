@@ -119,9 +119,20 @@ function wpb_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
 
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 8 );
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 30);
+
+// To change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+    return __( 'Payer en ligne', 'woocommerce' ); 
+}
 
 function wpdocs_enqueue_custom_admin_style($hook_suffix) {
     if($hook_suffix != 'appearance_page_easyrad_options') {
