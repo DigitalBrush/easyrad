@@ -494,9 +494,13 @@ h4 {
         padding: $spacing-xxl 0;
         overflow: hidden;
         .media-coverage {
-            .gs-logo-area {
-                .gs-logo-single {
+            .gs_logo_area {
+                .gs_logo_single {
                     max-width: 200px;
+                    .gs_logo_single--inner {
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
                 }
             }
         }
