@@ -30,9 +30,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php 
 						// the query
+						$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 						$the_query = new WP_Query( array(
 							//'category_name' => 'news',
 							'posts_per_page' => 10,
+							'paged' => $paged
 						)); 
 						?>
 
