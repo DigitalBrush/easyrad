@@ -39,7 +39,7 @@ get_header('dash');
 
 				<main class="site-main" id="main" role="main" >
 
-					<h2>Tableu de bord</h2>
+					<h2>Tableau de bord</h2>
 
 					<div class="row">
 						<div class="col-sm-12 mb-3">
