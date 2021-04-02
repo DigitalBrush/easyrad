@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</div>
 						</div>
-					</div>
+					
 						
 						
 						
@@ -62,6 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php else : ?>
 					<p><?php __('No News'); ?></p>
 					<?php endif; ?>
+					</div>
 
 				</main><!-- #main -->
 
