@@ -2,11 +2,22 @@
     .woocommerce-breadcrumb {
         display: none;
     }
+    .checkout {
+        .col2-set {
+            .col-1 {
+                flex: none;
+		        max-width: 100%;
+            }
+            .col-2 {
+                flex: none;
+		        max-width: 100%;
+            }
+        }
+    }
 	div.product {
 		margin-bottom: 0;
         position: relative;
         margin-top: $spacing-lg;
-		
         form.cart {
             div.quantity {
                 .qty {
@@ -86,6 +97,7 @@
             }
         }
         div.summary {
+            width: 100% !important;
             .product_title {
                 text-transform: capitalize;
                 padding-bottom: $spacing-md;
@@ -109,18 +121,30 @@
             p.price {
                 color: $easyrad-dark;
                 font-size: 1.25em;
+                display: none;
             }
             span.price {
                 color: $easyrad-dark;
                 font-size: 1.25em;
             }
             .product_meta {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: $spacing 0;
+                display: none;
+            }
+            .wsf-form {
+                .button {
+                    border-radius: $spacing-xs;
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin: 0 auto;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1em 3em;
+                    background-color: $primary;
+                }
             }
             .woocommerce-tabs {
+                display: none !important;
                 ul.tabs {
                     border-bottom: 3px solid $gray-200;
                     position: relative;
@@ -209,6 +233,9 @@
                     }
                 }
             }
+        }
+        .woocommerce-tabs {
+            display: none !important;
         }
     }
     .btn-block{
