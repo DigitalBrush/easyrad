@@ -1,5 +1,4 @@
 .navbar {
-    min-height: 72px;
     width: 100%;
     padding: 0;
     @include media-breakpoint-down(md) {
@@ -91,13 +90,23 @@
                 background: $white;
             }
         }
-        .contact-top-m {
-            background: $primary;
-            color: $white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 64px;
+        .icon-ctas {
+            .client-top-m {
+                background: $gray-700;
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 64px;
+            }
+            .contact-top-m {
+                background: $primary;
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 64px;
+            }
         }
         .contact-top {
             background: $gray-200;
@@ -105,20 +114,37 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 0;
             .number {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: flex-start;
+                height: 100%;
+                width: 100%;
                 .header-contact {
                     margin: 0;
                     font-size: 22px;
                     font-weight: 800;
                     line-height: 1em;
+                    color: $easyrad-plum;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 $spacing;
                 }
-                p {
-                    margin: 0;
-                    line-height: 1em;
+                .fine-print {
+                    background: $easyrad-plum;
+                    height: 100%;
+                    width: 100%;
+                    color: $white;
+                    font-size: 12px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         }
@@ -182,6 +208,13 @@
                 
             }
         }
+        
+    }
+    &.sticky {
+        background: $white;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
+        box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
     }
 }
 

@@ -64,8 +64,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_custom_logo();
 							} ?><!-- end custom logo -->
 						</div>
-						<div class="contact-top-m d-md-none d-flex">
-							<span class="material-icons">call</span>
+						<div class="icon-ctas d-md-none d-flex">
+							<div class="client-top-m d-md-none d-flex">
+								<span class="material-icons">person</span>
+							</div>
+							<div class="contact-top-m d-md-none d-flex">
+								<span class="material-icons">call</span>
+							</div>
 						</div>
 						
 					</div>
@@ -90,10 +95,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 					</div>
 					<div onclick="location.href='tel:0890102030'"class="col-md-2 contact-top d-md-flex d-none">
-						<span class="material-icons">call</span>
 						<div class="number">
-							<p class="header-contact">0 890 10 20 30</p>
-							<p class=fine-print>Service 0,80 €/min + prix appel</p>
+							<div class="header-contact"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/logo-antai.png" width="50px"/> 0 890 10 20 30</div>
+							<div class="fine-print">Service 0,80 €/min + prix appel</div>
 						</div>
 					</div>
 					<div class="col-md-2 cta-top d-md-flex d-none">

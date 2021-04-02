@@ -57,6 +57,16 @@ jQuery(function($){
         }, 1000);
     }
 
+    $('body').scrollTop(0);
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 5) {
+            $('.navbar').addClass('sticky');
+        } else {
+            $('.navbar').removeClass('sticky');
+        }
+    });
+
     
 
 
