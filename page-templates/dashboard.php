@@ -16,7 +16,18 @@ get_header('dash');
 
 <div class="dash-wrapper">
 	<div class="side-bar">
-	<h4>Menu utilisateur</h4>
+		<?php
+			wp_nav_menu(
+				array(
+					'menu'  => 'dashboard',
+					'menu_class'      => 'navbar-nav',
+					'fallback_cb'     => '',
+					'menu_id'         => 'dash-menu',
+					'depth'           => 2,
+					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
 	</div>
 
 

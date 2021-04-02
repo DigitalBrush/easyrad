@@ -150,12 +150,15 @@
         }
         .cta-top {
             background: $primary;
-            color: $white;
+            color: $white !important;
             display: flex;
             align-items: center;
             justify-content: center;
             text-transform: uppercase;
             font-weight: 600;
+            a {
+                color: $white !important;
+            }
         }
     }
     .navbar-nav {

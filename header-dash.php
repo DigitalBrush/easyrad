@@ -67,7 +67,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 					</div>
 					<div class="col-md-2 cta-top d-md-flex d-none">
-					Se déconnecter
+						<a href="<?php echo esc_url( home_url( '/logout' ) ); ?>">Se déconnecter</a>
 					</div>
 
 				</div>

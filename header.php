@@ -66,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 						<div class="icon-ctas d-md-none d-flex">
 							<div class="client-top-m d-md-none d-flex">
-								<span class="material-icons">person</span>
+								<a href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
 							</div>
 							<div class="contact-top-m d-md-none d-flex">
 								<span class="material-icons">call</span>
@@ -101,7 +101,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</div>
 					<div class="col-md-2 cta-top d-md-flex d-none">
-						Je conteste en ligne
+						<a href="<?php echo esc_url( home_url( '/contestation' ) ); ?>">Je conteste en ligne</a>
 					</div>
 				</div>
 			<?php if ( 'container' === $container ) : ?>
