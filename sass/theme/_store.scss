@@ -130,6 +130,11 @@
             .product_meta {
                 display: none;
             }
+            .cart {
+                .button {
+                    display: none;
+                }
+            }
             .wsf-form {
                 .button {
                     border-radius: $spacing-xs;
