@@ -1,14 +1,13 @@
 .navbar {
     width: 100%;
     padding: 0;
+    box-shadow: $shadow;
     @include media-breakpoint-down(md) {
 		padding: 0;
-        min-height: 100px;
     }
     @include media-breakpoint-down(sm) {
         background-color: $white;
         min-height: initial;
-        height: 64px;
     }
     .brand {
         display: flex;
@@ -36,6 +35,7 @@
         display: flex;
         align-items: stretch;
         margin: 0;
+        min-height: 72px;
         @include media-breakpoint-down(sm) {
             justify-content: space-between;
             align-items: stretch;
@@ -48,8 +48,9 @@
                 flex-direction: row-reverse;
                 justify-content: space-between;
             }
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 flex-direction: row;
+                justify-content: initial;
             }
             .toggler-button {
                 padding: $spacing;
@@ -74,7 +75,14 @@
                     }
                 }
             }
-            
+            .brand {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                }
+            }
             .material-icons {
                 @include media-breakpoint-down(xs) {
                     margin-right: 0 !important;
@@ -86,103 +94,69 @@
             align-items: center;
             @include media-breakpoint-down(sm) {
                 padding: 0;
+                margin: 0;
                 z-index: 10;
                 background: $white;
             }
         }
-        .icon-ctas {
-            .client-top-m {
-                background: $gray-700;
-                color: $white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 64px;
-            }
-            .contact-top-m {
-                background: $primary;
-                color: $white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 64px;
-            }
-        }
-        .client-area {
-            color: $primary !important;
-            padding-left: $spacing-lg;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            a {
-                text-transform: uppercase;
-                font-size: 14px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: 500;
-                letter-spacing: 1px;
-            }
-        }
-        .why-top {
+        .icons-top {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            .material-icons {
-                font-size: 48px;
-            }
-        }
-        .contact-top {
-            color: $easyrad-dark;
-            display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
             padding: 0;
-            .number {
+            .material-icons {
+                margin: 0;
+                font-size: 32px;
+                line-height: 32px;
+            }
+            .client-area {
+                color: $primary !important;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: flex-start;
-                height: 100%;
-                width: 100%;
-                .header-contact {
-                    margin: 0;
-                    font-size: 22px;
-                    font-weight: 800;
-                    line-height: 1em;
-                    color: $easyrad-plum;
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 0 $spacing;
-                }
-                .fine-print {
-                    background: $easyrad-plum;
-                    height: 100%;
-                    width: 100%;
-                    color: $white;
-                    font-size: 12px;
-                    font-weight: bold;
+                align-items: center;
+                justify-content: center;
+                a {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    padding: 0;
+                    line-height: 32px;
+                }
+            }
+            .why-top {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-right: 1px solid $gray-300;
+                border-left: 1px solid $gray-300;
+                padding: 0;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    line-height: 32px;
+                }
+            }
+            .contact-top {
+                border-right: 1px solid $gray-300;
+                color: $easyrad-plum;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: visible;
+                @include media-breakpoint-down(sm) {
+                    border-left: 1px solid $gray-300;
                 }
             }
         }
         .cta-top {
-            background: $primary;
-            color: $white !important;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-transform: uppercase;
             font-weight: 600;
-            a {
-                color: $white !important;
-            }
         }
+        
     }
     .navbar-nav {
         align-items: center;
@@ -237,11 +211,15 @@
         
         
     }
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
     &.sticky {
         background: $white;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
-        box-shadow: 0px 0px 5px 0px rgba(0, 40, 86, 0.3);
     }
 }
 

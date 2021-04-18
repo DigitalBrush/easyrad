@@ -49,8 +49,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			
 			<div class="container-fluid h-100 p-0">
 				
-				<div class="row header-bar h-100">
-					<div class="col-lg-1 logo-bar">
+				<div class="row header-bar">
+					<div class="col-lg-1 col-md-8 col-sm-6 col-8 logo-bar">
 						<div class="toggler-button d-lg-none d-flex">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'easyrad' ); ?>">
 							<span class="material-icons">menu</span>
@@ -64,20 +64,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_custom_logo();
 							} ?><!-- end custom logo -->
 						</div>
-						<div class="icon-ctas d-md-none d-flex">
-							<div onclick="location.href='tel:0890102030'" class="contact-top-m d-md-none d-flex">
-								<span class="material-icons">call</span>
-							</div>
-							<div class="client-top-m d-md-none d-flex">
-								<a href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
-							</div>
-						</div>
 						
 					</div>
 					
 
 						
-					<div class="col-lg-5 nav-block">
+					<div class="col-lg-6 nav-block order-lg-1 order-md-2 order-2">
 						<!-- The WordPress Menu goes here -->
 						<?php
 						wp_nav_menu(
@@ -94,22 +86,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div onclick="location.href='tel:0890102030'" class="col-md-2 contact-top d-md-flex d-none">
-						<div class="number">
-							<div class="header-contact"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/logo-antai.png" width="50px"/> 0 890 10 20 30</div>
-							<div class="fine-print">Service 0,80 €/min + prix appel</div>
+					<div class="col-lg-2 col-md-4 col-sm-4 col-4 icons-top  order-lg-2 order-md-1 order-1">
+						<div class="why-top flex-fill d-sm-flex d-none">
+							<a href="<?php echo esc_url( home_url( '/avantages' ) ); ?>"><span class="material-icons">help</span></a>
+						</div>
+						<div class="contact-top flex-fill" onclick="location.href='tel:0890102030'">
+							<span class="material-icons">call</span>
+						</div>
+						<div class="client-area flex-fill">
+							<a href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
 						</div>
 					</div>
-					<div class="col-md-1 why-top d-md-flex d-none">
-						<a href="<?php echo esc_url( home_url( '/avantages' ) ); ?>"><span class="material-icons">help</span></a>
-					</div>
-					<div class="col-md-2 cta-top d-md-flex d-none">
-						<a href="<?php echo esc_url(home_url('/produits/contestation/contestation-en-ligne/')); ?>">Je conteste en ligne</a>
-					</div>
-					<div class="col-md-1 client-area d-md-flex d-none">
-						<a href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
+					<div class="col-md-3 cta-top d-lg-flex d-none order-lg-1 order-md-2 order-2">
+						<a class="btn btn-primary" href="<?php echo esc_url(home_url('/produits/contestation/contestation-en-ligne/')); ?>">Je conteste en ligne</a>
 					</div>
 				</div>
+				
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

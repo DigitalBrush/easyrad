@@ -61,9 +61,9 @@ jQuery(function($){
 
     $(window).scroll(function(){
         if ($(this).scrollTop() > 5) {
-            $('.navbar').addClass('sticky');
+            $('.navbar').addClass('fixed-top sticky');
         } else {
-            $('.navbar').removeClass('sticky');
+            $('.navbar').removeClass('fixed-top sticky');
         }
     });
 
