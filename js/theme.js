@@ -7070,7 +7070,7 @@ jQuery(function ($) {
         nav: false
       },
       1000: {
-        items: 5,
+        items: 4,
         nav: true,
         loop: false
       }
@@ -7113,6 +7113,15 @@ jQuery(function ($) {
       $('.navbar').addClass('fixed-top sticky');
     } else {
       $('.navbar').removeClass('fixed-top sticky');
+    }
+  });
+  $(".contact-top").click(function () {
+    var numberblock = document.getElementById("contactnumber");
+
+    if (numberblock.style.display == "none") {
+      $("#contactnumber").show();
+    } else {
+      $("#contactnumber").hide();
     }
   });
 });

@@ -64,7 +64,7 @@ h4 {
 }
 
 .btn {
-    border-radius: $spacing-max;
+    
     font-weight: 600;
     font-size: 16px;
     margin: $spacing 0;
@@ -87,6 +87,9 @@ h4 {
     }
     &.btn-tag {
         background-color: $gray-200;
+    }
+    &.btn-conteste {
+        border-radius: $spacing-max;
     }
 }
 
@@ -142,6 +145,7 @@ h4 {
     top: 72px;
     height: 100px;
     background: $white;
+    display: none;
     .number {
         display: flex;
         flex-direction: column;
@@ -177,7 +181,7 @@ h4 {
     @include media-breakpoint-up(md) {
         position: absolute;
         width: 250px;
-        right: $spacing;
+        right: $spacing-sm;
         border-top: 1px solid $gray-300;
     }
 }
@@ -424,6 +428,10 @@ h4 {
             background: $white;
             border-radius: $spacing-xs;
             box-shadow: $shadow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             height: 100%;
             @include media-breakpoint-down(sm) {
                 padding: $spacing;
@@ -435,6 +443,9 @@ h4 {
                 border-radius: 0;
                 height: 130px;
             }
+            &:hover {
+                transform: scale(1.1);
+            }
             .benefit-icon {
                 margin-bottom: $spacing;
                 padding: $spacing;
@@ -443,7 +454,7 @@ h4 {
                 align-items: center;
                 justify-content: center;
                 height: 100%;
-                max-height: 120px;
+                max-height: 100px;
                 img {
                     max-height: 100%;
                 }
@@ -482,24 +493,40 @@ h4 {
                     flex-direction: column;
                 }
                 .title {
-                    font-size: 22px;
-                    font-weight: 700;
+                    font-size: 20px;
+                    font-weight: 300;
                     font-family: $body-font;
-                    line-height: 1em;
+                    line-height: 1.5em;
                     text-align: center;
                     &.price {
                         font-size: 72px;
+                        line-height: 1em;
                         color: $primary;
+                        font-weight: 700;
                         @include media-breakpoint-down(xs) {
                             font-size: 60px;
+                        }
+                        span {
+                            font-size: 24px;
+                            color: $easyrad-blue-gray;
+                        }
+                    }
+                    span {
+                        display: block;
+                        font-size: 36px;
+                        font-weight: 800;
+                        line-height: 1.2em;
+                        color: $primary;
+                        @include media-breakpoint-down(xs) {
+                            font-size: 24px;
                         }
                     }
                 }
                 .description {
                     margin-bottom: 22px;
                     text-align: center;
-                    font-size: 14px;
-                    line-height: 1em;
+                    font-size: 16px;
+                    line-height: 1.5em;
                     color: $gray-700;
                     @include media-breakpoint-down(xs) {
                         text-align: left;
@@ -645,7 +672,7 @@ h4 {
 
 .section-rights {
     background: $gray-200;
-    padding: $spacing-max 0;
+    padding: $spacing-max 0 0;
     @include media-breakpoint-down(xs) {
         background-position: 20% center;
     }
@@ -679,6 +706,7 @@ h4 {
             }
             .description {
                 text-align: center;
+                min-height: 180px;
             }
             a {
                 color: #fff;
@@ -757,11 +785,10 @@ h4 {
     padding: $spacing-xxl 0;
     .brief-content {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         padding: $spacing-xxl;
         .brief-text {
-            max-width: 500px;
             .text-heading {
                 position: relative;
                 padding-bottom: $spacing;
@@ -885,8 +912,12 @@ blockquote {
             .channel-block {
                 border-radius: $spacing-xs;
                 overflow: hidden;
+                max-width: 300px;
                 @include media-breakpoint-down(xs) {
                     border-radius: $spacing-xs $spacing-xs 0 0;
+                }
+                img {
+                    width: auto;
                 }
             }
             .press-text {
@@ -894,7 +925,7 @@ blockquote {
                 background-color: $white;
                 position: relative;
                 .text-body {
-                    padding: $spacing-lg;
+                    padding: $spacing-sm;
                     margin-bottom: $spacing-lg;
                     position: relative;
                     .quote {
@@ -912,6 +943,9 @@ blockquote {
                             top: -55px;
                             opacity: 0.3;
                           }
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 14px;
                     }
                 }
                 &:after {
@@ -947,6 +981,12 @@ blockquote {
     padding: $spacing-max 0;
     .section-title {
         text-align: center;
+    }
+    .section-subtitle {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+        font-weight: 300;
     }
     .points-row {
         display: flex;
@@ -990,6 +1030,8 @@ blockquote {
             }
             .text-heading {
                 color: $primary;
+                max-width: 500px;
+                margin: 0 auto;
             }
     
         }
@@ -997,7 +1039,7 @@ blockquote {
 }
 
 .section-founder {
-    padding: $spacing-xxl 0 0;
+    padding: $spacing-lg 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1013,6 +1055,13 @@ blockquote {
         display: flex;
         align-items: center;
         justify-content: center;
+        .founder-text {
+            .text-heading {
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
 

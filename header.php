@@ -90,15 +90,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="why-top flex-fill d-sm-flex d-none">
 							<a href="<?php echo esc_url( home_url( '/avantages' ) ); ?>"><span class="material-icons">help</span></a>
 						</div>
-						<div class="contact-top flex-fill" onclick="location.href='tel:0890102030'">
+						<div class="contact-top flex-fill">
 							<span class="material-icons">call</span>
 						</div>
 						<div class="client-area flex-fill">
-							<a href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
+							<a class="lrm-login" href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
 						</div>
 					</div>
 					<div class="col-md-3 cta-top d-lg-flex d-none order-lg-1 order-md-2 order-2">
-						<a class="btn btn-primary" href="<?php echo esc_url(home_url('/produits/contestation/contestation-en-ligne/')); ?>">Je conteste en ligne</a>
+						<a class="btn btn-primary btn-conteste" href="<?php echo esc_url(home_url('/produits/contestation/contestation-en-ligne/')); ?>">Je conteste en ligne</a>
 					</div>
 				</div>
 				
