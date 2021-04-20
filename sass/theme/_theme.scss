@@ -844,6 +844,15 @@ blockquote {
 	padding: 20px 10px;
 }
 
+.parallax-break {
+    padding: 0;
+    background-image: url(../img/fast-red-car.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 200px;
+}
+
 .section-press {
     padding: $spacing-xxl 0;
     background-image: url(../img/wave-press.svg);
