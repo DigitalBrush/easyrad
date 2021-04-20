@@ -40,44 +40,37 @@ get_header('dash');
 				<main class="site-main" id="main" role="main" >
 
 					<h2>Contestation n°3725476538</h2>
-
-					<div class="row">
-						<div class="col-sm-12 mb-3">
-						<input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Tapez pour rechercher...">
-						</div>
-					</div>
+					
 					<div class="row dash-contest">
-						<div class="col-sm-6 mb-3">
-							<div class="row mb-3">
-								<div class="card text-center">
-									<div class="card-header">
-										<h5 class="card-title">Special title treatment</h5>
-										<a href="#" class="btn btn-primary btn-sm">Go somewhere</a>
-									</div>
-									<div class="card-body">
-										<h5 class="card-title">Special title treatment</h5>
-										<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-										<a href="#" class="btn btn-primary">Go somewhere</a>
-									</div>
-								</div>
-							</div>     
-						</div>    
-						<div class="col-sm-6 mb-3">
-							<div class="row mb-3">
-								<div class="card text-center">
-									<div class="card-header">
-										<h5 class="card-title">Special title treatment</h5>
-										<a href="#" class="btn btn-primary">Go somewhere</a>
-									</div>
-									<div class="card-body">
-										<h5 class="card-title">Special title treatment</h5>
-										<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-										<a href="#" class="btn btn-primary">Go somewhere</a>
-									</div>
-								</div>
 
-							</div>     
-						</div> 
+						<div class="col-sm-6 mb-3">
+							<div class="card text-center">
+								<div class="card-header">
+									<h5 class="card-title">Special title treatment</h5>
+									<a href="#" class="btn btn-primary btn-sm">Go somewhere</a>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">Special title treatment</h5>
+									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+									<a href="#" class="btn btn-primary">Go somewhere</a>
+								</div>
+							</div> 
+						</div>    
+
+						<div class="col-sm-6 mb-3">
+							<div class="card text-center">
+								<div class="card-header">
+									<h5 class="card-title">Special title treatment</h5>
+									<a href="#" class="btn btn-primary btn-sm">Go somewhere</a>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">Special title treatment</h5>
+									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+									<a href="#" class="btn btn-primary">Go somewhere</a>
+								</div>
+							</div> 
+						</div>   
+
 					</div>
 
 				</main><!-- #main -->
