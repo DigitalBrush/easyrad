@@ -42,7 +42,6 @@
         }
         .logo-bar {
             padding: 0;
-            height: 100%;
             @include media-breakpoint-down(md) {
                 display: flex;
                 flex-direction: row-reverse;
@@ -79,8 +78,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                height: 100%;
                 @include media-breakpoint-down(md) {
                     width: 100%;
+                }
+                @include media-breakpoint-up(sm) {
+                    justify-content: flex-start;
                 }
             }
             .material-icons {
@@ -153,7 +156,7 @@
         .cta-top {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             font-weight: 600;
         }
         

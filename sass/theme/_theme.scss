@@ -656,7 +656,7 @@ h4 {
         position: relative;
         .video-block {
             height: 100%;
-            min-height: 400px;
+            min-height: 200px;
             border-radius: $spacing-xs;
             overflow: hidden;
             @include media-breakpoint-down(xs) {

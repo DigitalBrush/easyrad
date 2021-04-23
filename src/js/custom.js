@@ -76,6 +76,12 @@ jQuery(function($){
         }
     });
 
+    $('#ws-form-1 .wsf-group-tab a').each(function() {
+        var visiblePaneId = $(this).attr('data-tab-index');
+        var paneTitle = $(this).text();
+        $(this).html(visiblePaneId + '<span class="tab-title"> : ' + paneTitle + '</span>');
+    });
+
 
 });
 

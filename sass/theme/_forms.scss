@@ -3,19 +3,32 @@
     .wsf-group-tabs {
         justify-content: space-between;
         border: 0 !important;
-        background: $gray-100;
         border-radius: $spacing;
         margin: $spacing-md 0 !important;
         .wsf-group-tab {
             a {
                 font-size: 20px;
+                @include media-breakpoint-down(xs) {
+                    font-size: 16px;
+                }
+            }
+            @include media-breakpoint-down(xs) {
+                padding: 0;
+                .tab-title {
+                    display: none;
+                }
             }
             &.wsf-tab-active {
                 a {
-                    font-weight: bold;
-                    color: $white;
-                    background: $primary;
+                    color: $primary;
+                    border: 1px solid $primary;
                     border-radius: 0;
+                    text-transform: uppercase;
+                    @include media-breakpoint-down(xs) {
+                        .tab-title {
+                            display: inline-block;
+                        }
+                    }
                 }
             }
         }
@@ -28,7 +41,7 @@
         }
         .contest-section {
             padding: $spacing-xl 0;
-            max-width: 720px !important;
+            max-width: 800px !important;
             margin: 0 auto;
             .contest-field-group {
                 .wsf-label {
@@ -42,6 +55,22 @@
                     font-size: 20px;
                 }
                 .wsf-button {
+                    margin-right: $spacing-md;
+                    padding: $spacing-sm $spacing-lg;
+                    height: auto;
+                    background-color: transparent;
+                    border-color: $gray-700;
+                    color: $easyrad-dark;
+                    border-radius: 0;
+                    &:checked {
+                        + {
+                            label.wsf-label {
+                                background-color: $white;
+                                border: 2px solid $primary;
+                                color: $primary;
+                            }
+                        }
+                    }
                     &.wsf-button-primary {
                         border-radius: $spacing-xs;
                         font-weight: 600;
@@ -52,6 +81,9 @@
                         justify-content: center;
                         padding: 1em 3em;
                         background-color: $primary;
+                        &.btn-checkout {
+                            border-radius: 50px;
+                        }
                     }
                 }
                 .contest-field {
@@ -63,12 +95,28 @@
                     .contest-field {
                         display: flex;
                         align-items: center;
-                        div {
-                            margin-right: $spacing-md;
-                            padding: $spacing-sm $spacing-md;
-                            border: 1px solid $gray-400;
-                            .wsf-label {
-                                margin: 0;
+                        &.wsf-button { 
+                            padding: 0;
+                            margin: 0;
+                            + {
+                                label.wsf-label {
+                                    margin-right: $spacing-md;
+                                    padding: $spacing-sm $spacing-lg;
+                                    height: auto;
+                                    background-color: transparent;
+                                    border-color: $gray-700;
+                                    color: $easyrad-dark;
+                                    border-radius: 0;
+                                }
+                            }
+                            &:checked {
+                                + {
+                                    label.wsf-label {
+                                        background-color: $white;
+                                        border: 2px solid $primary;
+                                        color: $primary;
+                                    }
+                                }
                             }
                         }
                     }
