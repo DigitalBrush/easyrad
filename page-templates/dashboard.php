@@ -68,8 +68,8 @@ get_header('dash');
 											<h5 class="card-title">Dufour sebastien/N°3725476538</h5>
 										</div>
 										<div class="card-body">
-											<p class="card-text">Avis du: <span> 18/11/2020</span></p>
-											<p class="card-text">Immatriculation: <span>FT-655-CF</span></p>
+											<p class="card-text">Avin du: <span> 18/11/2020</span></p>
+											<p class="card-text">Immatriculation: <span>FT-345-CF</span></p>
 											<p class="card-text">Demande du: <span> 24/11/2020</span></p>
 										</div>
 									</div>

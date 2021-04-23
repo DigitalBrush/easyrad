@@ -33,16 +33,30 @@
             margin-bottom: $spacing-sm;
             .card-header {
                 color: $easyrad-blue-gray;
+                background: $white;
                 .card-title {
                     margin: 0;
                     font-size: 18px;
+                    font-weight: normal;
                 }
             }
             .card-body {
-                .card-text {
-                    margin: 0;
-                    span {
-                        font-weight: bold;
+                text-align: left;
+                .card-section {
+                    margin: $spacing-lg 0;
+                    .card-title {
+                       color: $gray-600;
+                    }
+                    .contest-value {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        .card-text {
+                            margin: 0;
+                            .card-value {
+                                font-weight: bold;
+                            }
+                        }
                     }
                 }
             }
