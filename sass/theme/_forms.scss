@@ -1,10 +1,21 @@
 .contestation {
     width: 100%;
+    h2 {
+        color: $easyrad-blue-gray;
+        font-size: 28px;
+        font-weight:300;
+        text-align: center;
+        margin-bottom: $spacing-lg;
+    }
     .wsf-group-tabs {
         justify-content: space-between;
-        border-radius: 0;
-        margin: $spacing-md 0 !important;
-        border-bottom: 3px solid $gray-200;
+        border-radius: $spacing-xs;
+        margin: $spacing-md 0 0!important;
+        border: 0 !important;
+        box-shadow: $shadow;
+        @include media-breakpoint-up(lg) {
+            padding: 0 $spacing-max !important;
+        }
         .wsf-group-tab {
             a {
                 font-size: 16px;

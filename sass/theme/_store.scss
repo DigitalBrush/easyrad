@@ -101,7 +101,8 @@
             .product_title {
                 text-transform: capitalize;
                 padding-bottom: $spacing-md;
-                margin-bottom: $spacing-lg;
+                margin-bottom: 0;
+                text-align: center;
             }
             .product-part {
                 border-bottom: 1px solid $gray-400;

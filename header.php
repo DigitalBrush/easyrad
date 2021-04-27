@@ -88,7 +88,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 					<div class="col-lg-2 col-md-4 col-sm-4 col-4 icons-top  order-lg-2 order-md-1 order-1">
 						<div class="why-top flex-fill d-sm-flex d-none">
-							<a href="<?php echo esc_url( home_url( '/avantages' ) ); ?>"><span class="material-icons">help</span></a>
+							<a href="<?php echo esc_url( home_url( '/faqs' ) ); ?>"><span class="material-icons">help</span></a>
 						</div>
 						<div class="contact-top flex-fill">
 							<span class="material-icons">call</span>
