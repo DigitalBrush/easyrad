@@ -549,8 +549,8 @@ h4 {
                     margin-bottom: 22px;
                     text-align: center;
                     font-size: 16px;
+                    font-weight: 300;
                     line-height: 1.5em;
-                    color: $gray-700;
                     @include media-breakpoint-down(xs) {
                         text-align: left;
                         margin: 0;
