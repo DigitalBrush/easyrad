@@ -2,121 +2,156 @@
     width: 100%;
     .wsf-group-tabs {
         justify-content: space-between;
-        border: 0 !important;
-        border-radius: $spacing;
+        border-radius: 0;
         margin: $spacing-md 0 !important;
+        border-bottom: 3px solid $gray-200;
         .wsf-group-tab {
             a {
-                font-size: 20px;
+                font-size: 16px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
                 @include media-breakpoint-down(xs) {
                     font-size: 16px;
                 }
-            }
-            @include media-breakpoint-down(xs) {
-                padding: 0;
-                .tab-title {
-                    display: none;
+                .tab-id {
+                    background: $easyrad-dark;
+                    color: $white;
+                    padding: .3rem .7rem;
+                    border-radius: 50px;
+                    margin-bottom: $spacing;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                }
+                @include media-breakpoint-down(sm) {
+                    padding: 0;
+                    .tab-title {
+                        display: none;
+                    }
                 }
             }
             &.wsf-tab-active {
                 a {
                     color: $primary;
-                    border: 1px solid $primary;
-                    border-radius: 0;
-                    text-transform: uppercase;
-                    @include media-breakpoint-down(xs) {
+                    font-weight: bold;
+                    border: 0;
+                    border-bottom: 5px solid $gray-400;
+                    .tab-id {
+                        background: $primary;
+                        color: $white;
+                        padding: .4rem .8rem;
+                        border-radius: 50px;
+                    }
+                    @include media-breakpoint-down(sm) {
                         .tab-title {
                             display: inline-block;
                         }
                     }
                 }
             }
-        }
-    }
-    .contest-tab {
-        .wsf-grid {
-            @include media-breakpoint-down(xs) {
-                margin: initial;
+            .wsf-tab-disabled { 
+                .tab-id {
+                    background: none;
+                    border: 1px solid $gray-600;
+                    color: $gray-600;
+                    padding: .4rem .8rem;
+                    border-radius: 50px;
+                }
             }
         }
-        .contest-section {
-            padding: $spacing-xl 0;
-            max-width: 800px !important;
-            margin: 0 auto;
-            .contest-field-group {
-                .wsf-label {
-                    font-size: 18px;
-                    margin-bottom: $spacing;
-                    color: $easyrad-blue-gray;
-                    font-weight: bold;
-                }
-                p {
-                    font-weight: 300;
-                    font-size: 20px;
-                }
-                .wsf-button {
-                    margin-right: $spacing-md;
-                    padding: $spacing-sm $spacing-lg;
-                    height: auto;
-                    background-color: transparent;
-                    border-color: $gray-700;
-                    color: $easyrad-dark;
-                    border-radius: 0;
-                    &:checked {
-                        + {
-                            label.wsf-label {
-                                background-color: $white;
-                                border: 2px solid $primary;
-                                color: $primary;
-                            }
-                        }
-                    }
-                    &.wsf-button-primary {
-                        border-radius: $spacing-xs;
-                        font-weight: 600;
-                        font-size: 16px;
-                        margin: 0 auto;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: $white;
-                        padding: 1em 3em;
-                        background-color: $primary;
-                        border: 0;
-                        &.btn-checkout {
-                            border-radius: 50px;
-                        }
-                    }
-                }
-                .contest-field {
+    }
+    .wsf-groups {
+        padding: $spacing-sm;
+        background: $gray-100;
+        border-radius: $spacing-xs;
+        .contest-tab {
+            .wsf-grid {
+                margin: initial;
+            }
+            .contest-section {
+                padding: $spacing-xl 0;
+                max-width: 800px !important;
+                margin: 0 auto;
+                .contest-field-group {
                     .wsf-label {
-                        font-size: 16px;
+                        font-size: 18px;
+                        margin-bottom: $spacing;
+                        color: $easyrad-blue-gray;
+                        font-weight: bold;
                     }
-                }
-                &.button-radio {
-                    .contest-field {
-                        display: flex;
-                        align-items: center;
-                        &.wsf-button { 
-                            padding: 0;
-                            margin: 0;
+                    p {
+                        font-weight: 300;
+                        font-size: 20px;
+                    }
+                    .wsf-button {
+                        margin-right: $spacing-md;
+                        padding: $spacing-sm $spacing-lg;
+                        height: auto;
+                        background-color: transparent;
+                        border-color: $gray-700;
+                        color: $easyrad-dark;
+                        border-radius: 0;
+                        &:checked {
                             + {
                                 label.wsf-label {
-                                    margin-right: $spacing-md;
-                                    padding: $spacing-sm $spacing-lg;
-                                    height: auto;
-                                    background-color: transparent;
-                                    border-color: $gray-700;
-                                    color: $easyrad-dark;
-                                    border-radius: 0;
+                                    background-color: $white;
+                                    border: 2px solid $primary;
+                                    color: $primary;
                                 }
                             }
-                            &:checked {
+                        }
+                        &.wsf-button-primary {
+                            border-radius: $spacing-xs;
+                            font-weight: 600;
+                            font-size: 16px;
+                            margin: 0 auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $white;
+                            padding: 1em 3em;
+                            background-color: $primary;
+                            border: 0;
+                            &.btn-checkout {
+                                border-radius: 50px;
+                            }
+                        }
+                    }
+                    .contest-field {
+                        .wsf-label {
+                            font-size: 16px;
+                        }
+                    }
+                    &.button-radio {
+                        .contest-field {
+                            display: flex;
+                            align-items: center;
+                            &.wsf-button { 
+                                padding: 0;
+                                margin: 0;
                                 + {
                                     label.wsf-label {
-                                        background-color: $white;
-                                        border: 2px solid $primary;
-                                        color: $primary;
+                                        margin-right: $spacing-md;
+                                        padding: $spacing-sm $spacing-lg;
+                                        height: auto;
+                                        background-color: transparent;
+                                        border-color: $gray-700;
+                                        color: $easyrad-dark;
+                                        border-radius: 0;
+                                    }
+                                }
+                                &:checked {
+                                    + {
+                                        label.wsf-label {
+                                            background-color: $white;
+                                            border: 2px solid $primary;
+                                            color: $primary;
+                                        }
                                     }
                                 }
                             }
