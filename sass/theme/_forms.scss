@@ -146,11 +146,6 @@
                                 }
                             }
                         }
-                        &:hover {
-                            background-color: $gray-800;
-                            border-color: $gray-800;
-                            color: $white;
-                        }
                         &.wsf-button-primary {
                             border-radius: $spacing-xs;
                             font-weight: 600;
