@@ -96,6 +96,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="client-area flex-fill">
 							<a class="lrm-login" href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
 						</div>
+						<div id="contactnumber" class="row number-overlay" onclick="location.href='tel:0890102030'">
+							<div class="number">
+								<div class="header-contact"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/nnca.png" width="50"/> 0 890 10 20 30</div>
+								<div class="fine-print">Service 0,80 €/min + prix appel</div>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-3 cta-top d-lg-flex d-none order-lg-1 order-md-2 order-2">
 						<a class="btn btn-primary btn-conteste" href="<?php echo esc_url(home_url('/produits/contestation/contestation-en-ligne/')); ?>">Je conteste en ligne</a>

@@ -1,11 +1,12 @@
 .contestation {
     width: 100%;
     h2 {
-        color: $easyrad-blue-gray;
+        color: $easyrad-dark;
         font-size: 28px;
-        font-weight:300;
+        font-weight: 400;
         text-align: center;
         margin-bottom: $spacing-lg;
+        font-family: $body-font;
     }
     .wsf-group-tabs {
         justify-content: space-between;
@@ -21,6 +22,7 @@
                 font-size: 16px;
                 text-align: center;
                 display: flex;
+                color: $gray-600;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
@@ -28,9 +30,10 @@
                     font-size: 16px;
                 }
                 .tab-id {
-                    background: $easyrad-dark;
-                    color: $white;
-                    padding: .3rem .7rem;
+                    background: none;
+                    border: 1px solid $gray-600;
+                    color: $gray-600;
+                    padding: .4rem .8rem;
                     border-radius: 50px;
                     margin-bottom: $spacing;
                     display: flex;
@@ -54,6 +57,7 @@
                     border-bottom: 5px solid $gray-400;
                     .tab-id {
                         background: $primary;
+                        border: 0;
                         color: $white;
                         padding: .4rem .8rem;
                         border-radius: 50px;
@@ -81,6 +85,31 @@
         background: $gray-100;
         border-radius: $spacing-xs;
         .contest-tab {
+            &.contest-tab-intro {
+                .contest-section {
+                    .contest-field-group {
+                        .wsf-button {
+                            border-radius: 50px;
+                            max-width: 400px;
+                            font-weight: 600;
+                            font-size: 16px;
+                            margin: 0 auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $primary;
+                            padding: 1em 3em;
+                            background-color: $white;
+                            border: 1px solid $primary;
+                            &:hover {
+                                background-color: $primary;
+                                color: $white;
+                                border: 1px solid $primary;
+                            }
+                        }
+                    }
+                }
+            }
             .wsf-grid {
                 margin: initial;
             }
@@ -116,6 +145,11 @@
                                     
                                 }
                             }
+                        }
+                        &:hover {
+                            background-color: $gray-800;
+                            border-color: $gray-800;
+                            color: $white;
                         }
                         &.wsf-button-primary {
                             border-radius: $spacing-xs;

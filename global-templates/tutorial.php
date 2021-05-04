@@ -24,7 +24,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div class="col-sm-5 tutorial-video">
 					<div class="video-block">
-						<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://easyrad-85d9.kxcdn.com/wp-content/themes/easy-rad/video/tutoriel-pv-particulier.mp4"></iframe>
+						<video width="100%" height="100%" controls="true">
+							<source src="https://easyrad-85d9.kxcdn.com/wp-content/themes/easy-rad/video/tutoriel-pv-particulier.mp4" type="video/mp4">
+						</video>
 					</div>
 				</div>
 			</div>

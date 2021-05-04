@@ -73,6 +73,7 @@ h4 {
     align-items: center;
     justify-content: center;
     padding: .8rem 1.8rem;
+    border-radius: 50px;
     &.btn-primary {
         color: $white !important;
         &:after {
@@ -164,50 +165,7 @@ h4 {
     }
 }
 
-.number-overlay {
-    top: 72px;
-    height: 100px;
-    background: $white;
-    display: none;
-    .number {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        height: 100%;
-        width: 100%;
-        .header-contact {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 800;
-            line-height: 1em;
-            color: $easyrad-plum;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 $spacing;
-        }
-        .fine-print {
-            background: $easyrad-plum;
-            height: 100%;
-            width: 100%;
-            color: $white;
-            font-size: 14px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-    @include media-breakpoint-up(md) {
-        position: absolute;
-        width: 250px;
-        right: $spacing-sm;
-        border-top: 1px solid $gray-300;
-    }
-}
+
 
 .contact-cta {
     color: $white;
@@ -985,7 +943,7 @@ blockquote {
                     position: absolute;
                     width: 0;
                     border: 24px solid transparent; 
-                    border-top-color: $gray-100; 
+                    border-top-color: $white; 
                     bottom: -36px;
                     left: 10%;
                     z-index: 2;

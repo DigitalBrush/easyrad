@@ -78,6 +78,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                padding-left: $spacing-sm;
                 height: 100%;
                 @include media-breakpoint-down(md) {
                     width: 100%;
@@ -150,6 +151,54 @@
                 overflow: visible;
                 @include media-breakpoint-down(sm) {
                     border-left: 1px solid $gray-300;
+                }
+                &:hover {
+                    .material-icons {
+                        color: #610b44; 
+                    }
+                }
+            }
+            .number-overlay {
+                position: absolute;
+                width: 300px;
+                right: $spacing-sm;
+                border-top: 1px solid $gray-300;
+                top: 72px;
+                height: 100px;
+                background: $white;
+                display: none;
+                z-index: 1000;
+                .number {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    height: 100%;
+                    width: 100%;
+                    .header-contact {
+                        margin: 0;
+                        font-size: 24px;
+                        font-weight: 800;
+                        line-height: 1em;
+                        color: $easyrad-plum;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 $spacing;
+                    }
+                    .fine-print {
+                        background: $easyrad-plum;
+                        height: 100%;
+                        width: 100%;
+                        color: $white;
+                        font-size: 14px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
         }
