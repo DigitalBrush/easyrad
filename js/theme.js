@@ -7099,7 +7099,7 @@ jQuery(function ($) {
 
   if (window.matchMedia("(max-width: 767px)").matches) {
     $('.category-section').addClass('owl-carousel owl-theme category-carousel');
-  } else {}
+  }
 
   function setupFlip(tick) {
     Tick.helper.interval(function () {
@@ -7115,23 +7115,6 @@ jQuery(function ($) {
       $('.navbar').removeClass('fixed-top sticky');
     }
   });
-  $(".contact-top").click(function () {
-    var numberblock = document.getElementById("contactnumber");
-
-    if (numberblock.style.display == "none") {
-      $("#contactnumber").show();
-    } else {
-      $("#contactnumber").hide();
-    }
-  });
-  $('#ws-form-1 .wsf-group-tab a').each(function () {
-    var visiblePaneId = $(this).attr('data-tab-index');
-    var paneTitle = $(this).text();
-    $(this).html('<span class="tab-id">' + visiblePaneId + '</span>' + '<span class="tab-title">' + paneTitle + '</span>');
-  });
-});
-jQuery(document).ready(function () {
-  var $ = jQuery;
 
   if ($('.set_custom_images').length > 0) {
     if (typeof wp !== 'undefined' && wp.media && wp.media.editor) {
@@ -7149,6 +7132,10 @@ jQuery(document).ready(function () {
       });
     }
   }
+
+  $("#contacttop").click(function () {
+    $("#contactnumber").toggle();
+  });
 });
 
 function myFunction() {

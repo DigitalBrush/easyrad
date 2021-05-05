@@ -56,9 +56,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+<script>
+	jQuery(document).ready(function($) {
+		$('#ws-form-1 .wsf-group-tab a').each(function() {
+			var visiblePaneId = $(this).attr('data-tab-index');
+			var paneTitle = $(this).text();
+			$(this).html('<span class="tab-id">' + visiblePaneId + '</span><span class="tab-title">' + paneTitle + '</span>');
+		});
+	});
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/src/js/custom.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/flip.min.js"></script>
 </body>
 

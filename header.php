@@ -90,7 +90,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="why-top flex-fill d-sm-flex d-none">
 							<a href="<?php echo esc_url( home_url( '/faqs' ) ); ?>"><span class="material-icons">help</span></a>
 						</div>
-						<div class="contact-top flex-fill">
+						<div id="contacttop" class="contact-top flex-fill">
 							<span class="material-icons">call</span>
 						</div>
 						<div class="client-area flex-fill">

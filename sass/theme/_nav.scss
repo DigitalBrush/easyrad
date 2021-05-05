@@ -153,6 +153,7 @@
                     border-left: 1px solid $gray-300;
                 }
                 &:hover {
+                    background: $gray-200;
                     .material-icons {
                         color: #610b44; 
                     }

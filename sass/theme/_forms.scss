@@ -113,6 +113,18 @@
             .wsf-grid {
                 margin: initial;
             }
+            &.main-fields {
+                .contest-section {
+                    .contest-field-group {
+                        .wsf-label {
+                            text-align: left;
+                        }
+                        p {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
             .contest-section {
                 padding: $spacing-xl 0;
                 max-width: 800px !important;
@@ -121,28 +133,29 @@
                     .wsf-label {
                         font-size: 18px;
                         margin-bottom: $spacing;
-                        color: $easyrad-blue-gray;
+                        color: $easyrad-dark;
                         font-weight: bold;
+                        text-align: center;
                     }
                     p {
                         font-weight: 300;
                         font-size: 20px;
+                        text-align: center;
                     }
                     .wsf-button {
                         margin-right: $spacing-md;
                         padding: $spacing-sm $spacing-lg;
                         height: auto;
                         background-color: transparent;
-                        border-color: $gray-600;
+                        border-color: $primary;
                         color: $easyrad-dark;
-                        border-radius: 0;
+                        border-radius: 50px;
                         &:checked {
                             + {
                                 label.wsf-label {
-                                    background-color: $white;
+                                    background-color: $primary;
                                     border: 2px solid $primary;
-                                    color: $primary;
-                                    
+                                    color: $white; 
                                 }
                             }
                         }
@@ -171,6 +184,7 @@
                     &.button-radio {
                         .contest-field {
                             display: flex;
+                            flex-direction: column;
                             align-items: center;
                             &.wsf-button { 
                                 padding: 0;
@@ -181,12 +195,13 @@
                                         padding: $spacing-sm $spacing-lg;
                                         height: auto;
                                         background-color: transparent;
-                                        border-color: $gray-700;
-                                        color: $easyrad-dark;
-                                        border-radius: 0;
+                                        border-color: $primary;
+                                        color: $primary;
+                                        border-radius: 50px;
+                                        min-width: 400px;
                                         &:hover {
-                                            background-color: $gray-800;
-                                            border-color: $gray-800;
+                                            background-color: $primary;
+                                            border-color: $primary;
                                             color: $white;
                                         }
                                     }
@@ -194,9 +209,9 @@
                                 &:checked {
                                     + {
                                         label.wsf-label {
-                                            background-color: $white;
+                                            background-color: $primary;
                                             border: 2px solid $primary;
-                                            color: $primary;
+                                            color: $white; 
                                         }
                                     }
                                 }
