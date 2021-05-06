@@ -91,7 +91,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<a href="<?php echo esc_url( home_url( '/faqs' ) ); ?>"><span class="material-icons">help</span></a>
 						</div>
 						<div id="contacttop" class="contact-top flex-fill">
-							<span class="material-icons">call</span>
+							<a href="#"><span class="material-icons">call</span></a>
 						</div>
 						<div class="client-area flex-fill">
 							<a class="lrm-login" href="<?php echo esc_url( home_url( '/espace-client' ) ); ?>"><span class="material-icons">person</span></a>
