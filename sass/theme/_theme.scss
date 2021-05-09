@@ -393,7 +393,11 @@ h4 {
     }
     .section-benefits {
         margin-top: -200px;
-        
+        @include media-breakpoint-down(sm) {
+            border-radius: $spacing-xs;
+            box-shadow: $shadow;
+            overflow: hidden;
+        }
         @include media-breakpoint-down(xs) {
             border-radius: 0;
         }
@@ -408,6 +412,10 @@ h4 {
         .before-last {
             z-index: 150;
         }
+        a {
+            color: $easyrad-dark;
+            text-decoration: none;
+        }
         .single-benefit {
             padding: $spacing-lg $spacing-md;
             background: $white;
@@ -418,15 +426,19 @@ h4 {
             align-items: center;
             justify-content: center;
             height: 100%;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
             @include media-breakpoint-down(sm) {
                 padding: $spacing-sm;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                border-bottom: 2px solid $gray-300;
+                border-bottom: 1px solid $gray-300;
                 box-shadow: none;
                 border-radius: 0;
+                
             }
+            
             &:hover {
                 transform: scale(1.1);
             }
